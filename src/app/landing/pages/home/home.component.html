@@ -1,0 +1,125 @@
+<div class="content">
+  <div class="stars"></div>
+<div class="twinkling"></div>
+  <div class="banner">
+      <div class="boy">
+          <div class="on">
+              <img [ngStyle]="{'transform': 'scale(1.9)'}" class="im1" src="/assets/anim/trans/11.png">
+              <img [ngStyle]="{'transform': 'rotate(-'+ pneck +'deg) scale(1.9)'}" class="im2" src="/assets/anim/trans/22.png">
+              <img [ngStyle]="{'transform': 'rotate(-'+ phead +'deg) scale(1.9)'}" class="im3" src="/assets/anim/trans/33.png">
+              <img [ngStyle]="{'transform': 'rotate(-'+ pbicep +'deg) scale(1.9)'}" class="im4" src="/assets/anim/trans/44.png">
+              <img [ngStyle]="{'transform': 'rotate(-'+ parm +'deg) scale(1.9)'}" class="im6" src="/assets/anim/trans/66.png">
+              <img [ngStyle]="{'transform': 'rotate(-'+ ppalm +'deg) skew('+ spalm +'deg) scale(1.9)'}" class="im5" src="/assets/anim/trans/55.png">
+          </div>
+      </div>
+      <div class="anim">
+          <div class="l"></div>
+          <div class="r" [class.hide]="hide" #anim [style.top.px]="posy" [style.right.px]="posx">
+              <div class="top">
+                  <div class="one">
+                      <p [class.leftIn]="animate">{{id}}</p>
+                  </div>
+                  <div class="two" [class.heightDown]="animate"></div>
+                  <div class="three">
+                      <div class="textTop" [class.rightIn]="animate">{{head}}</div>
+                      <div class="textBtm" [class.rightIn]="animate">{{head2}}</div>
+                  </div>
+              </div>
+              <div class="mid" [class.leftIn]="animate">
+                  Always on the lookout for the hi-tech advancements. Build not only a product that can sell well, but a platform through which to deliver it.
+              </div>
+              <div class="btm">
+                  <div class="btn1 btn" [class.slideUp]="animate">Start Now</div>
+                  <div class="btn2 btn" [class.slideUp2]="animate">Learn More</div>
+              </div>
+          </div>
+      </div>
+      <div class="skew"></div>
+  </div>
+
+  <div class="how">
+      <div class="head">
+          <h3><span>How</span> we Work</h3>
+      </div>
+      <div class="opts">
+          <div class="nav">
+              <div class="vw vw1"></div>
+              <h6>Palnning</h6>
+          </div>
+          <div class="nav">
+              <div class="ar ar1"></div>
+          </div>
+          <div class="nav">
+              <div class="vw vw2"></div>
+              <h6>Design</h6>
+          </div>
+          <div class="nav">
+              <div class="ar ar2"></div>
+          </div>
+          <div class="nav">
+              <div class="vw vw3"></div>
+              <h6>Development</h6>
+          </div>
+      </div>
+  </div>
+
+  <div class="inf">
+      <div class="row">
+          <div class="navi">
+              <div class="l"><i class="fa fa-file-code-o" aria-hidden="true"></i></div>
+              <div class="r">
+                  <div class="t">SEO Ready Code</div>
+                  <div class="b">Tincidunt felis dignissim justo congue, non rutrum tortor volutpat.</div>
+              </div>
+          </div>
+          <div class="navi">
+                  <div class="l"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                  <div class="r">
+                      <div class="t">Fully Responsive</div>
+                      <div class="b">Fully responsive on notebook, tablets and smartphones ant other.</div>
+                  </div>
+          </div>
+          <div class="navi">
+                  <div class="l"><i class="fa fa-sliders" aria-hidden="true"></i></div>
+                  <div class="r">
+                      <div class="t">Awesome Features</div>
+                      <div class="b">Easy-to-use, dynamic colors, grid, video, map and much more .</div>
+                  </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="navi">
+                  <div class="l"><i class="fa fa-comments-o" aria-hidden="true"></i></div>
+                  <div class="r">
+                      <div class="t">5-Star-Support</div>
+                      <div class="b">Always ready to help you create the best solution.</div>
+                  </div>
+          </div>
+          <div class="navi">
+                  <div class="l"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+                  <div class="r">
+                      <div class="t">High Customizibility</div>
+                      <div class="b">Create, display everything that you want in few seconds .</div>
+                  </div>
+          </div>
+          <div class="navi">
+                  <div class="l"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                  <div class="r">
+                      <div class="t">Up-To-Date Software</div>
+                      <div class="b">lorem er dolor sit amet, teso adipiscing elit. Mauris .</div>
+                  </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="portfolio">
+      <h2>Our Clients</h2>
+      <div class="bar"></div>
+      <div class="bttm">
+          <div class="navs">
+              
+          </div>
+      </div>
+      
+  </div>
+</div>
