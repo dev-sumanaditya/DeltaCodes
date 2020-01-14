@@ -76,117 +76,121 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public services = [
     {
       name: 'Static Websites',
-      url: ''
+      url: '/assets/i3/1.png'
     },
     {
       name: 'Dynamic Websites',
-      url: ''
+      url: '/assets/i3/2.png'
     },
     {
       name: 'Web Apps',
-      url: ''
+      url: '/assets/i3/3.png'
     },
     {
       name: 'Progressive Web Apps',
-      url: ''
+      url: '/assets/i3/4.png'
     },
     {
       name: 'Hybrid Apps',
-      url: ''
+      url: '/assets/i3/5.png'
     },
     {
       name: 'Android Apps',
-      url: ''
+      url: '/assets/i3/6.png'
     },
     {
       name: 'IOS Apps',
-      url: ''
+      url: '/assets/i3/7.png'
     },
     {
       name: 'Desktop Apps',
-      url: ''
+      url: '/assets/i3/8.png'
     },
     {
       name: 'Backend API Development',
-      url: ''
+      url: '/assets/i3/9.png'
     },{
       name: 'Frontend Development',
-      url: ''
+      url: '/assets/i3/10.png'
     },{
       name: 'API Integration',
-      url: ''
+      url: '/assets/i3/11.png'
     },
     {
       name: 'Wearable Tech',
-      url: ''
+      url: '/assets/i3/12.png'
     },
     {
       name: 'Data Science',
-      url: ''
+      url: '/assets/i3/13.png'
     },
     {
       name: 'Machine Learning',
-      url: ''
+      url: '/assets/i3/14.png'
     },
     {
       name: 'Image Processing',
-      url: ''
+      url: '/assets/i3/15.png'
     },
     {
       name: 'AR/VR',
-      url: ''
+      url: '/assets/i3/16.png'
+    },
+    {
+      name: 'AI',
+      url: '/assets/i3/16b.png'
     },
     {
       name: 'UI/UX Design',
-      url: ''
+      url: '/assets/i3/17.png'
     },
     {
       name: 'Arduino',
-      url: ''
+      url: '/assets/i3/18.png'
     },
     {
       name: 'Raspberry-Pi',
-      url: ''
+      url: '/assets/i3/19.png'
     },
     {
       name: 'Drones/Robotics',
-      url: ''
+      url: '/assets/i3/20.png'
     },
     {
       name: 'Automation',
-      url: ''
+      url: '/assets/i3/21.png'
     },
     {
       name: 'Sensors and Microprocessors',
-      url: ''
+      url: '/assets/i3/22.png'
     },
     {
       name: 'CAD Designing',
-      url: ''
+      url: '/assets/i3/23.png'
     },
     {
       name: 'E-Commerce',
-      url: ''
+      url: '/assets/i3/24.png'
     },
     {
       name: 'Wordpress',
-      url: ''
+      url: '/assets/i3/25.png'
     },
     {
       name: 'SEO',
-      url: ''
+      url: '/assets/i3/26.png'
     },
     {
       name: 'Digital Marketing',
-      url: ''
+      url: '/assets/i3/27.png'
     },
     {
       name: 'Website Optimization',
-      url: ''
+      url: '/assets/i3/28.png'
     },
     {
       name: 'Maintenance',
-      url: ''
+      url: '/assets/i3/3.png'
     },
   ]
 

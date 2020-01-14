@@ -112,7 +112,7 @@
       <div class="bar"></div>
       <div class="bttm">
           <div class="navs" *ngFor="let item of services">
-              <div class="img"></div>
+              <div class="img" [style.backgroundImage]="'url('+ item.url +')'"></div>
               <h2>{{item.name}}</h2>
           </div>
       </div>

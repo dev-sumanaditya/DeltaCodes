@@ -489,10 +489,14 @@
     align-items: center;
 }
 .portfolio .bttm .navs .img {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     width: 110px;
     height: 110px;
     border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
 }
 .portfolio .bttm .navs h2 {
     font-size: 18px;
