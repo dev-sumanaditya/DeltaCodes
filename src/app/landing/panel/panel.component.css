@@ -32,7 +32,7 @@
     transition-duration: 0.2s;
 }
 .navbar .le span:hover {
-    color: #024186;
+    color: #0ac775;
 }
 
 .navbar .re i {
@@ -57,7 +57,7 @@
     display: flex;
     align-items: center;
     font-weight: 600;
-    color: #024186;
+    color: #0ac775;
 }
 .navbar .spacer {
     display: flex;
@@ -82,7 +82,7 @@
     transition-duration: 0.2s;
 }
 .navbar .navs .nav a:hover {
-    color: #024186;
+    color: #0ac775;
 }
 
 
@@ -105,7 +105,7 @@
     cursor: pointer;
 }
 .navbar .navs2 .nav2:hover {
-    color: #024186;
+    color: #0ac775;
 }
 
 .hidDrop {
