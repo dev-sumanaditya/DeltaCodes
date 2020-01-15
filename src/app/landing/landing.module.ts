@@ -5,9 +5,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { LandingRoutingModule } from './landing-routing.module';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
+import { SliderbgComponent } from './pages/components/sliderbg/sliderbg.component';
 
 @NgModule({
-  declarations: [PanelComponent, HomeComponent, ContactComponent, AboutComponent],
+  declarations: [PanelComponent, HomeComponent, ContactComponent, AboutComponent, SliderbgComponent],
   imports: [
     CommonModule,
     LandingRoutingModule

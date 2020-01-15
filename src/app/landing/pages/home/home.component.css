@@ -503,3 +503,119 @@
     margin-top: 20px;
     text-align: center;
 }
+
+
+.dtwo {
+    background-color: #233142;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 40px 0;
+    font-size: 28px;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 8px;
+}
+
+.dtwo .bttn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 25px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    user-select: none;
+}
+.dtwo .bttn i {
+    font-size: 30px;
+    margin-left: 3px;
+    animation: pulseSize 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+      color: white;
+      border-color: white;
+      height: 50px;
+      width: 50px;
+    }
+    50% {
+      color: #0ac775;
+      border-color: #0ac775;
+      height: 60px;
+      width: 60px;
+    }
+    100% {
+      color: white;
+      border-color: white;
+      height: 50px;
+      width: 50px;
+    }
+}
+@keyframes pulseSize {
+    0% {
+      font-size: 30px;
+    }
+    50% {
+      font-size: 40px;
+    }
+    100% {
+      font-size: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.slidercontainer {
+    display: flex;
+    flex-direction: column;
+    z-index: -100;
+}
+
+.page {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+}
+.page .overlay {
+    flex-grow: 1;
+}
+.page .content {
+    position: absolute;
+    color: white;
+    padding: 50px;
+}
+.page .content h1 {
+    font-size: 40px;
+    margin: 0;
+    position: sticky;
+    top: 350px;
+}
+
+
+.p1 .overlay {
+    background-image: linear-gradient(to bottom right, #0ac7757e, #0ac775);
+}
+.p2 .overlay {
+    background-image: linear-gradient(to bottom right, rgba(220, 20, 60, 0.5), crimson);
+}
+.p3 .overlay {
+    background-image: linear-gradient(to bottom right, rgba(128, 128, 128, 0.5), grey);
+}
