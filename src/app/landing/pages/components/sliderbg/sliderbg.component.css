@@ -1,0 +1,39 @@
+.slidercontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    z-index: -20;
+}
+.page .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;    
+    color: white;
+    padding: 50px 100px;
+    z-index: -10;
+}
+.page h1 {
+    font-size: 50px;
+    margin: 0;
+    position: sticky;
+    top: 400px;
+}
+
+
+.p1 .overlay {
+    background-image: linear-gradient(to bottom right, #0ac7757e, #0ac775);
+}
+.p2 .overlay {
+    background-image: linear-gradient(to bottom right, rgba(220, 20, 60, 0.5), crimson);
+}
+.p3 .overlay {
+    background-image: linear-gradient(to bottom right, rgba(128, 128, 128, 0.5), grey);
+}

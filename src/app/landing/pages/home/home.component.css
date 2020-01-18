@@ -574,48 +574,4 @@
 
 
 
-
-
-
-
-
-
-
-
-.slidercontainer {
-    display: flex;
-    flex-direction: column;
-    z-index: -100;
-}
-
-.page {
-    display: flex;
-    height: 100vh;
-    position: relative;
-    background-size: cover;
-}
-.page .overlay {
-    flex-grow: 1;
-}
-.page .content {
-    position: absolute;
-    color: white;
-    padding: 50px;
-}
-.page .content h1 {
-    font-size: 40px;
-    margin: 0;
-    position: sticky;
-    top: 350px;
-}
-
-
-.p1 .overlay {
-    background-image: linear-gradient(to bottom right, #0ac7757e, #0ac775);
-}
-.p2 .overlay {
-    background-image: linear-gradient(to bottom right, rgba(220, 20, 60, 0.5), crimson);
-}
-.p3 .overlay {
-    background-image: linear-gradient(to bottom right, rgba(128, 128, 128, 0.5), grey);
-}
+app-sliderbg  { display: block; }
