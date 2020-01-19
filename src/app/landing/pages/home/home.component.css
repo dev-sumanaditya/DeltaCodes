@@ -227,6 +227,7 @@
     -ms-transform: skewY(-4deg); /* IE 9 */
     -webkit-transform: skewY(-4deg); /* Safari 3-8 */
     transform: skewY(-4deg);
+    z-index: 100;
 }
 
 
@@ -379,25 +380,31 @@
 }
 .boy .on img {
     position: absolute;
-    bottom: 220px;
-    left: 180px;
+    bottom: 230px;
+    left: 350px;
     transition-duration: 0.8s !important;
 }
 
+.boy .im1 {
+    z-index: 100;
+}
 .boy .im2 {
-    bottom: 218px !important;
+    z-index: 70;
 }
 .boy .im3 {
-    bottom: 215px !important;
+    z-index: 20;
+    padding-top: 25px;
 }
 .boy .im4 {
-    left: 175px !important;
+    z-index: 20;
+    left: 330px !important;
 }
 .boy .im5 {
-    left: 173px !important;
+    left: 320px !important;
 }
 .boy .im6 {
-    left: 173px !important;
+    z-index: 15;
+    left: 320px !important; 
 }
 
 

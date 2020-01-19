@@ -16,12 +16,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   // human
   public phead = 0;
+  public pheadSkew = 0;
   public pneck = 0;
+  public pneckSkew = 0;
   public pbody = 0;
+  public pbodySkew = 0;
   public pbicep = 0;
+  public pbicepSkew = 0;
   public parm = 0;
+  public parmSkew = 0;
   public ppalm = 0;
-  public spalm = 0;
+  public ppalmSkew = 0;
+  
 
 
 
@@ -32,12 +38,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.posx = Math.floor(x/65);
     this.posy = '-' + Math.floor(y/65);
 
-    this.phead = Math.floor((x + y)/400);
-    this.pbicep = Math.floor((x + y)/330);
-    this.parm = Math.floor((x + y)/320);
-    this.ppalm = Math.floor((x + y)/320);
-    this.pneck = Math.floor((x + y)/350);
-    this.spalm = Math.floor((x + y)/350);
+    this.phead = Math.floor((x + y)/1200);
+    this.pheadSkew = Math.floor((x+y)/800);
+    
+    this.pneck = Math.floor((x + y)/1200);
+    this.pneckSkew = Math.floor((x+y)/300);
+
+    this.pbicep = Math.floor((x + y)/1000);
+    this.pbicepSkew = Math.floor((x+y)/1000);
+
+    this.parm = Math.floor((x + y)/1000);
+    this.parmSkew = Math.floor((x+y)/600);
+
+    this.ppalm = Math.floor((x + y)/600);
+    this.ppalmSkew = Math.floor((x+y)/200);
   }
 
 
