@@ -10,6 +10,9 @@ export class SliderbgComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
+
+
 
 }
