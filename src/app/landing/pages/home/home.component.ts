@@ -38,20 +38,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.posx = Math.floor(x/65);
     this.posy = '-' + Math.floor(y/65);
 
-    this.phead = Math.floor((x + y)/1200);
+    this.phead = Math.floor((x + y)/1600);
     this.pheadSkew = Math.floor((x+y)/800);
     
-    this.pneck = Math.floor((x + y)/1200);
-    this.pneckSkew = Math.floor((x+y)/300);
+    this.pneck = Math.floor((x + y)/1600);
+    this.pneckSkew = Math.floor((x+y)/800);
 
-    this.pbicep = Math.floor((x + y)/1000);
-    this.pbicepSkew = Math.floor((x+y)/1000);
+    this.pbicep = Math.floor((x + y)/1200);
+    this.pbicepSkew = Math.floor((x+y)/1200);
 
-    this.parm = Math.floor((x + y)/1000);
-    this.parmSkew = Math.floor((x+y)/600);
+    this.parm = Math.floor((x + y)/600);
+    this.parmSkew = Math.floor((x+y)/1200);
 
-    this.ppalm = Math.floor((x + y)/600);
-    this.ppalmSkew = Math.floor((x+y)/200);
+    this.ppalm = Math.floor((x + y)/200);
+    this.ppalmSkew = Math.floor((x+y)/800);
   }
 
 

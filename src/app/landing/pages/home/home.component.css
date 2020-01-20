@@ -390,6 +390,7 @@
 }
 .boy .im2 {
     z-index: 70;
+    bottom: 210px;
 }
 .boy .im3 {
     z-index: 20;
@@ -400,11 +401,13 @@
     left: 330px !important;
 }
 .boy .im5 {
-    left: 320px !important;
+    left: 315px !important;
+    bottom: 210px !important;
 }
 .boy .im6 {
     z-index: 15;
-    left: 320px !important; 
+    left: 315px !important;
+    bottom: 210px !important;
 }
 
 
