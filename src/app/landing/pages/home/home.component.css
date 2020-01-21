@@ -462,6 +462,7 @@
 
 
 
+
 .portfolio {
     min-height: 500px;
     display: flex;
@@ -583,4 +584,114 @@
     100% {
       font-size: 30px;
     }
+}
+
+
+
+.scrl {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+.scrl .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+.scrl .head h2 {
+    font-size: 50px;
+    margin: 0;
+}
+drag-scroll {
+    height: 65vh;
+    margin-top: 60px;
+}
+drag-scroll .item {
+    height: 100%;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 0 50px;
+}
+drag-scroll .i1 {
+    margin-left: 300px;
+}
+drag-scroll .item .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+}
+drag-scroll .item .content .l {
+    width: 48%;
+    height: 100%;
+    position: absolute;
+    left: -30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+drag-scroll .item .content .l .text {
+    font-size: 47px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+drag-scroll .item .content .l .bar {
+    height: 6px;
+    width: 100px;
+    background-color: #0ac775;
+    margin-left: 40px;
+    border-radius: 5px;
+}
+
+
+
+
+drag-scroll .item .content .r {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    right: -70px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+drag-scroll .item .content .r img {
+    max-width: 100%;
+    max-height: 80%;
+}
+drag-scroll .item .content .r2 img {
+    right: -40px !important;
+    max-height: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapword {
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.something {
+    height: 1000px;
 }
