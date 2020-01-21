@@ -234,26 +234,6 @@
     background-color: white;
     padding-bottom: 50px;
 }
-.how .head {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.how .head h3 {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 40px;
-    margin: 0;
-    letter-spacing: 2px;
-    font-family: 'Poppins', sans-serif;
-}
-.how .head h3 span {
-    color: #0ac775;
-    font-weight: 700;
-    font-size: 45px;
-    letter-spacing: 1px;
-    margin-right: 8px;
-}
 
 .how .opts {
     display: flex;
@@ -269,43 +249,19 @@
     flex-direction: column;
 }
 
-.how .opts .nav .vw {
-    height: 180px;
-    width: 180px;
-    border-radius: 50%;
-    overflow: hidden;
+.how .opts .nav img {
+    max-width: 90%;
     background-size: cover;
     background-position: center;
-}
-.how .opts .nav .ar {
-    background-image: url('/assets/icons/arrow.svg');
-    height: 120px;
-    width: 120px;
-    background-size: contain;
-    opacity: 1;
-}
-.how .opts .nav .ar1 {
-    transform: scaley(-1) rotate(-40deg);
-}
-.how .opts .nav .ar2 {
-    transform: rotate(-40deg);
-}
-
-.how .vw1 {
-    background-image: url('/assets/i2/5.jpg');
-}
-.how .vw2 {
-    background-image: url('/assets/i2/3.jpg');
-}
-.how .vw3 {
-    background-image: url('/assets/i2/4.jpg');
+    max-height: 210px;
 }
 .how .opts .nav h6 {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 600;
     letter-spacing: 2px;
     margin: 30px 0;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -526,7 +482,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 40px 0;
+    padding: 0 0 40px 0;
     font-size: 28px;
     font-weight: 100;
     font-family: 'Raleway', sans-serif;
@@ -592,6 +548,7 @@
     display: flex;
     flex-direction: column;
     user-select: none;
+    margin-bottom: 100px;
 }
 .scrl .head {
     display: flex;
@@ -605,9 +562,40 @@
     font-size: 50px;
     margin: 0;
 }
+.scrl .head .drag {
+    border-top: 2px dashed #333;
+    width: 120px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scrl .head .drag img {
+    height: 30px;
+    margin-top: -16px;
+    animation: leftRyt 4s infinite;
+}
+@keyframes leftRyt {
+    0% {
+        margin-left: 0px;
+    }
+    25% {
+        margin-left: -50px;
+    }
+    50% {
+        margin-left: 0px;   
+    }
+    75% {
+        margin-left: 50px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+  }
+
 drag-scroll {
     height: 65vh;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 drag-scroll .item {
     height: 100%;
@@ -649,9 +637,6 @@ drag-scroll .item .content .l .bar {
     border-radius: 5px;
 }
 
-
-
-
 drag-scroll .item .content .r {
     width: 70%;
     height: 100%;
@@ -671,17 +656,6 @@ drag-scroll .item .content .r2 img {
     max-height: 90%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .wrapword {
     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */
@@ -692,6 +666,62 @@ drag-scroll .item .content .r2 img {
     white-space: normal;
 }
 
+
+
+
+
+.map {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 140px;
+    margin-top: 120px;
+}
+.map h2 {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 5px 0;
+}
+.map img {
+    max-width: 100%;
+    margin-top: 80px;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .something {
     height: 1000px;
+}
+
+.bar {
+    height: 6px;
+    width: 80px;
+    border-radius: 3px;
+    background-color: #0ac775;
 }
