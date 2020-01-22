@@ -655,6 +655,12 @@ drag-scroll .item .content .r2 img {
     right: -40px !important;
     max-height: 90%;
 }
+.scrl2 drag-scroll .item .content .r {
+    right: 30px !important;
+}
+.scrl2 drag-scroll .item .content .r img {
+    max-width: 70% !important;
+}
 
 .wrapword {
     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
@@ -716,7 +722,7 @@ drag-scroll .item .content .r2 img {
 
 
 .something {
-    height: 1000px;
+    height: 400px;
 }
 
 .bar {
