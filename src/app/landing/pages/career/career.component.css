@@ -1,0 +1,165 @@
+.container {
+    margin-top: 143px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+}
+
+.bar {
+    height: 5px;
+    width: 90px;
+    background-color: #0ac775;
+    margin-top: 5px;
+}
+.banner {
+    display: flex;
+    min-height: 100px;
+    margin-top: 100px;
+}
+.banner .tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    user-select: none;
+}
+.banner .tab h1 {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.banner .tab img {
+    max-height: 460px;
+}
+.banner .tab p {
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 40px;
+}
+
+
+.perks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.perks h2 {
+    font-size: 50px;
+    margin: 0 0 5px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.perks p {
+    margin-top: 60px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 0.7;
+}
+.perks .list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 60px;
+}
+.perks .list .tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+.perks .list .t1 {
+    align-items: flex-end;
+}
+
+.perks .list .tab .item {
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
+}
+.perks .list .tab .item h4 {
+    margin: 0;
+}
+.perks .list .tab .item i {
+    margin: 0 15px;
+    border: 2px solid #0ac775;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0ac775;
+}
+
+
+
+.joindc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin: 70px -100px 0 -100px;
+}
+.joindc svg {
+    display: block;
+    transform-origin: bottom;
+    animation: animateWave 5s ease-in-out infinite;
+}
+@keyframes animateWave {
+    0% {
+      transform: scale(1,0.6);
+    }
+    50% {
+        transform: scale(1,0.99);
+    }
+    100% {
+      transform: scale(1,0.6);
+    }
+}
+.joindc .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.joindc .content h1 {
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+.joindc .content .btn {
+    outline: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 50px;
+    width: 200px;
+    position: relative;
+    margin-top: 30px;
+}
+.joindc .content .btn span {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: black;
+    top: -5px;
+    left: -5px;
+    position: absolute;
+    transition-duration: 0.4s;
+}
+.joindc .content .btn:hover span {
+    left: -10px;
+    top: -10px;
+}

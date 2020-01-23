@@ -5,13 +5,15 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 
 import { PanelComponent } from './panel/panel.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SliderbgComponent } from './pages/components/sliderbg/sliderbg.component';
+import { CareerComponent } from './pages/career/career.component';
+import { StartComponent } from './pages/start/start.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 
 @NgModule({
-  declarations: [PanelComponent, HomeComponent, ContactComponent, AboutComponent, SliderbgComponent],
+  declarations: [PanelComponent, HomeComponent, AboutComponent, SliderbgComponent, CareerComponent, StartComponent, BlogComponent],
   imports: [
     CommonModule,
     LandingRoutingModule,
