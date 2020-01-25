@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="navtop">
+    <h1>Let's get some idea about your Experience.</h1>
+    <div class="bar"></div>
+  </div>
+
+  <div class="form">
+    <div class="item">
+      <i class="fa fa-bullseye" aria-hidden="true"></i>
+      <input type="text" placeholder="Field of Study">
+    </div>
+    <div class="item">
+      <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+      <input type="text" placeholder="Qualification">
+    </div>
+    <div class="item">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      <input type="number" placeholder="Experience in Years">
+    </div>
+  </div>
+  
+  <div class="bottom">
+    <div class="spacer"></div>
+    <div class="submit" (click)="submit()">
+      <i *ngIf="!submitted" class="fa fa-arrow-right" aria-hidden="true"></i>
+      <i *ngIf="submitted" class="fa fa-circle-o-notch rotating" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>

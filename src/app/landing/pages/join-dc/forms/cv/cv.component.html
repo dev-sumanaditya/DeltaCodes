@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="navtop">
+    <h1>Great! Now let's upload your Resume.</h1>
+    <div class="bar"></div>
+  </div>
+
+  <div class="form">
+    <div class="item">
+      <input class="input" type="file" #fileInput (change)="onFileSelected($event.target.files)">
+      <div class="upload" (click)="fileInput.click()">Upload Resume</div>
+    </div>
+    <p>* Only pdf, doc, docx formats are allowed.</p>
+    <div class="file" *ngIf="uploaded">
+      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+      <h3>{{file.name}}</h3>
+    </div>
+  </div>
+  
+  <div class="bottom">
+    <div class="spacer"></div>
+    <div class="submit" (click)="submit()">
+      <i *ngIf="!submitted" class="fa fa-arrow-right" aria-hidden="true"></i>
+      <i *ngIf="submitted" class="fa fa-circle-o-notch rotating" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+.container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.bar {
+    height: 6px;
+    width: 60px;
+    border-radius: 3px;
+    background-color: #0ac775;
+    margin-top: 8px;
+}
+.spacer {
+    flex-grow: 1;
+}
+
+
+.navtop {
+    display: flex;
+    flex-direction: column;
+}
+.navtop  h1 {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.submit {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0ac775;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px #ddd, 0 0px 10px rgba(51, 51, 51, 0.4);
+    overflow: hidden;
+}
+.submit i {
+    font-size: 22px;
+    color: #333;
+}
+.submit:hover {
+    background-color: #21d889;
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+.rotating {
+   -webkit-animation: rotating 2s linear infinite;
+   -moz-animation: rotating 2s linear infinite;
+   -ms-animation: rotating 2s linear infinite;
+   -o-animation: rotating 2s linear infinite;
+   animation: rotating 2s linear infinite;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 50px;
+}
+.form .item {
+    position: relative;
+    height: 70px;
+}
+.form input {
+    position: absolute;
+    width: 50%;
+    border: 2px solid #0ac775;
+    padding: 12px 20px 12px 45px;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+.form i {
+    position: absolute;
+    z-index: 5;
+    color: rgba(51, 51, 51, 0.4);
+    top: 12px;
+    left: 17px;
+    font-size: 20px;
+}
