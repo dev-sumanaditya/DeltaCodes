@@ -1,3 +1,38 @@
-<p>
-  blog works!
-</p>
+<div class="container">
+
+  <div class="banner">
+    <div class="inDiv">
+      <h4>CAREERS</h4>
+      <h1>Come join the remote revolution!</h1>
+      <p>Join our diverse group of innovators-- working on cutting edge technology, solving leading industry problems and building new age tools and technologies straight from scratch.</p>
+      <a routerLink="/join" class="box">
+        <div class="h2">Be a D-coder</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="maincontent">
+    <h1 class="mainText">DeltaCodes <span>Blog</span></h1>
+    <div class="bar"></div>
+    <div class="content1">
+      <div class="item" *ngFor="let i of mainblogs">
+        <img draggable="false" src="https://s3.envato.com/files/4d191b24-4cf0-4186-8195-0f3475977527/inline_image_preview.jpg" alt="">
+        <h1>Best SEO practices</h1>
+        <p>the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h4>FIND OUT MORE</h4>
+      </div>
+    </div>
+  
+    <div class="content2">
+      <div class="item" *ngFor="let i of subblogs">
+        <div class="top"></div>
+        <div class="bttm">
+          <h4>How to design a website?</h4>
+          <div class="bar"></div>
+          <h5>KNOW MORE</h5>
+        </div>
+      </div>
+    </div>
+    <h4 class="loadMore">SHOW MORE</h4>
+  </div>
+</div>

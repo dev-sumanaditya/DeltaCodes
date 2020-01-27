@@ -141,6 +141,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 80px;
+    margin-bottom: 100px;
 }
 .dcoder .text {
     flex: 1;
@@ -148,6 +149,14 @@
     color: #333;
     line-height: 30px;
     font-size: 18px;
+}
+.dcoder .text .to1 {
+    font-weight: 600 !important;
+    color: rgba(51, 51, 51, 0.9) !important;
+}
+.dcoder .text span {
+    color: black;
+    font-weight: 200;
 }
 .dcoder .img {
     display: flex;

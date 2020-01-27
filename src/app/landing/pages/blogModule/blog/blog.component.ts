@@ -12,4 +12,7 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
   }
 
+  public mainblogs = [1,1];
+  public subblogs = [1,1,1,1,1,1,1,1,1];
+
 }

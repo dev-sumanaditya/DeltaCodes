@@ -1,0 +1,188 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 143px;
+    padding: 0px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 60vh;
+    margin: 100px 0 100px 0;
+    background-image: url('/assets/Blog/banner.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: right;
+    border-top: 1px solid #ddd;
+    user-select: none;
+}
+.inDiv {
+    height: 50vh;
+    width: 40vw;
+    background-color: white;
+    margin-left: 160px;
+    margin-top: -50px;
+    border: 1px solid #ddd;
+    border-top: 4px solid #0ac775;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.inDiv h4 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+.inDiv h1 {
+    font-size: 40px;
+}
+.inDiv .box {
+    width: max-content;
+    background-color: grey;
+    margin-top: 25px;
+    margin-left: 5px;
+    width: 200px;
+    height: 45px;
+    position: relative;
+    cursor: pointer;
+}
+.inDiv .box .h2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -5px;
+    left: -5px;
+    background-color: #000;
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inDiv .box:hover .h2 {
+    top: -8px;
+    left: -8px;
+    transition-duration: 0.3s;
+}
+
+
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    padding: 0 150px;
+}
+.mainText {
+    margin: 10px;
+    font-size: 40px;
+}
+.mainText span {
+    color: #0ac775;
+}
+.bar {
+    height: 6px;
+    width: 80px;
+    background-color: #0ac775;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+.content1 {
+    display: flex;
+}
+.item {
+    flex: 1;
+    margin: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.content1 .item img {
+    width: 100%;
+    height: 70%;
+}
+.content1 .item h1 {
+    margin: 15px 10px;
+}
+.content1 .item h1:hover {
+    color: #0ac775;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    text-decoration: underline;
+}
+.content1 .item p {
+    margin: 0 10px;
+}
+.content1 .item h4 {
+    margin: 20px 10px;
+    color: #0ac775;
+    width: max-content;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+.content1 .item h4:hover {
+    border-bottom: 2px solid #0ac775;
+    transition-duration: 0.4s;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.content2 .item {
+    max-width: 30%;
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    height: 300px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.content2 .item .top {
+    flex: 1;
+    border: 1px solid green;
+    background-image: url('https://mobirise.com/video-background/assets/images/uber.jpg');
+    background-size: cover;
+    background-position: top;
+    max-height: 60%;
+}
+.content2 .item .bttm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 50%;
+}
+.content2 .item .bttm h4 {
+    font-size: 24px;
+    margin: 20px 10px 10px 10px;
+}
+.content2 .item .bttm h5 {
+    font-size: 14px;
+    margin: 0 0 0 10px;
+    color: #0ac775;
+}
+
+
+
+
+
+
+.loadMore {
+    margin: 10px;
+    margin-bottom: 100px;
+    cursor: pointer;
+    width: max-content;
+    text-decoration: underline;
+}
+.loadMore:hover {
+    color: #0ac775;
+}
