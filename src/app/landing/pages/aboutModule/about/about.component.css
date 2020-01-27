@@ -31,10 +31,24 @@
 
 .top .items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 70px;
 }
-.top .item {
+.top .l {
+    flex: 5;
+}
+.top .r {
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.top .r img {
+    margin-top: 100px;
+    max-width: 130%;
+    max-height: 100%;
+}
+.top .l .item {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
@@ -49,7 +63,7 @@
     color: #0ac775;
 }
 .top .item p {
-    max-width: 55%;
+    max-width: 75%;
 }
 
 
@@ -71,16 +85,24 @@
     100% { margin-left: 0; opacity: 1;}
 }
 
-
+.schead {
+    margin: 10px 0 0 0;
+    font-size: 50px;
+    color: #333;
+}
+.schead span{
+    color: #0ac775;
+}
 .scroller {
-    margin-top: 250px;
+    margin-top: 80px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
 }
 .scroller .slide {
     display: flex;
     flex-direction: column;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 }
 .scroller .slide .content {
     height: 100%;
@@ -92,10 +114,12 @@
 
 .slide .content .i {
     display: flex;
-    height: 300px;
     width: 300px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+}
+.slide .content .i img {
+    max-width: 100%;
 }
 .slide .content .text {
     display: flex;
@@ -103,11 +127,34 @@
     margin-left: 50px;
 }
 .slide .content .text h2 {
-    font-size: 40px;
+    font-size: 30px;
     color: #333;
     margin: 20px 0 8px 0;
 }
 .slide .content .text p {
     max-width: 60%;
     margin-top: 30px;
+}
+
+
+.dcoder {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+.dcoder .text {
+    flex: 1;
+    font-weight: 600;
+    color: #333;
+    line-height: 30px;
+    font-size: 18px;
+}
+.dcoder .img {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.dcoder .img img {
+    max-width: 100%;
 }
