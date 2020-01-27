@@ -30,7 +30,6 @@ export class AboutComponent implements OnInit {
   
   public show(e, id) {
     var pid = '#' + id;
-    console.log(pid);
     if(e.value) {
       $(pid).addClass('start');
     }

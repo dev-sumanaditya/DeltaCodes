@@ -18,6 +18,7 @@ export class PanelComponent implements OnInit {
   Interceptor(event: RouterEvent): void {
     if (event instanceof NavigationStart) {
       this.loading = true
+      console.log(event);
     }
     if (event instanceof NavigationEnd) {
       this.loading = false

@@ -76,10 +76,12 @@
     color: rgba(51, 51, 51, 0.7) !important;
 }
 .loadingBar {
+    position: absolute;
+    top: 0;
     height: 4px;
     width: 100%;
-    background: linear-gradient(to right, #6fce16 8%, #e28915 28%, #74d419 53%);
-    animation: Shift 1.2s infinite;
+    background: linear-gradient(to right, #6fce16 25%, #f1f1f1 50%, #74d419 75%);
+    animation: Shift 1s infinite;
 }
 @keyframes Shift {
     0% {

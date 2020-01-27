@@ -1,5 +1,5 @@
 <div class="panel">
-  <div class="loadingBar" *ngIf="loading"></div>
+  <div class="loadingBar" [class.hide]="!loading"></div>
   <div class="navbar nt" [class.hide]="hideTopNav">
     <div class="le">
         <i class="fa fa-phone" aria-hidden="true"></i>
