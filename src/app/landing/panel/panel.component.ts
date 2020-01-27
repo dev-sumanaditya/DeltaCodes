@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, RouterEvent, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
@@ -15,19 +17,34 @@ export class PanelComponent implements OnInit {
     this.router.events.subscribe(this.Interceptor);
   }
 
+  public apply(status) {
+    if(status) {
+      $('#loading').addClass('hide');
+    } else {
+      $('#loading').removeClass('hide');
+    }
+  }
+
   Interceptor(event: RouterEvent): void {
     if (event instanceof NavigationStart) {
-      this.loading = true
+      this.loading = true;
       console.log(event);
+      this.apply(true);
     }
     if (event instanceof NavigationEnd) {
       this.loading = false
+      console.log(event);
+      this.apply(false);
     }
     if (event instanceof NavigationCancel) {
       this.loading = false
+      console.log(event)
+      this.apply(false);
     }
     if (event instanceof NavigationError) {
       this.loading = false
+      console.log(event)
+      this.apply(false)
     }
   }
 
@@ -40,7 +57,6 @@ export class PanelComponent implements OnInit {
 
     this.router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-        console.log(event.url);
         if(event.url !== '/') {
           this.hideTopNav = true;
         } else {
