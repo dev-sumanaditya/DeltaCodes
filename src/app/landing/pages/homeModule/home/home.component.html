@@ -27,8 +27,8 @@
               </div>
               <div class="mid" [class.leftIn]="animate">{{detail}}</div>
               <div class="btm">
-                  <div class="btn1 btn" [class.slideUp]="animate">Start Now</div>
-                  <div class="btn2 btn" [class.slideUp2]="animate">Learn More</div>
+                  <a routerLink="/start" class="btn1 btn" [class.slideUp]="animate">Start Now</a>
+                  <a routerLink="/about" class="btn2 btn" [class.slideUp2]="animate">Learn More</a>
               </div>
           </div>
       </div>
@@ -324,7 +324,7 @@
 
 <div class="dtwo">
     <h3>Start your project.</h3>
-    <div class="bttn">
+    <div class="bttn" routerLink="/start">
       <i class="material-icons">arrow_forward_ios</i>            
     </div>
 </div>
@@ -340,7 +340,4 @@
     </div>
   </div>
 
-  
-
-  <div class="something"></div>
 </div>

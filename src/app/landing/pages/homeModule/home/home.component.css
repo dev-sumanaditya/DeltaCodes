@@ -121,6 +121,7 @@
     justify-content: center;
     user-select: none;
     height: 22px;
+    text-decoration: none;
 }
 .anim .r .btm .btn1 {
     background-color: #0ac775;
@@ -132,6 +133,7 @@
 }
 .anim .r .btm .btn2 {
     margin-left: 20px;
+    color: white;
 }
 .anim .r .btm .btn2:hover {
     border-color: #0ac775c5;
@@ -420,7 +422,6 @@
 
 
 .portfolio {
-    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -701,35 +702,6 @@ drag-scroll .item .content .r2 img {
 .map img {
     max-width: 100%;
     margin-top: 80px;   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.something {
-    height: 400px;
 }
 
 .bar {
