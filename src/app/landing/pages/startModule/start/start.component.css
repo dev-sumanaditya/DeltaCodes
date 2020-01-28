@@ -72,6 +72,7 @@
     justify-content: center;
     user-select: none;
     cursor: pointer;
+    outline: none;
 }
 .menu .sections .hor {
     border: 1px solid #0ac775;

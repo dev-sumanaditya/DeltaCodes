@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    flex-direction: column;
+}
+.anim {
+    position: relative;   
+    box-sizing: border-box;
+    z-index: 0;
+}
+.anim svg {
+    position: absolute;
+    display: block;
+    transform-origin: top;
+    animation: animateWave 5s ease-in-out infinite;
+    transform: scale(1,0.6);
+}
+@keyframes animateWave {
+    0% {
+      transform: scale(1,0.5);
+    }
+    50% {
+        transform: scale(1,0.6);
+    }
+    100% {
+      transform: scale(1,0.5);
+    }
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 10;
+}
+.content .topnav {
+    display: flex;
+    padding: 30px 150px;
+}
+
+.content .topnav .brand {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #333;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.topnav .brand span {
+    font-size: 20px;
+    color: white;
+    margin-top: 8px;
+    margin-left: 2px;
+}
+.content .form {
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    height: 100%;
+}
+
