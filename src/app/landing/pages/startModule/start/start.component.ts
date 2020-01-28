@@ -49,7 +49,7 @@ export class StartComponent implements OnInit, AfterViewInit {
       }
       this.move();  
     } else {
-      if(this.left > 0) {
+      if(this.left > -5) {
         this.left--;
         this.apply(this.left);
         this.renderer.addClass(this.bike.nativeElement, 'left')

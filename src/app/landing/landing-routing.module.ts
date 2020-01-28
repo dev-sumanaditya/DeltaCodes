@@ -6,6 +6,7 @@ import { PanelComponent } from './panel/panel.component';
 
 const routes: Routes = [
     {path: 'join', loadChildren: './pages/join-dc/join-dc.module#JoinDCModule'},
+    {path: 'begin', loadChildren: './pages/begin/begin.module#BeginModule'},
     {path: '', component: PanelComponent, children: [
       {path: 'about', loadChildren: './pages/aboutModule/about.module#AboutModule'},
       {path: 'career', loadChildren: './pages/careerModule/career.module#CareerModule' },
