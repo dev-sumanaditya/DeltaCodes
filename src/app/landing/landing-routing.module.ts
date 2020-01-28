@@ -12,6 +12,7 @@ const routes: Routes = [
       {path: 'career', loadChildren: './pages/careerModule/career.module#CareerModule' },
       {path: 'start', loadChildren: './pages/startModule/start.module#StartModule' },
       {path: 'blog', loadChildren: './pages/blogModule/blog.module#BlogModule' },
+      {path: 'contact', loadChildren: './pages/contact-module/contact-module.module#ContactModuleModule'},
       {path: '', loadChildren: './pages/homeModule/home.module#HomeModule'}
     ]},
 ];
