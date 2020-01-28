@@ -1,0 +1,49 @@
+.container {
+    margin: 143px 0 0 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+.head {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.head h1 {
+    margin: 0;
+    color: #333;
+}
+.head h1 span {
+    color: #0ac775;
+}
+
+.animation {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.animation .ctr {
+    border-bottom: 2px groove rgba(51, 51, 51, 0.3);
+    max-height: 100%;
+    width: 40vw;
+    height: 100%;
+    position: relative;
+}
+.animation .ctr img {
+    height: 70px;
+    position: absolute;
+    bottom: -4px;
+    left: 40%;
+    transition-duration: 0.4s;
+}
+
+
+.left {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
