@@ -1,24 +1,45 @@
 <div class="container">
   <h1>Great! <br>Now let's get some details</h1>
-  <div class="items">
-    <div class="item">
+  <div class="items" *ngIf="showM1">
+    <div class="item" (click)="submit('Static website')">
       <img src="/assets/begin/menu/1.png" alt="">
       <h3>Static Website</h3>
     </div>
     <div class="bar"></div>
-    <div class="item">
+    <div class="item" (click)="submit('Dynamic website')">
       <img src="/assets/begin/menu/2.png" alt="">
-      <h3>Dynamic Website</h3>
+      <h3>Dynamic Web App</h3>
     </div>
     <div class="bar"></div>
-    <div class="item">
+    <div class="item" (click)="submit('Mobile application')">
       <img src="/assets/begin/menu/3.png" alt="">
       <h3>Mobile Application</h3>
     </div>
     <div class="bar"></div>
-    <div class="item">
+    <div class="item" (click)="submit('Both app and web')">
       <img src="/assets/begin/menu/4.png" alt="">
       <h3>Both App & Website</h3>
+    </div>
+  </div>
+
+  <div class="loading" *ngIf="loading">
+    <img class="rotating" src="/assets/begin/loader.png" alt="">
+  </div>
+
+  <div class="items" *ngIf="showM2">
+    <div class="item">
+      <img src="/assets/begin/menu4/1.png" alt="">
+      <h3>Small Application</h3>
+    </div>
+    <div class="bar"></div>
+    <div class="item">
+      <img src="/assets/begin/menu4/2.png" alt="">
+      <h3>Mid-sized Application</h3>
+    </div>
+    <div class="bar"></div>
+    <div class="item">
+      <img src="/assets/begin/menu4/3.png" alt="">
+      <h3>Large Application</h3>
     </div>
   </div>
 </div>
