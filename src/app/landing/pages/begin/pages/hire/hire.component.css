@@ -10,10 +10,11 @@
     color: #333;
 }
 .container h2 {
-  font-size: 20px;
-  color: #0ac775;
-  opacity: 0.8;
+    font-size: 20px;
+    color: #0ac775;
+    opacity: 0.8;
 }
+
 
 .items {
     display: flex;
@@ -43,16 +44,17 @@
 }
 .items .item h3 {
     margin-top: 60px;
+    margin-bottom: 0;
     font-size: 20px;
     color: rgba(51, 51, 51, 0.7);
     text-align: center;
 }
 .items .item:hover h3 {
-  color: #333;
+    color: #333;
 }
 .items .item p {
-  text-align: center;
-  max-width: 70%;
+    text-align: center;
+    max-width: 70%;
 }
 
 
@@ -94,4 +96,54 @@
   }
   .loading {
       margin-top: 80px;
+  }
+
+
+  .btn {
+      padding: 10px 20px;
+      border: 2px solid #0ac775;
+      margin-right: 30px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+  }
+  .btn1 {
+      background-color: #0ac775b0;
+      padding: 10px 30px;
+  }
+  .btn1:hover {
+      background-color: #0ac775;
+  }
+  .btn2 {
+      background-color: #0ac7752d;
+  }
+  .btn2:hover {
+      background-color: #0ac77546;
+  }
+
+
+  .items .form {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      margin-bottom: 40px;
+  }
+  .form .bttn {
+      margin: 20px 0;
+      width: max-content;
+  }
+  .form input {
+      border: 2px solid #0ac775;
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      outline: none;
+      border-radius: 20px;
+  }
+  .form textarea {
+      border: 2px solid #0ac775;
+      padding: 10px 20px;
+      resize: none;
+      outline: none;
+      border-radius: 20px;
   }

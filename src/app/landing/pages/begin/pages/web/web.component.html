@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Great! <br>Now let's get some details</h1>
+  <h2 *ngIf="showM1">What type of application do you need?</h2>
   <div class="items" *ngIf="showM1">
     <div class="item" (click)="submit('Static website')">
       <img src="/assets/begin/menu/1.png" alt="">
@@ -26,20 +27,24 @@
     <img class="rotating" src="/assets/begin/loader.png" alt="">
   </div>
 
+  <h2 *ngIf="showM2">What's the estimated size of your application?</h2>
   <div class="items" *ngIf="showM2">
-    <div class="item">
+    <div class="item" routerLink="/begin/hire">
       <img src="/assets/begin/menu4/1.png" alt="">
       <h3>Small Application</h3>
+      <p>Eg: Blog website, Brand website, Business websites</p>
     </div>
     <div class="bar"></div>
-    <div class="item">
+    <div class="item" routerLink="/begin/hire">
       <img src="/assets/begin/menu4/2.png" alt="">
       <h3>Mid-sized Application</h3>
+      <p>Eg: E-commerce websites, Shopping website, Online ordering</p>
     </div>
     <div class="bar"></div>
-    <div class="item">
+    <div class="item" routerLink="/begin/hire">
       <img src="/assets/begin/menu4/3.png" alt="">
       <h3>Large Application</h3>
+      <p>Eg: CRM, Warehouse management, Enterprise solutions</p>
     </div>
   </div>
 </div>

@@ -10,6 +10,12 @@
     color: #333;
 }
 
+.container h2 {
+  font-size: 20px;
+  color: #0ac775;
+  opacity: 0.8;
+}
+
 .items {
     display: flex;
     margin-top: 50px;
@@ -40,6 +46,13 @@
     margin-top: 60px;
     font-size: 20px;
     color: rgba(51, 51, 51, 0.7);
+}
+.items .item:hover h3 {
+  color: #333;
+}
+.items .item p {
+  text-align: center;
+  max-width: 70%;
 }
 
 

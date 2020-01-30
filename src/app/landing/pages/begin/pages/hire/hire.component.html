@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Great! <br>Now let's get some details</h1>
+  <h2 *ngIf="showM1">What's the scope of your work?</h2>
+  <div *ngIf="showM1" class="items">
+    <div class="item" (click)="submit('short')">
+      <img src="/assets/begin/hire/1.png" alt="">
+      <h3>Short-term tasks</h3>
+      <p>Build a pool of diverse experts for one-off tasks</p>
+    </div>
+    <div class="bar"></div>
+    <div class="item" (click)="submit('recurring')">
+      <img src="/assets/begin/hire/2.png" alt="">
+      <h3>Recurring projects</h3>
+      <p>Have a go-to team with specialized skills</p>
+    </div>
+    <div class="bar"></div>
+    <div class="item" (click)="submit('contract')">
+      <img src="/assets/begin/hire/3.png" alt="">
+      <h3>Full-time contract work</h3>
+      <p>Expand your staff with a dedicated team</p>
+    </div>
+  </div>
+
+
+  <div class="loading" *ngIf="loading">
+    <img class="rotating" src="/assets/begin/loader.png" alt="">
+  </div>
+
+  <h2 *ngIf="showM2">Are you an individual?</h2>
+  <div class="items" *ngIf="showM2">
+    <div class="btn btn1" (click)="submit2(true)">Yes</div>
+    <div class="btn btn2" (click)="submit2(false)">No! I am an enterprise</div>
+  </div>
+
+
+  <h2 *ngIf="showForm">Just few more details and you are all set to go..</h2>
+  <div class="items" *ngIf="showForm">
+    <div class="form" *ngIf="individual">
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Your Email">
+      <input type="number" placeholder="Contact Number">
+      <textarea name="" id="" cols="30" rows="5" placeholder="Anything else you want to mention?"></textarea>
+      <div routerLink="/" class="btn btn1 bttn">Submit</div>
+    </div>
+    <div class="form" *ngIf="!individual">
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Your Email">
+      <input type="text" placeholder="Company Name">
+      <input type="number" placeholder="Contact Number">
+      <textarea name="" id="" cols="30" rows="5" placeholder="Anything else you want to mention?"></textarea>
+      <div routerLink="/" class="btn btn1 bttn">Submit</div>
+    </div>
+  </div>
+
+</div>
