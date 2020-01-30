@@ -17,31 +17,41 @@ export class PanelComponent implements OnInit {
     this.router.events.subscribe(this.Interceptor);
   }
 
-  public apply(status) {
-    if(status) {
-      $('#loading').addClass('hide');
-    } else {
-      $('#loading').removeClass('hide');
-    }
-  }
-
   Interceptor(event: RouterEvent): void {
     if (event instanceof NavigationStart) {
       this.loading = true;
-      this.apply(true);
+      console.log(this.loading);
+      $('#loading').removeClass('hide');
+      return;
     }
     if (event instanceof NavigationEnd) {
-      this.loading = false
-      this.apply(false);
+      setTimeout(() => {
+        this.loading = false;
+        console.log(this.loading);
+        $('#loading').addClass('hide');
+      }, 1000);
+      return;
     }
     if (event instanceof NavigationCancel) {
-      this.loading = false
-      this.apply(false);
+      setTimeout(() => {
+        this.loading = false;
+        console.log(this.loading);
+        $('#loading').addClass('hide');
+      }, 1000);
+      return;
     }
     if (event instanceof NavigationError) {
-      this.loading = false
-      this.apply(false)
+      setTimeout(() => {
+        this.loading = false;
+        console.log(this.loading);
+        $('#loading').addClass('hide');
+      }, 1000);
+      return;
     }
+  }
+
+  click() {
+    this.loading = true;
   }
 
   ngOnInit() {
