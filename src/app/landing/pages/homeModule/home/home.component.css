@@ -880,7 +880,7 @@ drag-scroll .item {
     padding: 0 20px;
 }
 drag-scroll .i1 {
-    margin-left: 0px;
+    margin-left: 20px;
 }
 drag-scroll .item .content {
     max-height: max-content;

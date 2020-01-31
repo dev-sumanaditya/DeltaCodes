@@ -167,3 +167,168 @@
 .dcoder .img img {
     max-width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+}
+  
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+  
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .bar {
+        height: 6px;
+        width: 90px;
+        background-color: #0ac775;
+        border-radius: 10px;
+    }
+    .top {
+        margin-top: 50px;
+    }
+    .top h1 {
+        font-size: 40px;
+    }
+    
+    .top .items {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 70px;
+    }
+    .top .l {
+        flex: 1;
+    }
+    .top .r {
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    .top .r img {
+        margin-top: 0px;
+        max-width: 80%;
+        max-height: 80%;
+    }
+    .top .l .item {
+        margin-bottom: 30px;
+        margin-left: -200px;
+    }
+    .top .item h2 {
+        margin: 0;
+        color: #333;
+    }
+    .top .item h2 span {
+        color: #0ac775;
+    }
+    .top .item p {
+        max-width: 80%;
+    }
+    
+
+
+    .schead {
+        margin: 40px 0 0 0;
+        font-size: 32px;
+    }
+    .scroller {
+        margin-top: 40px;
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    .scroller .slide {
+        margin-bottom: 80px;
+    }
+    .scroller .slide .content {
+        flex-direction: column;
+        margin-left: -200px;
+        opacity: 0;
+    }
+    
+    .slide .content .i {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .slide .content .i img {
+        max-width: 50%;
+    }
+    .slide .content .text {
+        margin-left: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    .slide .content .text h2 {
+        font-size: 25px;
+        margin: 30px 0 8px 0;
+        text-align: center;
+    }
+    .slide .content .text p {
+        max-width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    @-webkit-keyframes slide {
+        0% {margin-left: -50px; opacity: 0.1;}
+        100% { margin-left: 0; opacity: 1;}
+    }
+    
+    @keyframes slide {
+        0% {margin-left: -50px; opacity: 0.1;}
+        100% { margin-left: 0; opacity: 1;}
+    }
+
+.schead2 {
+    font-size: 30px;
+}
+.dcoder {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+.dcoder .text {
+    margin-top: 60px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.dcoder .img {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.dcoder .img img {
+    max-width: 80%;
+}
+
+}
