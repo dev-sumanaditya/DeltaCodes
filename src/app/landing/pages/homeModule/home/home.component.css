@@ -800,7 +800,7 @@ drag-scroll .item .content .r2 img {
         display: flex;
         flex: 1;
         font-size: 60px;
-        padding-right: 10px;
+        padding-right: 0px;
     }
     .anim .r .top .one p {
         line-height: 60px;
@@ -809,12 +809,12 @@ drag-scroll .item .content .r2 img {
         padding-left: 10px;
     }
     .anim .r .top .three .textTop {
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 35px;
+        line-height: 35px;
     }
     .anim .r .top .three .textBtm {
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 35px;
+        line-height: 35px;
     }
     .anim .r .btm .btn {
         padding: 10px 20px;
@@ -822,11 +822,11 @@ drag-scroll .item .content .r2 img {
 
     @keyframes heightDown {
         from {height: 0px; opacity: 0;}
-        to {height: 80px; opacity: 1;}
+        to {height: 65px; opacity: 1;}
     }
     @-webkit-keyframes heightDown {
         from {height: 0px; opacity: 0;}
-        to {height: 80px; opacity: 1;}
+        to {height: 65px; opacity: 1;}
     }
 
 

@@ -174,7 +174,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.97);
     color: black;
     font-weight: 600;
     display: flex;
@@ -192,7 +192,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 70px 70px 0 50px;
+    padding: 40px 40px 0 0;
 }
 
 .sideMenu .top .close {
@@ -223,6 +223,8 @@
 .sideMenu .content ul {
     list-style-type: none;
     margin-top: -100px;
+    padding: 0;
+    margin-bottom: 0;
 }
 .sideMenu .content ul li {
     text-align: center;
@@ -231,9 +233,15 @@
 
 .sideMenu .content ul li a {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: black;
+}
+.sideMenu .content ul li .start {
+    border: 2px solid #0ac775;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #0ac77570;
 }
 
 .sideMenu .content ul li:hover a {
