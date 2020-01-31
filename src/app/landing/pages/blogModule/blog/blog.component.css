@@ -186,3 +186,139 @@
 .loadMore:hover {
     color: #0ac775;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+}
+  
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+    
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        margin-top: 143px;
+    }
+    .banner {
+        width: 100%;
+        height: 25vh;
+        margin: 100px 0 100px 0;
+    }
+
+    .inDiv {
+        height: min-content;
+        width: 50vw;
+        margin-left: 10px;
+        margin-top: -50px;
+        padding: 10px;
+    }
+    .inDiv h4 {
+        font-size: 12px;
+    }
+    .inDiv h1 {
+        font-size: 16px;
+    }
+    .inDiv p {
+        font-size: 12px;
+    }
+    .inDiv .box {
+        margin-top: 20px;
+        margin-left: 5px;
+        width: 150px;
+        height: 35px;
+    }
+    .inDiv .box .h2 {
+        font-size: 14px;
+    }
+    .inDiv .box:hover .h2 {
+        top: -8px;
+        left: -8px;
+        transition-duration: 0.3s;
+    }
+    
+
+
+    .maincontent {
+        padding: 0 10px;
+    }
+    .mainText {
+        margin: 10px 0;
+        font-size: 30px;
+    }
+    .bar {
+        margin-left: 5px;
+    }
+    .content1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .item {
+        margin: 10px 0;
+    }
+    .content1 .item img {
+        width: 100%;
+        height: 70%;
+    }
+    .content1 .item h1 {
+        font-size: 18px;
+    }
+    .content1 .item p {
+        font-size: 14px;
+    }
+    .content1 .item h4 {
+        margin: 20px 10px 10px 10px;
+    }
+
+
+
+    .content2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .content2 .item {
+        max-width: 48%;
+        min-width: 48%;
+        height: 300px;
+    }
+    .content2 .item .top {
+        flex: 1;
+        max-height: 50%;
+    }
+    .content2 .bar {
+        margin-left: 10px;
+        height: 5px;
+    }
+    .content2 .item .bttm {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        max-height: 50%;
+    }
+    .content2 .item .bttm h4 {
+        font-size: 15px;
+        margin: 10px 10px 10px 10px;
+    }
+}

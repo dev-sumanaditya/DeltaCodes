@@ -163,3 +163,140 @@
     left: -10px;
     top: -10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    
+}
+  
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+  
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    .banner {
+        flex-direction: column-reverse;
+        margin-top: 40px;
+    }
+    .banner .tab {
+        max-width: 100%;
+    }
+    .banner .tab h1 {
+        font-size: 30px;
+        margin: 40px 0 0 0;
+    }
+    .banner .tab img {
+        max-width: 100%;
+        display: block;
+    }
+    .banner .tab p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    
+
+
+    .perks {
+        align-items: center;
+        margin-top: 60px;
+    }
+    .perks h2 {
+        font-size: 30px;
+    }
+    .perks p {
+        margin-top: 40px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .perks .list {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .perks .list .tab {
+        margin: 0px;
+    }
+    .perks .list .t1 {
+        align-items: flex-start;
+    }
+    .perks .list .t1 .item {
+        flex-direction: row-reverse;
+    }
+    
+    .perks .list .tab .item {
+        display: flex;
+        margin: 15px 0;
+        align-items: center;
+    }
+    .perks .list .tab .item h4 {
+        margin: 0;
+        font-size: 14px;
+        flex-grow: 1;
+    }
+    .perks .list .tab .item i {
+        margin: 0 0;
+        height: 25px; 
+        width: 25px;
+        min-width: 25px;
+        min-height: 25px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+
+
+    .joindc {
+        margin: 0px -20px 0 -20px;
+        min-height: 50vh;
+    }
+    .joindc svg {
+        position: absolute;
+        bottom: 0;
+    }
+    @keyframes animateWave {
+        0% {
+          transform: scale(1,1.5);
+        }
+        50% {
+            transform: scale(1,2.3);
+        }
+        100% {
+          transform: scale(1,1.5);
+        }
+    }
+    .joindc .content {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .joindc .content h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+}
