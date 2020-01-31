@@ -6,11 +6,7 @@
 
 .banner {
     height: 100vh;
-   /* background-image: url('/assets/bg/bg1.jpg'); */
     background-color: transparent;
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
     padding: 300px 80px 0 150px;
     display: flex;
     flex-direction: column;
@@ -734,4 +730,349 @@ drag-scroll .item .content .r2 img {
     width: 80px;
     border-radius: 3px;
     background-color: #0ac775;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+  
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .banner {
+        height: 100vh;
+        padding: 100px 0px 0 0px;
+    }
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+    .banner {
+        height: 100vh;
+        padding: 100px 0px 0 0px;
+    }
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .banner {
+        height: 100vh;
+        padding: 250px 0px 0 0px;
+        max-width: 100%;
+    }
+    .banner .boy {
+        display: none;
+    }
+    .banner .anim {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .anim .r {
+        position: relative;
+        width: 100%;
+        margin-left: 20px;
+    }
+    .anim .r .top .one {
+        display: flex;
+        flex: 1;
+        font-size: 60px;
+        padding-right: 10px;
+    }
+    .anim .r .top .one p {
+        line-height: 60px;
+    }
+    .anim .r .top .three {
+        padding-left: 10px;
+    }
+    .anim .r .top .three .textTop {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .anim .r .top .three .textBtm {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .anim .r .btm .btn {
+        padding: 10px 20px;
+    }
+
+    @keyframes heightDown {
+        from {height: 0px; opacity: 0;}
+        to {height: 80px; opacity: 1;}
+    }
+    @-webkit-keyframes heightDown {
+        from {height: 0px; opacity: 0;}
+        to {height: 80px; opacity: 1;}
+    }
+
+
+
+    .how {
+        padding-bottom: 30px;
+    }
+    
+    .how .opts {
+        padding: 0 0px;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+    .how .opts .nav {
+        padding: 0 10px;
+    }
+    
+    .how .opts .nav img {
+        max-width: 90%;
+        max-height: 90px;
+    }
+    .how .opts .nav h6 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+
+    .scrl .head {
+        padding: 20px 10px;
+    }
+    .scrl .head h2 {
+        font-size: 35px;
+    }
+    .scrl .head .drag {
+        margin-top: 40px;
+    }
+
+
+
+
+    
+drag-scroll {
+    height: 70vh;
+    margin-top: 40px;
+    overflow: hidden;
+}
+drag-scroll .item {
+    max-height: 70vh;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+drag-scroll .i1 {
+    margin-left: 0px;
+}
+drag-scroll .item .content {
+    max-height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+}
+drag-scroll .item .content .l {
+    width: 100%;
+    position: initial;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+drag-scroll .item .content .l .text {
+    font-size: 24px;
+    text-align: center;
+}
+drag-scroll .item .content .l .bar {
+    height: 5px;
+    width: 60px;
+    margin-left: 0px;
+    margin-top: 5px;
+}
+
+drag-scroll .item .content .r {
+    width: 100%;
+    position: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+drag-scroll .item .content .r img {
+    max-width: 80%;
+    max-height: 80%;
+}
+drag-scroll .item .content .r2 img {
+    right: 0px !important;
+    max-height: 80%;
+}
+.scrl2 drag-scroll .item .content .r {
+    right: 0px !important;
+}
+.scrl2 drag-scroll .item .content .r img {
+    max-width: 80% !important;
+}
+
+.map {
+    padding: 0 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.map h2 {
+    font-size: 25px;
+}
+.map img {
+    margin-top: 80px;  
+    margin-bottom: 40px; 
+}
+
+
+.inf {
+    padding: 70px 20px 70px 20px;
+}
+.inf .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+}
+.inf .row .navi {
+    padding-right: 0px;
+    margin-bottom: 50px;
+}
+.inf .row .navi .l {
+    padding: 0;
+    flex: 1;
+}
+.inf .row .navi .l i {
+    font-size: 40px;
+}
+.inf .row .navi .r {
+    padding-top: 0px;
+    flex: 4;
+}
+.inf .row .navi .r .t {
+    font-size: 18px;
+}
+.inf .row .navi .r .b {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.dtwo {
+    height: 100px;
+    font-size: 12px;
+    letter-spacing: 8px;
+}
+.dtwo h3 {
+    width: max-content;
+    font-size: 12px;
+    text-shadow: 0px 0px #fff;
+}
+.dtwo .bttn {
+    height: 25px;
+    width: 25px;
+    margin-left: 0px;
+}
+.dtwo .bttn i {
+    font-size: 20px;
+    margin-left: 3px;
+    animation: pulseSize 2s infinite;
+}
+@keyframes pulse {
+    0% {
+      color: white;
+      border-color: white;
+      height: 30px;
+      width: 30px;
+    }
+    50% {
+      color: #0ac775;
+      border-color: #0ac775;
+      height: 40px;
+      width: 40px;
+    }
+    100% {
+      color: white;
+      border-color: white;
+      height: 30px;
+      width: 30px;
+    }
+}
+@keyframes pulseSize {
+    0% {
+      font-size: 20px;
+    }
+    50% {
+      font-size: 25px;
+    }
+    100% {
+      font-size: 20px;
+    }
+}
+
+
+
+
+.portfolio {
+    padding: 60px 20px;
+}
+
+.portfolio  h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.portfolio .bar {
+    margin-top: 5px;
+    width: 90px;
+    height: 6px;
+    background-color: #0ac775;
+}
+
+.portfolio .bttm {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.portfolio .bttm .navs {
+    width: 40%;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0;
+}
+.portfolio .bttm .navs .img {
+    width: 80%;
+    height: auto;
+    border-radius: 30px;
+    padding: 10px;
+}
+.portfolio .bttm .navs .img img {
+    height: 100%;
+    width: 100%;
+}
+.portfolio .bttm .navs h2 {
+    font-size: 14px;
+    margin-top: 20px;
+}
 }

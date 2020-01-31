@@ -293,9 +293,6 @@
     margin-top: -143px;
 }
 
-
-
-
 .hide {
     display: none;
 }
@@ -328,6 +325,9 @@
     .navbar .navs .nav {
         display: none;
     }
+    .navbar .navs .nav3 {
+        display: none;
+    }
     .hidDrop {
         display: flex !important;
     }
@@ -344,6 +344,9 @@
     .navbar .navs .nav {
         display: none;
     }
+    .navbar .navs .nav3 {
+        display: none;
+    }
     .hidDrop {
         display: flex !important;
     }
@@ -357,6 +360,9 @@
         padding: 10px 20px !important;
     }
     .navbar .navs .nav {
+        display: none;
+    }
+    .navbar .navs .nav3 {
         display: none;
     }
     .hidDrop {
