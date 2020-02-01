@@ -85,6 +85,9 @@
         flex-direction: column;
         margin-bottom: 60px;
     }
+    .con2 {
+        flex-direction: column-reverse;
+    }
     
     .content .tb {
         margin: 10px;
