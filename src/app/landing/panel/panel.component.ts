@@ -55,7 +55,7 @@ export class PanelComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(this.router.url != "/") {
+    if (this.router.url !== '/') {
       this.hideTopNav = true;
     } else {
       this.hideTopNav = false;
