@@ -108,8 +108,8 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    margin-left: -200px;
-    opacity: 0;
+    margin-left: 0px;
+    opacity: 1;
 }
 
 .slide .content .i {
@@ -184,9 +184,9 @@
 
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  
+
 }
-  
+
 
 /* Tab */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -196,7 +196,7 @@
 
 /* tab/cellphone */
 @media (min-width: 481px) and (max-width: 767px) {
-  
+
 }
 
 /* Smartphone */
@@ -204,7 +204,7 @@
     .container {
         padding: 0 20px;
     }
-    
+
     .bar {
         height: 6px;
         width: 90px;
@@ -217,7 +217,7 @@
     .top h1 {
         font-size: 40px;
     }
-    
+
     .top .items {
         display: flex;
         flex-direction: column-reverse;
@@ -250,7 +250,7 @@
     .top .item p {
         max-width: 80%;
     }
-    
+
 
 
     .schead {
@@ -267,10 +267,10 @@
     }
     .scroller .slide .content {
         flex-direction: column;
-        margin-left: -200px;
-        opacity: 0;
+        margin-left: 0px;
+        opacity: 1;
     }
-    
+
     .slide .content .i {
         width: 100%;
         align-items: center;
@@ -300,7 +300,7 @@
         0% {margin-left: -50px; opacity: 0.1;}
         100% { margin-left: 0; opacity: 1;}
     }
-    
+
     @keyframes slide {
         0% {margin-left: -50px; opacity: 0.1;}
         100% { margin-left: 0; opacity: 1;}
