@@ -12,7 +12,7 @@ export class StartComponent implements OnInit, AfterViewInit {
   public mx;
   public x;
 
-  @ViewChild('bike') bike: ElementRef;
+  @ViewChild('bike', { static: true }) bike: ElementRef;
 
   constructor(public renderer: Renderer2) { }
 

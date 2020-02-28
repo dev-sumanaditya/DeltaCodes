@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
-  @ViewChild('anim') anim: ElementRef;
+  @ViewChild('anim', { static: true }) anim: ElementRef;
 
   public posx;
   public posy;

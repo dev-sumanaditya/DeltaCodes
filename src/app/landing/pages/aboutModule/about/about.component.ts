@@ -7,9 +7,9 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 })
 export class AboutComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('i1') i1: ElementRef;
-  @ViewChild('i2') i2: ElementRef;
-  @ViewChild('i3') i3: ElementRef;
+  @ViewChild('i1', { static: true }) i1: ElementRef;
+  @ViewChild('i2', { static: true }) i2: ElementRef;
+  @ViewChild('i3', { static: true }) i3: ElementRef;
 
   constructor() { }
 

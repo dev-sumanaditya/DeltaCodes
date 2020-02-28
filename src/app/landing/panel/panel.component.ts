@@ -15,7 +15,7 @@ export class PanelComponent implements OnInit, AfterViewInit {
   public SearchWindow: Boolean = false;
   public MenuWindow: Boolean = false;
 
-  @ViewChild('loading') _ldng: ElementRef;
+  @ViewChild('loading', { static: true }) _ldng: ElementRef;
 
   constructor(private router: Router) {}
 
