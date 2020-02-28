@@ -27,24 +27,18 @@ export class PanelComponent implements OnInit, AfterViewInit {
         return;
       }
       if (event instanceof NavigationEnd) {
-        setTimeout(() => {
           this.loading = false;
           this._ldng.nativeElement.classList.add('hide');
-        }, 1000);
         return;
       }
       if (event instanceof NavigationCancel) {
-        setTimeout(() => {
           this.loading = false;
           this._ldng.nativeElement.classList.add('hide');
-        }, 1000);
         return;
       }
       if (event instanceof NavigationError) {
-        setTimeout(() => {
           this.loading = false;
           this._ldng.nativeElement.classList.add('hide');
-        }, 1000);
         return;
       }
     });

@@ -17,11 +17,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.i1.nativeElement.classList.add('start');
-    setTimeout(() => {
-      this.i2.nativeElement.classList.add('start');
-    }, 300);
-    setTimeout(() => {
-      this.i3.nativeElement.classList.add('start');
-    }, 600);
+    this.i2.nativeElement.classList.add('start');
+    this.i3.nativeElement.classList.add('start');
   }
 }

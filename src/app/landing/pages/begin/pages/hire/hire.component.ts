@@ -20,10 +20,8 @@ export class HireComponent implements OnInit {
     this.showM1 = false;
     this.loading = true;
 
-    setTimeout(() => {
       this.loading = false;
       this.showM2 = true;
-    }, 1000);
   }
 
   public individual : boolean = true;
@@ -31,10 +29,8 @@ export class HireComponent implements OnInit {
   public submit2(e) {
     this.showM2 = false;
     this.loading = true
-    setTimeout(() => {
       this.loading = false;
       this.showForm = true;
-    }, 1000);
     if(e) {
       this.individual = true;
     } else {

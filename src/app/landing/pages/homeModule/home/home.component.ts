@@ -191,28 +191,28 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
 
-  @HostListener('body:mousemove', ['$event'])
-  onMouseMove(e) {
-    const x = e.x;
-    const y = e.y;
-    this.posx = Math.floor(x / 65);
-    this.posy = '-' + Math.floor(y / 65);
+  // @HostListener('body:mousemove', ['$event'])
+  // onMouseMove(e) {
+  //   const x = e.x;
+  //   const y = e.y;
+  //   this.posx = Math.floor(x / 65);
+  //   this.posy = '-' + Math.floor(y / 65);
 
-    this.phead = Math.floor((x + y) / 1600);
-    this.pheadSkew = Math.floor((x + y) / 800);
+  //   this.phead = Math.floor((x + y) / 1600);
+  //   this.pheadSkew = Math.floor((x + y) / 800);
 
-    this.pneck = Math.floor((x + y) / 1600);
-    this.pneckSkew = Math.floor((x + y) / 800);
+  //   this.pneck = Math.floor((x + y) / 1600);
+  //   this.pneckSkew = Math.floor((x + y) / 800);
 
-    this.pbicep = Math.floor((x + y) / 1200);
-    this.pbicepSkew = Math.floor((x + y) / 1200);
+  //   this.pbicep = Math.floor((x + y) / 1200);
+  //   this.pbicepSkew = Math.floor((x + y) / 1200);
 
-    this.parm = Math.floor((x + y) / 600);
-    this.parmSkew = Math.floor((x + y) / 1200);
+  //   this.parm = Math.floor((x + y) / 600);
+  //   this.parmSkew = Math.floor((x + y) / 1200);
 
-    this.ppalm = Math.floor((x + y) / 200);
-    this.ppalmSkew = Math.floor((x + y) / 800);
-  }
+  //   this.ppalm = Math.floor((x + y) / 200);
+  //   this.ppalmSkew = Math.floor((x + y) / 800);
+  // }
 
 
 
@@ -225,17 +225,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public callHide = () => {
     this.hide = true;
     this.animate = false;
-    setTimeout(() => {
-      this.hide = false;
-    }, 400);
-    setTimeout(() => {
-      this.animate = true;
-    }, 400);
+    this.hide = false;
+    this.animate = true;
   }
 
   public time = () => {
     this.callHide();
-    setTimeout(() => {
+    // setTimeout(() => {
       this.head = this.headarray[this.index];
       this.head2 = this.headarray2[this.index];
       this.id = this.idarray[this.index];
@@ -251,6 +247,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.index++;
       }
       this.time();
-    }, this.start);
+    // }, this.start);
 }
 }

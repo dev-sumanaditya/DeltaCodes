@@ -20,9 +20,7 @@ export class WebComponent implements OnInit {
     this.showM1 = false;
     this.loading = true;
 
-    setTimeout(() => {
       this.loading = false;
       this.showM2 = true;
-    }, 1000);
   }
 }

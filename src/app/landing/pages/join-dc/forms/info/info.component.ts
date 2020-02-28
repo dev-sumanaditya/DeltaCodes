@@ -16,9 +16,7 @@ export class InfoComponent implements OnInit {
   public submitted: boolean = false;
   submit() {
     this.submitted = !this.submitted;
-    setTimeout(() => {
       this.router.navigate(['/join/location']);
-    }, 2000)
   }
 
 }

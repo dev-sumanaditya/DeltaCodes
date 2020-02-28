@@ -16,8 +16,6 @@ export class SkillsComponent implements OnInit {
   public submitted: boolean = false;
   submit() {
     this.submitted = !this.submitted;
-    setTimeout(() => {
       this.router.navigate(['/join/resume']);
-    }, 2000)
   }
 }

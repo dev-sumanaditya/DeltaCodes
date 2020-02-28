@@ -19,27 +19,23 @@ export class StartComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    setTimeout(() => {this.move(); }, 1000);
+    this.move();
   }
 
-  @HostListener('body:mousemove', ['$event'])
-  onMouseMove(e) {
-    const posx = e.x;
-    const screenx = e.view.screen.availWidth;
-    const midx = Math.round(screenx / 2);
-    this.set(midx, posx);
-  }
+  // @HostListener('body:mousemove', ['$event'])
+  // onMouseMove(e) {
+  //   const posx = e.x;
+  //   const screenx = e.view.screen.availWidth;
+  //   const midx = Math.round(screenx / 2);
+  //   this.set(midx, posx);
+  // }
 
   public set(mx, x) {
     this.mx = mx;
     this.x = x;
   }
 
-  timeout(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
   async move() {
-    await this.timeout(100);
     const current = this.left;
     if (this.x > this.mx) {
       if (this.left < 90) {

@@ -16,9 +16,7 @@ export class QualificationComponent implements OnInit {
   public submitted: boolean = false;
   submit() {
     this.submitted = !this.submitted;
-    setTimeout(() => {
       this.router.navigate(['/join/skills']);
-    }, 2000)
   }
 
 }
