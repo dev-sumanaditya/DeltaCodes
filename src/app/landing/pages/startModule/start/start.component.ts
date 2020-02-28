@@ -8,29 +8,29 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef, AfterViewInit, 
 })
 export class StartComponent implements OnInit, AfterViewInit {
 
+  public left = 40; // left percentage
+  public mx;
+  public x;
+
+  @ViewChild('bike') bike: ElementRef;
+
   constructor(public renderer: Renderer2) { }
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    setTimeout(()=> {this.move()},1000) 
+    setTimeout(() => {this.move(); }, 1000);
   }
 
-  @ViewChild('bike') bike: ElementRef;
-
-  @HostListener('document:mousemove', ['$event']) 
+  @HostListener('body:mousemove', ['$event'])
   onMouseMove(e) {
-    let posx = e.x;
-    let screenx = e.view.screen.availWidth;
-    let midx = Math.round(screenx/2);
-    this.set(midx,posx);
+    const posx = e.x;
+    const screenx = e.view.screen.availWidth;
+    const midx = Math.round(screenx / 2);
+    this.set(midx, posx);
   }
 
-  public left = 40; // left percentage
-  public mx;
-  public x;
-
-  public set(mx,x){
+  public set(mx, x) {
     this.mx = mx;
     this.x = x;
   }
@@ -40,25 +40,25 @@ export class StartComponent implements OnInit, AfterViewInit {
   }
   async move() {
     await this.timeout(100);
-    let current = this.left;
-    if(this.x > this.mx) {
-      if(this.left < 90) {
+    const current = this.left;
+    if (this.x > this.mx) {
+      if (this.left < 90) {
         this.left++;
         this.apply(this.left);
         this.renderer.removeClass(this.bike.nativeElement, 'left');
       }
-      this.move();  
+      this.move();
     } else {
-      if(this.left > -5) {
+      if (this.left > -5) {
         this.left--;
         this.apply(this.left);
-        this.renderer.addClass(this.bike.nativeElement, 'left')
+        this.renderer.addClass(this.bike.nativeElement, 'left');
       }
       this.move();
     }
   }
 
   public apply(left) {
-    this.renderer.setStyle(this.bike.nativeElement, "left", left+'%');
+    this.renderer.setStyle(this.bike.nativeElement, 'left', left + '%');
   }
 }

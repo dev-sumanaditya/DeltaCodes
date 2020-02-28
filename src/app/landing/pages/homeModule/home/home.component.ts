@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
-  @ViewChild('anim') anim: ElementRef; 
+  @ViewChild('anim') anim: ElementRef;
 
   public posx;
   public posy;
@@ -27,65 +27,44 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public parmSkew = 0;
   public ppalm = 0;
   public ppalmSkew = 0;
-  
 
 
 
-  @HostListener('document:mousemove', ['$event']) 
-  onMouseMove(e) {
-    let x = e.x;
-    let y = e.y;
-    this.posx = Math.floor(x/65);
-    this.posy = '-' + Math.floor(y/65);
+  public hide: Boolean = true;
+  public animate: Boolean = false;
 
-    this.phead = Math.floor((x + y)/1600);
-    this.pheadSkew = Math.floor((x+y)/800);
-    
-    this.pneck = Math.floor((x + y)/1600);
-    this.pneckSkew = Math.floor((x+y)/800);
+  public head = '';
+  public head2 = '';
+  public id = '';
+  public detail = '';
 
-    this.pbicep = Math.floor((x + y)/1200);
-    this.pbicepSkew = Math.floor((x+y)/1200);
-
-    this.parm = Math.floor((x + y)/600);
-    this.parmSkew = Math.floor((x+y)/1200);
-
-    this.ppalm = Math.floor((x + y)/200);
-    this.ppalmSkew = Math.floor((x+y)/800);
-  }
-
-
-
-  ngOnInit() { }
-
-  ngAfterViewInit() {
-    this.time();
-  }
-
-  public hide: boolean = true;
-  public animate: boolean = false;
+  public index = -1;
+  public start = 100;
 
   public idarray = [
     '01',
     '02',
     '03'
-  ]
+  ];
   public headarray = [
     'Start Up Your',
     'Boost Your',
     'A New Era of'
-  ]
+  ];
   public headarray2 = [
     'Dream',
     'Business',
     'Innovation'
-  ]
+  ];
 
   public detailarray = [
-    'Have an IDEA? Bring it to the world with the help of our experienced developers who dedicatedly work with you to bring out the best version of your product.',
-    'Be it SEO, Digital Marketing or just some minor tweaks to rank your website, Our specialized team of digital marketing experts can handle it all.',
-    'Drones? AI? Blockchain and Machine Learning? We love these words.. Be it autonomous flights to wearable tech, Our team of Data Scientists and Developers can build all the Algorithms.'
-  ]
+    `Have an IDEA? Bring it to the world with the help of our experienced
+     developers who dedicatedly work with you to bring out the best version of your product.`,
+    `Be it SEO, Digital Marketing or just some minor tweaks to rank your website,
+    Our specialized team of digital marketing experts can handle it all.`,
+    `Drones? AI? Blockchain and Machine Learning? We love these words.. Be
+    it autonomous flights to wearable tech, Our team of Data Scientists and Developers can build all the Algorithms.`
+  ];
 
   public services = [
     {
@@ -123,10 +102,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
     {
       name: 'Backend API Development',
       url: '/assets/i3/9.png'
-    },{
+    },
+    {
       name: 'Frontend Development',
       url: '/assets/i3/10.png'
-    },{
+    },
+    {
       name: 'API Integration',
       url: '/assets/i3/11.png'
     },
@@ -206,26 +187,52 @@ export class HomeComponent implements OnInit, AfterViewInit {
       name: 'Maintenance',
       url: '/assets/i3/3.png'
     },
-  ]
+  ];
 
-  public head = '';
-  public head2 = '';
-  public id = '';
-  public detail = '';
+
+
+  @HostListener('body:mousemove', ['$event'])
+  onMouseMove(e) {
+    const x = e.x;
+    const y = e.y;
+    this.posx = Math.floor(x / 65);
+    this.posy = '-' + Math.floor(y / 65);
+
+    this.phead = Math.floor((x + y) / 1600);
+    this.pheadSkew = Math.floor((x + y) / 800);
+
+    this.pneck = Math.floor((x + y) / 1600);
+    this.pneckSkew = Math.floor((x + y) / 800);
+
+    this.pbicep = Math.floor((x + y) / 1200);
+    this.pbicepSkew = Math.floor((x + y) / 1200);
+
+    this.parm = Math.floor((x + y) / 600);
+    this.parmSkew = Math.floor((x + y) / 1200);
+
+    this.ppalm = Math.floor((x + y) / 200);
+    this.ppalmSkew = Math.floor((x + y) / 800);
+  }
+
+
+
+  ngOnInit() { }
+
+  ngAfterViewInit() {
+    this.time();
+  }
 
   public callHide = () => {
     this.hide = true;
     this.animate = false;
-    setTimeout(()=>{
+    setTimeout(() => {
       this.hide = false;
     }, 400);
-    setTimeout(()=>{
+    setTimeout(() => {
       this.animate = true;
     }, 400);
   }
 
-  public index = -1;
-  public start = 100;
   public time = () => {
     this.callHide();
     setTimeout(() => {
@@ -233,13 +240,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.head2 = this.headarray2[this.index];
       this.id = this.idarray[this.index];
       this.detail = this.detailarray[this.index];
-      if (this.index == 0) {
+      if (this.index === 0) {
         this.start = 7000;
       }
       // Then recall the parent function to
       // create a recursive loop.
-      if(this.index == 2) {
-        this.index=0
+      if (this.index === 2) {
+        this.index = 0;
       } else {
         this.index++;
       }
