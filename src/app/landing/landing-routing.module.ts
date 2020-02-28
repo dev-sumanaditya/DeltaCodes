@@ -5,15 +5,15 @@ import { PanelComponent } from './panel/panel.component';
 
 
 const routes: Routes = [
-    {path: 'join', loadChildren: () => import('./pages/join-dc/join-dc.module').then(m => m.JoinDCModule)},
-    {path: 'begin', loadChildren: () => import('./pages/begin/begin.module').then(m => m.BeginModule)},
+    {path: 'join', loadChildren: './pages/join-dc/join-dc.module#JoinDCModule'},
+    {path: 'begin', loadChildren: './pages/begin/begin.module#BeginModule'},
     {path: '', component: PanelComponent, children: [
-      {path: 'about', loadChildren: () => import('./pages/aboutModule/about.module').then(m => m.AboutModule)},
-      {path: 'career', loadChildren: () => import('./pages/careerModule/career.module').then(m => m.CareerModule) },
-      {path: 'start', loadChildren: () => import('./pages/startModule/start.module').then(m => m.StartModule) },
-      {path: 'blog', loadChildren: () => import('./pages/blogModule/blog.module').then(m => m.BlogModule) },
-      {path: 'contact', loadChildren: () => import('./pages/contact-module/contact-module.module').then(m => m.ContactModuleModule)},
-      {path: '', loadChildren: () => import('./pages/homeModule/home.module').then(m => m.HomeModule)}
+      {path: 'about', loadChildren: './pages/aboutModule/about.module#AboutModule'},
+      {path: 'career', loadChildren: './pages/careerModule/career.module#CareerModule' },
+      {path: 'start', loadChildren: './pages/startModule/start.module#StartModule' },
+      {path: 'blog', loadChildren: './pages/blogModule/blog.module#BlogModule' },
+      {path: 'contact', loadChildren: './pages/contact-module/contact-module.module#ContactModuleModule'},
+      {path: '', loadChildren: './pages/homeModule/home.module#HomeModule'}
     ]},
 ];
 
