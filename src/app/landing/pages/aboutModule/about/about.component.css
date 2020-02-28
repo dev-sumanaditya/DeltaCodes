@@ -108,8 +108,8 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    margin-left: -200px;
-    opacity: 0;
+    margin-left: 0px;
+    opacity: 1;
 }
 
 .slide .content .i {
@@ -267,8 +267,8 @@
     }
     .scroller .slide .content {
         flex-direction: column;
-        margin-left: -200px;
-        opacity: 0;
+        margin-left: 0px;
+        opacity: 1;
     }
 
     .slide .content .i {
