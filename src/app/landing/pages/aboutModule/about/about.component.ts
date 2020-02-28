@@ -1,38 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-
-import * as $ from 'jquery';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('i1') i1: ElementRef;
+  @ViewChild('i2') i2: ElementRef;
+  @ViewChild('i3') i3: ElementRef;
 
   constructor() { }
 
-  ngOnInit() {
-    $(document).ready(function() {
-      $('#i1').addClass('start');
-      setTimeout(() => {
-        $('#i2').addClass('start');
-      }, 300);
-      setTimeout(() => {
-        $('#i3').addClass('start');
-      }, 600);
+  ngOnInit() {}
 
-      // Capture scroll events
-      $(window).scroll(function(){
-        
-      }); 
-    });
+  ngAfterViewInit() {
+    this.i1.nativeElement.classList.add('start');
+    setTimeout(() => {
+      this.i2.nativeElement.classList.add('start');
+    }, 300);
+    setTimeout(() => {
+      this.i3.nativeElement.classList.add('start');
+    }, 600);
   }
-  
-  public show(e, id) {
-    var pid = '#' + id;
-    if(e.value) {
-      $(pid).addClass('start');
-    }
-  }
-
 }
