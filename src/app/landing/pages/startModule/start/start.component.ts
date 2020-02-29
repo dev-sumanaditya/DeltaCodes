@@ -1,5 +1,14 @@
-import { Component, OnInit, HostListener, ViewChild, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  HostListener,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+  Renderer2
+} from '@angular/core';
 
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-start',
@@ -22,13 +31,17 @@ export class StartComponent implements OnInit, AfterViewInit {
     this.move();
   }
 
-  // @HostListener('body:mousemove', ['$event'])
-  // onMouseMove(e) {
-  //   const posx = e.x;
-  //   const screenx = e.view.screen.availWidth;
-  //   const midx = Math.round(screenx / 2);
-  //   this.set(midx, posx);
-  // }
+  @HostListener('body:mousemove', ['$event'])
+  onMouseMove(e) {
+    const posx = e.x;
+    const screenx = e.view.innerWidth;
+    const midx = Math.round(screenx / 2);
+    this.set(midx, posx);
+  }
+
+  listen() {
+
+  }
 
   public set(mx, x) {
     this.mx = mx;

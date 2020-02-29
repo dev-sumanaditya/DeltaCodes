@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 
+import { timer } from 'rxjs';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +9,6 @@ import { Component, OnInit, AfterViewInit, HostListener, ViewChild, ElementRef }
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
 
   @ViewChild('anim', { static: true }) anim: ElementRef;
 
@@ -191,47 +192,55 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
 
-  // @HostListener('body:mousemove', ['$event'])
-  // onMouseMove(e) {
-  //   const x = e.x;
-  //   const y = e.y;
-  //   this.posx = Math.floor(x / 65);
-  //   this.posy = '-' + Math.floor(y / 65);
+  constructor() { }
 
-  //   this.phead = Math.floor((x + y) / 1600);
-  //   this.pheadSkew = Math.floor((x + y) / 800);
+  @HostListener('body:mousemove', ['$event'])
+  onMouseMove(e) {
+    const x = e.x;
+    const y = e.y;
+    this.posx = Math.floor(x / 65);
+    this.posy = '-' + Math.floor(y / 65);
 
-  //   this.pneck = Math.floor((x + y) / 1600);
-  //   this.pneckSkew = Math.floor((x + y) / 800);
+    this.phead = Math.floor((x + y) / 1600);
+    this.pheadSkew = Math.floor((x + y) / 800);
 
-  //   this.pbicep = Math.floor((x + y) / 1200);
-  //   this.pbicepSkew = Math.floor((x + y) / 1200);
+    this.pneck = Math.floor((x + y) / 1600);
+    this.pneckSkew = Math.floor((x + y) / 800);
 
-  //   this.parm = Math.floor((x + y) / 600);
-  //   this.parmSkew = Math.floor((x + y) / 1200);
+    this.pbicep = Math.floor((x + y) / 1200);
+    this.pbicepSkew = Math.floor((x + y) / 1200);
 
-  //   this.ppalm = Math.floor((x + y) / 200);
-  //   this.ppalmSkew = Math.floor((x + y) / 800);
-  // }
+    this.parm = Math.floor((x + y) / 600);
+    this.parmSkew = Math.floor((x + y) / 1200);
+
+    this.ppalm = Math.floor((x + y) / 200);
+    this.ppalmSkew = Math.floor((x + y) / 800);
+  }
 
 
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     this.time();
+    const source = timer(100, 7000);
+    const subscribe = source.subscribe(() => {
+      this.time();
+    });
   }
 
-  public callHide = () => {
+  callHide = () => {
     this.hide = true;
     this.animate = false;
-    this.hide = false;
-    this.animate = true;
+    const numbers = timer(1000);
+    numbers.subscribe(() => {
+      this.hide = false;
+      this.animate = true;
+    })
   }
 
   public time = () => {
     this.callHide();
-    // setTimeout(() => {
       this.head = this.headarray[this.index];
       this.head2 = this.headarray2[this.index];
       this.id = this.idarray[this.index];
@@ -239,14 +248,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
       if (this.index === 0) {
         this.start = 7000;
       }
-      // Then recall the parent function to
-      // create a recursive loop.
       if (this.index === 2) {
         this.index = 0;
       } else {
         this.index++;
       }
-      this.time();
-    // }, this.start);
-}
+  }
 }
