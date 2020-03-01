@@ -621,19 +621,13 @@
         margin-left: 0px;
     }
   }
-.dsContainer {
-  overflow: hidden;
-  width: 100%;
-}
 .drag-scroll {
     height: 65vh;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
     overflow: scroll hidden;
-    scrollbar-width: none;
     user-select: none;
-    -moz-user-select: none;
     transform: scale(1);
     transition-duration: 0.2s;
     position: relative;
@@ -894,14 +888,14 @@
 .drag-scroll {
     height: 70vh;
     margin-top: 40px;
-    overflow: hidden;
-    /* overflow: hidden hidden !important; */
+    cursor: none;
 }
 .drag-scroll .item {
     max-height: 70vh;
-    width: 90%;
+    min-width: 90%;
     box-sizing: border-box;
     padding: 0 20px;
+
 }
 .drag-scroll .i1 {
     margin-left: 20px;

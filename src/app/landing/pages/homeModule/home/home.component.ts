@@ -210,11 +210,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     if (testb) {
       const ua = window.navigator.userAgent;
       console.log(ua);
-
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)) {
         this.ismob = true;
       }
-      else if(/Chrome/i.test(ua)) {
+      else {
         this.ismob = false;
       }
     }
@@ -285,8 +284,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const subscribe = source.subscribe(() => {
       this.time();
     });
-
-      console.log('yes');
       const sl1MouseDown = fromEvent<any>(this.sl1.nativeElement, 'mousedown')
       const subscription: Subscription = sl1MouseDown.subscribe(
         e => {
@@ -316,7 +313,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       const sl1MouseMove = fromEvent<any>(this.sl1.nativeElement, 'mousemove')
       const subscription4: Subscription = sl1MouseMove.subscribe(
         e => {
-          if(!this.isDown || this.ismob) return;
+          if(!this.isDown) return;
           e.preventDefault();
           const x = e.pageX - this.sl1.nativeElement.offsetLeft;
           const walk = (x- this.startX) * 3;
@@ -356,7 +353,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       const sl2MouseMove = fromEvent<any>(this.sl2.nativeElement, 'mousemove')
       const subscription8 = sl2MouseMove.subscribe(
         e => {
-          if(!this.isDown2 || this.ismob) return;
+          if(!this.isDown2) return;
           e.preventDefault();
           const x = e.pageX - this.sl2.nativeElement.offsetLeft;
           const walk = (x- this.startX2) * 3;
