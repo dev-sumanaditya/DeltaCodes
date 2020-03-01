@@ -8,7 +8,7 @@ import {
   Renderer2
 } from '@angular/core';
 
-import { Observable, of } from 'rxjs';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-start',
@@ -28,7 +28,10 @@ export class StartComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.move();
+    const numbers = interval(100);
+    numbers.subscribe(() => {
+      this.move();
+    })
   }
 
   @HostListener('body:mousemove', ['$event'])
@@ -48,22 +51,19 @@ export class StartComponent implements OnInit, AfterViewInit {
     this.x = x;
   }
 
-  async move() {
-    const current = this.left;
+  move() {
     if (this.x > this.mx) {
       if (this.left < 90) {
         this.left++;
         this.apply(this.left);
         this.renderer.removeClass(this.bike.nativeElement, 'left');
       }
-      this.move();
     } else {
       if (this.left > -5) {
         this.left--;
         this.apply(this.left);
         this.renderer.addClass(this.bike.nativeElement, 'left');
       }
-      this.move();
     }
   }
 

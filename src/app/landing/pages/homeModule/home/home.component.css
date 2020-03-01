@@ -65,7 +65,7 @@
     flex: 3;
     flex-direction: column;
     padding-left: 20px;
-    overflow: hidden;    
+    overflow: hidden;
 }
 .anim .r .top .three .textTop {
     display: flex;
@@ -612,7 +612,7 @@
         margin-left: -50px;
     }
     50% {
-        margin-left: 0px;   
+        margin-left: 0px;
     }
     75% {
         margin-left: 50px;
@@ -621,21 +621,41 @@
         margin-left: 0px;
     }
   }
-
-drag-scroll {
+.dsContainer {
+  overflow: hidden;
+  width: 100%;
+}
+.drag-scroll {
     height: 65vh;
     margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll hidden;
+    scrollbar-width: none;
+    user-select: none;
+    -moz-user-select: none;
+    transform: scale(1);
+    transition-duration: 0.2s;
+    position: relative;
+    cursor: pointer;
 }
-drag-scroll .item {
+.activeSlide {
+  transform: scale(1.02);
+  cursor: grabbing;
+}
+.drag-scroll::-webkit-scrollbar {
+  display: none;
+}
+.drag-scroll .item {
     height: 100%;
-    width: 60%;
+    min-width: 60%;
     box-sizing: border-box;
     padding: 0 50px;
 }
-drag-scroll .i1 {
+.drag-scroll .i1 {
     margin-left: 300px;
 }
-drag-scroll .item .content {
+.drag-scroll .item .content {
     height: 100%;
     width: 100%;
     display: flex;
@@ -643,7 +663,7 @@ drag-scroll .item .content {
     box-sizing: border-box;
     position: relative;
 }
-drag-scroll .item .content .l {
+.drag-scroll .item .content .l {
     width: 48%;
     height: 100%;
     position: absolute;
@@ -653,12 +673,12 @@ drag-scroll .item .content .l {
     flex-direction: column;
     justify-content: center;
 }
-drag-scroll .item .content .l .text {
+.drag-scroll .item .content .l .text {
     font-size: 47px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
 }
-drag-scroll .item .content .l .bar {
+.drag-scroll .item .content .l .bar {
     height: 6px;
     width: 100px;
     background-color: #0ac775;
@@ -666,7 +686,7 @@ drag-scroll .item .content .l .bar {
     border-radius: 5px;
 }
 
-drag-scroll .item .content .r {
+.drag-scroll .item .content .r {
     width: 70%;
     height: 100%;
     position: absolute;
@@ -676,19 +696,22 @@ drag-scroll .item .content .r {
     align-items: center;
     justify-content: flex-end;
 }
-drag-scroll .item .content .r img {
+.drag-scroll .item .content .r img {
     max-width: 100%;
     max-height: 80%;
+    -moz-user-select: none;
 }
-drag-scroll .item .content .r2 img {
+.drag-scroll .item .content .r2 img {
     right: -40px !important;
     max-height: 90%;
+    -moz-user-select: none;
 }
-.scrl2 drag-scroll .item .content .r {
+.scrl2 .drag-scroll .item .content .r {
     right: 30px !important;
 }
-.scrl2 drag-scroll .item .content .r img {
+.scrl2 .drag-scroll .item .content .r img {
     max-width: 70% !important;
+    -moz-user-select: none;
 }
 
 .wrapword {
@@ -722,7 +745,7 @@ drag-scroll .item .content .r2 img {
 }
 .map img {
     max-width: 100%;
-    margin-top: 80px;   
+    margin-top: 80px;
 }
 
 .bar {
@@ -756,7 +779,7 @@ drag-scroll .item .content .r2 img {
 @media (min-width: 1025px) and (max-width: 1280px) {
 
 }
-  
+
 
 /* Tab */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -834,7 +857,7 @@ drag-scroll .item .content .r2 img {
     .how {
         padding-bottom: 30px;
     }
-    
+
     .how .opts {
         padding: 0 0px;
         margin-top: 30px;
@@ -843,7 +866,7 @@ drag-scroll .item .content .r2 img {
     .how .opts .nav {
         padding: 0 10px;
     }
-    
+
     .how .opts .nav img {
         max-width: 90%;
         max-height: 90px;
@@ -867,22 +890,22 @@ drag-scroll .item .content .r2 img {
 
 
 
-    
-drag-scroll {
+
+.drag-scroll {
     height: 70vh;
     margin-top: 40px;
     overflow: hidden;
 }
-drag-scroll .item {
+.drag-scroll .item {
     max-height: 70vh;
     width: 90%;
     box-sizing: border-box;
     padding: 0 20px;
 }
-drag-scroll .i1 {
+.drag-scroll .i1 {
     margin-left: 20px;
 }
-drag-scroll .item .content {
+.drag-scroll .item .content {
     max-height: max-content;
     width: 100%;
     display: flex;
@@ -890,36 +913,36 @@ drag-scroll .item .content {
     box-sizing: border-box;
     position: relative;
 }
-drag-scroll .item .content .l {
+.drag-scroll .item .content .l {
     width: 100%;
     position: initial;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-drag-scroll .item .content .l .text {
+.drag-scroll .item .content .l .text {
     font-size: 24px;
     text-align: center;
 }
-drag-scroll .item .content .l .bar {
+.drag-scroll .item .content .l .bar {
     height: 5px;
     width: 60px;
     margin-left: 0px;
     margin-top: 5px;
 }
 
-drag-scroll .item .content .r {
+.drag-scroll .item .content .r {
     width: 100%;
     position: initial;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-drag-scroll .item .content .r img {
+.drag-scroll .item .content .r img {
     max-width: 80%;
     max-height: 80%;
 }
-drag-scroll .item .content .r2 img {
+.drag-scroll .item .content .r2 img {
     right: 0px !important;
     max-height: 80%;
 }
@@ -939,8 +962,8 @@ drag-scroll .item .content .r2 img {
     font-size: 25px;
 }
 .map img {
-    margin-top: 80px;  
-    margin-bottom: 40px; 
+    margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 

@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 
-import { timer } from 'rxjs';
+import {fromEvent, Observable, Subscription, timer} from 'rxjs';
+import {debounceTime, distinctUntilChanged, map, startWith, tap} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-home',
@@ -11,6 +13,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   @ViewChild('anim', { static: true }) anim: ElementRef;
+  @ViewChild('slider', { static: true }) sl1: ElementRef;
+  @ViewChild('slider2', { static: true }) sl2: ElementRef;
 
   public posx;
   public posy;
@@ -39,7 +43,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public id = '';
   public detail = '';
 
-  public index = -1;
+  public index = 1;
   public start = 100;
 
   public idarray = [
@@ -190,7 +194,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
     },
   ];
 
+  private isDown: Boolean = false;
+  private startX;
+  private scrollLeft;
 
+  private isDown2: Boolean = false;
+  private startX2;
+  private scrollLeft2;
 
   constructor() { }
 
@@ -221,37 +231,120 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {}
 
+  public time = () => {
+      this.hideit();
+      const timers = timer(200);
+      timers.subscribe(() => {
+        this.head = this.headarray[this.index];
+        this.head2 = this.headarray2[this.index];
+        this.id = this.idarray[this.index];
+        this.detail = this.detailarray[this.index];
+      });
+      this.show();
+  }
+  show = () => {
+    const numbers = timer(600);
+    numbers.subscribe(() => {
+      this.animate = true;
+      this.hide = false;
+    })
+    if (this.index === 2) {
+      this.index = 0;
+    } else {
+      this.index++;
+    }
+  }
+  hideit = () => {
+    this.hide = true;
+    this.animate = false;
+  }
+
+  public drag(e) {
+    console.log(e);
+  }
+
   ngAfterViewInit() {
     this.time();
-    const source = timer(100, 7000);
+    const source = timer(100, 6000);
     const subscribe = source.subscribe(() => {
       this.time();
     });
-  }
 
-  callHide = () => {
-    this.hide = true;
-    this.animate = false;
-    const numbers = timer(1000);
-    numbers.subscribe(() => {
-      this.hide = false;
-      this.animate = true;
-    })
-  }
 
-  public time = () => {
-    this.callHide();
-      this.head = this.headarray[this.index];
-      this.head2 = this.headarray2[this.index];
-      this.id = this.idarray[this.index];
-      this.detail = this.detailarray[this.index];
-      if (this.index === 0) {
-        this.start = 7000;
+    const sl1MouseDown = fromEvent<any>(this.sl1.nativeElement, 'mousedown')
+    const subscription: Subscription = sl1MouseDown.subscribe(
+      e => {
+        this.isDown = true;
+        this.sl1.nativeElement.classList.add('activeSlide');
+        this.startX = e.pageX - this.sl1.nativeElement.offsetLeft;
+        this.scrollLeft = this.sl1.nativeElement.scrollLeft;
       }
-      if (this.index === 2) {
-        this.index = 0;
-      } else {
-        this.index++;
+    );
+
+    const sl1MouseLeave = fromEvent<any>(this.sl1.nativeElement, 'mouseleave')
+    const subscription2: Subscription = sl1MouseLeave.subscribe(
+      e => {
+        this.isDown = false;
+        this.sl1.nativeElement.classList.remove('activeSlide');
       }
+    );
+
+    const sl1MouseUp = fromEvent<any>(this.sl1.nativeElement, 'mouseup')
+    const subscription3: Subscription = sl1MouseUp.subscribe(
+      e => {
+        this.isDown = false;
+        this.sl1.nativeElement.classList.remove('activeSlide');
+      }
+    );
+
+    const sl1MouseMove = fromEvent<any>(this.sl1.nativeElement, 'mousemove')
+    const subscription4: Subscription = sl1MouseMove.subscribe(
+      e => {
+        if(!this.isDown) return;
+        e.preventDefault();
+        const x = e.pageX - this.sl1.nativeElement.offsetLeft;
+        const walk = (x- this.startX) * 9;
+        this.sl1.nativeElement.scrollLeft = this.scrollLeft - walk;
+      }
+    );
+
+
+
+    const sl2MouseDown = fromEvent<any>(this.sl2.nativeElement, 'mousedown')
+    const subscription5 = sl2MouseDown.subscribe(
+      e => {
+        this.isDown2 = true;
+        this.sl2.nativeElement.classList.add('activeSlide');
+        this.startX2 = e.pageX - this.sl2.nativeElement.offsetLeft;
+        this.scrollLeft2 = this.sl2.nativeElement.scrollLeft;
+      }
+    );
+
+    const sl2MouseLeave = fromEvent<any>(this.sl2.nativeElement, 'mouseleave')
+    const subscription6 = sl2MouseLeave.subscribe(
+      e => {
+        this.isDown2 = false;
+        this.sl2.nativeElement.classList.remove('activeSlide');
+      }
+    );
+
+    const sl2MouseUp = fromEvent<any>(this.sl2.nativeElement, 'mouseup')
+    const subscription7 = sl2MouseUp.subscribe(
+      e => {
+        this.isDown2 = false;
+        this.sl2.nativeElement.classList.remove('activeSlide');
+      }
+    );
+
+    const sl2MouseMove = fromEvent<any>(this.sl2.nativeElement, 'mousemove')
+    const subscription8 = sl2MouseMove.subscribe(
+      e => {
+        if(!this.isDown2) return;
+        e.preventDefault();
+        const x = e.pageX - this.sl2.nativeElement.offsetLeft;
+        const walk = (x- this.startX2) * 9;
+        this.sl2.nativeElement.scrollLeft = this.scrollLeft2 - walk;
+      }
+    );
   }
 }
