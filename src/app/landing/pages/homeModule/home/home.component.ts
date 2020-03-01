@@ -1,7 +1,8 @@
 import { Component, OnInit, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 
-import {fromEvent, Observable, Subscription, timer} from 'rxjs';
-import {debounceTime, distinctUntilChanged, map, startWith, tap} from 'rxjs/operators';
+import {fromEvent, Subscription, timer} from 'rxjs';
+import { PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser} from '@angular/common';
 
 
 @Component({
@@ -202,7 +203,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private startX2;
   private scrollLeft2;
 
-  constructor() { }
+  public ismob = false;
+
+  constructor(@Inject(PLATFORM_ID) platformId: string) {
+    const testb = isPlatformBrowser(platformId);
+    if (testb) {
+      const ua = window.navigator.userAgent;
+      console.log(ua);
+
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)) {
+        this.ismob = true;
+      }
+      else if(/Chrome/i.test(ua)) {
+        this.ismob = false;
+      }
+    }
+  }
 
   @HostListener('body:mousemove', ['$event'])
   onMouseMove(e) {
@@ -270,81 +286,82 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.time();
     });
 
+      console.log('yes');
+      const sl1MouseDown = fromEvent<any>(this.sl1.nativeElement, 'mousedown')
+      const subscription: Subscription = sl1MouseDown.subscribe(
+        e => {
+          this.isDown = true;
+          this.sl1.nativeElement.classList.add('activeSlide');
+          this.startX = e.pageX - this.sl1.nativeElement.offsetLeft;
+          this.scrollLeft = this.sl1.nativeElement.scrollLeft;
+        }
+      );
 
-    const sl1MouseDown = fromEvent<any>(this.sl1.nativeElement, 'mousedown')
-    const subscription: Subscription = sl1MouseDown.subscribe(
-      e => {
-        this.isDown = true;
-        this.sl1.nativeElement.classList.add('activeSlide');
-        this.startX = e.pageX - this.sl1.nativeElement.offsetLeft;
-        this.scrollLeft = this.sl1.nativeElement.scrollLeft;
-      }
-    );
+      const sl1MouseLeave = fromEvent<any>(this.sl1.nativeElement, 'mouseleave')
+      const subscription2: Subscription = sl1MouseLeave.subscribe(
+        e => {
+          this.isDown = false;
+          this.sl1.nativeElement.classList.remove('activeSlide');
+        }
+      );
 
-    const sl1MouseLeave = fromEvent<any>(this.sl1.nativeElement, 'mouseleave')
-    const subscription2: Subscription = sl1MouseLeave.subscribe(
-      e => {
-        this.isDown = false;
-        this.sl1.nativeElement.classList.remove('activeSlide');
-      }
-    );
+      const sl1MouseUp = fromEvent<any>(this.sl1.nativeElement, 'mouseup')
+      const subscription3: Subscription = sl1MouseUp.subscribe(
+        e => {
+          this.isDown = false;
+          this.sl1.nativeElement.classList.remove('activeSlide');
+        }
+      );
 
-    const sl1MouseUp = fromEvent<any>(this.sl1.nativeElement, 'mouseup')
-    const subscription3: Subscription = sl1MouseUp.subscribe(
-      e => {
-        this.isDown = false;
-        this.sl1.nativeElement.classList.remove('activeSlide');
-      }
-    );
-
-    const sl1MouseMove = fromEvent<any>(this.sl1.nativeElement, 'mousemove')
-    const subscription4: Subscription = sl1MouseMove.subscribe(
-      e => {
-        if(!this.isDown) return;
-        e.preventDefault();
-        const x = e.pageX - this.sl1.nativeElement.offsetLeft;
-        const walk = (x- this.startX) * 9;
-        this.sl1.nativeElement.scrollLeft = this.scrollLeft - walk;
-      }
-    );
+      const sl1MouseMove = fromEvent<any>(this.sl1.nativeElement, 'mousemove')
+      const subscription4: Subscription = sl1MouseMove.subscribe(
+        e => {
+          if(!this.isDown || this.ismob) return;
+          e.preventDefault();
+          const x = e.pageX - this.sl1.nativeElement.offsetLeft;
+          const walk = (x- this.startX) * 3;
+          this.sl1.nativeElement.scrollLeft = this.scrollLeft - walk;
+          console.log('yes');
+        }
+      );
 
 
 
-    const sl2MouseDown = fromEvent<any>(this.sl2.nativeElement, 'mousedown')
-    const subscription5 = sl2MouseDown.subscribe(
-      e => {
-        this.isDown2 = true;
-        this.sl2.nativeElement.classList.add('activeSlide');
-        this.startX2 = e.pageX - this.sl2.nativeElement.offsetLeft;
-        this.scrollLeft2 = this.sl2.nativeElement.scrollLeft;
-      }
-    );
+      const sl2MouseDown = fromEvent<any>(this.sl2.nativeElement, 'mousedown')
+      const subscription5 = sl2MouseDown.subscribe(
+        e => {
+          this.isDown2 = true;
+          this.sl2.nativeElement.classList.add('activeSlide');
+          this.startX2 = e.pageX - this.sl2.nativeElement.offsetLeft;
+          this.scrollLeft2 = this.sl2.nativeElement.scrollLeft;
+        }
+      );
 
-    const sl2MouseLeave = fromEvent<any>(this.sl2.nativeElement, 'mouseleave')
-    const subscription6 = sl2MouseLeave.subscribe(
-      e => {
-        this.isDown2 = false;
-        this.sl2.nativeElement.classList.remove('activeSlide');
-      }
-    );
+      const sl2MouseLeave = fromEvent<any>(this.sl2.nativeElement, 'mouseleave')
+      const subscription6 = sl2MouseLeave.subscribe(
+        e => {
+          this.isDown2 = false;
+          this.sl2.nativeElement.classList.remove('activeSlide');
+        }
+      );
 
-    const sl2MouseUp = fromEvent<any>(this.sl2.nativeElement, 'mouseup')
-    const subscription7 = sl2MouseUp.subscribe(
-      e => {
-        this.isDown2 = false;
-        this.sl2.nativeElement.classList.remove('activeSlide');
-      }
-    );
+      const sl2MouseUp = fromEvent<any>(this.sl2.nativeElement, 'mouseup')
+      const subscription7 = sl2MouseUp.subscribe(
+        e => {
+          this.isDown2 = false;
+          this.sl2.nativeElement.classList.remove('activeSlide');
+        }
+      );
 
-    const sl2MouseMove = fromEvent<any>(this.sl2.nativeElement, 'mousemove')
-    const subscription8 = sl2MouseMove.subscribe(
-      e => {
-        if(!this.isDown2) return;
-        e.preventDefault();
-        const x = e.pageX - this.sl2.nativeElement.offsetLeft;
-        const walk = (x- this.startX2) * 9;
-        this.sl2.nativeElement.scrollLeft = this.scrollLeft2 - walk;
-      }
-    );
+      const sl2MouseMove = fromEvent<any>(this.sl2.nativeElement, 'mousemove')
+      const subscription8 = sl2MouseMove.subscribe(
+        e => {
+          if(!this.isDown2 || this.ismob) return;
+          e.preventDefault();
+          const x = e.pageX - this.sl2.nativeElement.offsetLeft;
+          const walk = (x- this.startX2) * 3;
+          this.sl2.nativeElement.scrollLeft = this.scrollLeft2 - walk;
+        }
+      );
   }
 }

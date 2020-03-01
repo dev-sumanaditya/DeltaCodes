@@ -895,6 +895,7 @@
     height: 70vh;
     margin-top: 40px;
     overflow: hidden;
+    /* overflow: hidden hidden !important; */
 }
 .drag-scroll .item {
     max-height: 70vh;
