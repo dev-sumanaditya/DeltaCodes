@@ -8,7 +8,7 @@ import { HomeRoutingModule } from './home-routing.module';
   declarations: [HomeComponent, SliderbgComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    HomeRoutingModule
   ]
 })
 export class HomeModule { }

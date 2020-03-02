@@ -7,10 +7,11 @@ import { LocationComponent } from './forms/location/location.component';
 import { QualificationComponent } from './forms/qualification/qualification.component';
 import { SkillsComponent } from './forms/skills/skills.component';
 import { CvComponent } from './forms/cv/cv.component';
+import { SuccessComponent } from './forms/success/success.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, InfoComponent, LocationComponent, QualificationComponent, SkillsComponent, CvComponent],
+  declarations: [HomeComponent, InfoComponent, LocationComponent, QualificationComponent, SkillsComponent, CvComponent, SuccessComponent],
   imports: [
     CommonModule,
     JoinDCRoutingModule

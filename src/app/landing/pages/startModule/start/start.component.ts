@@ -5,10 +5,14 @@ import {
   ViewChild,
   ElementRef,
   AfterViewInit,
-  Renderer2
+  Renderer2,
+  Inject
 } from '@angular/core';
 
 import { interval } from 'rxjs';
+
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID } from "@angular/core";
 
 @Component({
   selector: 'app-start',
@@ -23,15 +27,17 @@ export class StartComponent implements OnInit, AfterViewInit {
 
   @ViewChild('bike', { static: true }) bike: ElementRef;
 
-  constructor(public renderer: Renderer2) { }
+  constructor(public renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    const numbers = interval(100);
-    numbers.subscribe(() => {
-      this.move();
-    })
+    if (isPlatformBrowser(this.platformId)) {
+      const numbers = interval(100);
+      numbers.subscribe(() => {
+        this.move();
+      })
+    }
   }
 
   @HostListener('body:mousemove', ['$event'])

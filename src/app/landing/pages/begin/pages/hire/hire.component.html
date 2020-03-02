@@ -2,19 +2,19 @@
   <h1>Great! <br>Now let's get some details</h1>
   <h2 *ngIf="showM1">What's the scope of your work?</h2>
   <div *ngIf="showM1" class="items">
-    <div class="item" (click)="submit('short')">
+    <div class="item" (click)="submit(1)">
       <img src="/assets/begin/hire/1.png" alt="">
       <h3>Short-term tasks</h3>
       <p>Build a pool of diverse experts for one-off tasks</p>
     </div>
     <div class="bar"></div>
-    <div class="item" (click)="submit('recurring')">
+    <div class="item" (click)="submit(2)">
       <img src="/assets/begin/hire/2.png" alt="">
       <h3>Recurring projects</h3>
       <p>Have a go-to team with specialized skills</p>
     </div>
     <div class="bar"></div>
-    <div class="item" (click)="submit('contract')">
+    <div class="item" (click)="submit(3)">
       <img src="/assets/begin/hire/3.png" alt="">
       <h3>Full-time contract work</h3>
       <p>Expand your staff with a dedicated team</p>
@@ -35,21 +35,17 @@
 
   <h2 *ngIf="showForm">Just few more details and you are all set to go..</h2>
   <div class="items" *ngIf="showForm">
-    <div class="form" *ngIf="individual">
-      <input type="text" placeholder="Full Name">
-      <input type="email" placeholder="Your Email">
-      <input type="number" placeholder="Contact Number">
-      <textarea name="" id="" cols="30" rows="5" placeholder="Anything else you want to mention?"></textarea>
-      <div routerLink="/" class="btn btn1 bttn">Submit</div>
-    </div>
-    <div class="form" *ngIf="!individual">
-      <input type="text" placeholder="Full Name">
-      <input type="email" placeholder="Your Email">
-      <input type="text" placeholder="Company Name">
-      <input type="number" placeholder="Contact Number">
-      <textarea name="" id="" cols="30" rows="5" placeholder="Anything else you want to mention?"></textarea>
-      <div routerLink="/" class="btn btn1 bttn">Submit</div>
-    </div>
+    <form class="form" [formGroup]="myForm">
+        <input type="text" formControlName="name" placeholder="Full Name*" maxlength="80" [ngClass]="{ 'invalid': submitted && f.name.errors }">
+        <input type="email" formControlName="email" placeholder="Your Email*" maxlength="80" [ngClass]="{ 'invalid': submitted && f.email.errors }">
+        <input *ngIf="!individual" formControlName="cname" type="text" placeholder="Company Name" maxlength="80" [ngClass]="{ 'invalid': submitted && f.cname.errors }">
+        <input type="text" formControlName="contact" placeholder="10 digit Contact Number*" pattern="\d*" maxlength="10" [ngClass]="{ 'invalid': submitted && f.contact.errors }">
+        <textarea formControlName="query" cols="30" rows="5" placeholder="Anything else you want to mention?" [ngClass]="{ 'invalid': submitted && f.query.errors }"></textarea>
+
+        <div class="error" *ngIf="f.email.errors && submitted">Email must be a valid email address</div>
+
+        <div (click)="submit3(myForm)" class="btn btn1 bttn">Submit</div>
+    </form>
   </div>
 
 </div>

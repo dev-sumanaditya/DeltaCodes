@@ -6,6 +6,7 @@ import { ServComponent } from './pages/serv/serv.component';
 import { TechComponent } from './pages/tech/tech.component';
 import { HireComponent } from './pages/hire/hire.component';
 import { InfoComponent } from './pages/info/info.component';
+import { SuccessComponent } from './pages/success/success.component';
 
 const routes: Routes = [
   {path: '', component: PanelComponent, children: [
@@ -13,6 +14,7 @@ const routes: Routes = [
     {path: 'tech', component: TechComponent},
     {path: 'hire', component: HireComponent},
     {path: 'info', component:InfoComponent},
+    {path: 'success', component: SuccessComponent},
     {path: '', component: WebComponent},
   ]}
 ];

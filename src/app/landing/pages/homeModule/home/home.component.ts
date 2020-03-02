@@ -1,16 +1,16 @@
-import { Component, OnInit, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, HostListener, ViewChild, ElementRef, OnDestroy, Inject } from '@angular/core';
 
 import {fromEvent, Subscription, timer} from 'rxjs';
-import { PLATFORM_ID, Inject } from '@angular/core';
-import { isPlatformBrowser} from '@angular/common';
 
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID } from "@angular/core";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   @ViewChild('anim', { static: true }) anim: ElementRef;
@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public id = '';
   public detail = '';
 
-  public index = 1;
+  public index = 0;
   public start = 100;
 
   public idarray = [
@@ -195,29 +195,24 @@ export class HomeComponent implements OnInit, AfterViewInit {
     },
   ];
 
-  private isDown: Boolean = false;
-  private startX;
-  private scrollLeft;
+  public isDown: Boolean = false;
+  public startX;
+  public scrollLeft;
 
-  private isDown2: Boolean = false;
-  private startX2;
-  private scrollLeft2;
+  public isDown2: Boolean = false;
+  public startX2;
+  public scrollLeft2;
 
-  public ismob = false;
+  public subscription: Subscription;
+  public subscription2: Subscription;
+  public subscription3: Subscription;
+  public subscription4: Subscription;
+  public subscription5: Subscription;
+  public subscription6: Subscription;
+  public subscription7: Subscription;
+  public subscription8: Subscription;
 
-  constructor(@Inject(PLATFORM_ID) platformId: string) {
-    const testb = isPlatformBrowser(platformId);
-    if (testb) {
-      const ua = window.navigator.userAgent;
-      console.log(ua);
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)) {
-        this.ismob = true;
-      }
-      else {
-        this.ismob = false;
-      }
-    }
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   @HostListener('body:mousemove', ['$event'])
   onMouseMove(e) {
@@ -247,6 +242,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   public time = () => {
+    if (isPlatformBrowser(this.platformId)) {
       this.hideit();
       const timers = timer(200);
       timers.subscribe(() => {
@@ -256,13 +252,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.detail = this.detailarray[this.index];
       });
       this.show();
+    }
   }
   show = () => {
-    const numbers = timer(600);
-    numbers.subscribe(() => {
-      this.animate = true;
-      this.hide = false;
-    })
+    if (isPlatformBrowser(this.platformId)) {
+      const tr = timer(600);
+      tr.subscribe(() => {
+        this.animate = true;
+        this.hide = false;
+      })
+    }
     if (this.index === 2) {
       this.index = 0;
     } else {
@@ -274,18 +273,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.animate = false;
   }
 
-  public drag(e) {
-    console.log(e);
-  }
-
   ngAfterViewInit() {
-    this.time();
-    const source = timer(100, 6000);
-    const subscribe = source.subscribe(() => {
-      this.time();
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      const source = timer(100, 6000);
+      const subscribe = source.subscribe(() => {
+        this.time();
+      });
+    }
+
+
       const sl1MouseDown = fromEvent<any>(this.sl1.nativeElement, 'mousedown')
-      const subscription: Subscription = sl1MouseDown.subscribe(
+      this.subscription = sl1MouseDown.subscribe(
         e => {
           this.isDown = true;
           this.sl1.nativeElement.classList.add('activeSlide');
@@ -295,7 +293,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       );
 
       const sl1MouseLeave = fromEvent<any>(this.sl1.nativeElement, 'mouseleave')
-      const subscription2: Subscription = sl1MouseLeave.subscribe(
+      this.subscription2 = sl1MouseLeave.subscribe(
         e => {
           this.isDown = false;
           this.sl1.nativeElement.classList.remove('activeSlide');
@@ -303,7 +301,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       );
 
       const sl1MouseUp = fromEvent<any>(this.sl1.nativeElement, 'mouseup')
-      const subscription3: Subscription = sl1MouseUp.subscribe(
+      this.subscription3 = sl1MouseUp.subscribe(
         e => {
           this.isDown = false;
           this.sl1.nativeElement.classList.remove('activeSlide');
@@ -311,21 +309,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
       );
 
       const sl1MouseMove = fromEvent<any>(this.sl1.nativeElement, 'mousemove')
-      const subscription4: Subscription = sl1MouseMove.subscribe(
+      this.subscription4 = sl1MouseMove.subscribe(
         e => {
           if(!this.isDown) return;
           e.preventDefault();
           const x = e.pageX - this.sl1.nativeElement.offsetLeft;
           const walk = (x- this.startX) * 3;
           this.sl1.nativeElement.scrollLeft = this.scrollLeft - walk;
-          console.log('yes');
         }
       );
 
 
 
       const sl2MouseDown = fromEvent<any>(this.sl2.nativeElement, 'mousedown')
-      const subscription5 = sl2MouseDown.subscribe(
+      this.subscription5 = sl2MouseDown.subscribe(
         e => {
           this.isDown2 = true;
           this.sl2.nativeElement.classList.add('activeSlide');
@@ -335,7 +332,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       );
 
       const sl2MouseLeave = fromEvent<any>(this.sl2.nativeElement, 'mouseleave')
-      const subscription6 = sl2MouseLeave.subscribe(
+      this.subscription6 = sl2MouseLeave.subscribe(
         e => {
           this.isDown2 = false;
           this.sl2.nativeElement.classList.remove('activeSlide');
@@ -343,7 +340,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       );
 
       const sl2MouseUp = fromEvent<any>(this.sl2.nativeElement, 'mouseup')
-      const subscription7 = sl2MouseUp.subscribe(
+      this.subscription7 = sl2MouseUp.subscribe(
         e => {
           this.isDown2 = false;
           this.sl2.nativeElement.classList.remove('activeSlide');
@@ -351,7 +348,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       );
 
       const sl2MouseMove = fromEvent<any>(this.sl2.nativeElement, 'mousemove')
-      const subscription8 = sl2MouseMove.subscribe(
+      this.subscription8 = sl2MouseMove.subscribe(
         e => {
           if(!this.isDown2) return;
           e.preventDefault();
@@ -360,5 +357,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
           this.sl2.nativeElement.scrollLeft = this.scrollLeft2 - walk;
         }
       );
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+    this.subscription2.unsubscribe();
+    this.subscription3.unsubscribe();
+    this.subscription4.unsubscribe();
+    this.subscription5.unsubscribe();
+    this.subscription6.unsubscribe();
+    this.subscription7.unsubscribe();
+    this.subscription8.unsubscribe();
   }
 }
