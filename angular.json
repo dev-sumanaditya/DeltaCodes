@@ -71,7 +71,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "DeltaCodes:build:production"
+              "browserTarget": "DeltaCodes:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },

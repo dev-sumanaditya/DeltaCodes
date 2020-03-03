@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="mainMenu">
+    <h1>DeltaCodes Learning</h1>
+    <div class="child">
+      <div class="menuItem" *ngFor="let i of dummy; let ind = index">
+        <div class="top">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <a (click)="toggle(ind)" [routerLink]="['./reader',i.url]" [class.active1]="ind === currentIndex">{{i.head}}</a>
+        </div>
+        <div class="subMenu" [class.shrink]="ind !== currentIndex">
+          <div class="subItem" *ngFor="let i2 of i.list">
+            <i class="fa fa-circle" aria-hidden="true"></i>
+            <h4 [routerLink]="['./reader',i.url]" [fragment]="i2.url">{{i2.name}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="subNav">
+    <div class="child">
+      <div class="top">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" placeholder="Search by topic.." spellcheck="flase" maxlength="120">
+      </div>
+      <div class="results">
+        <div class="resItem" *ngFor="let i of d2">
+          <h4 class="name">Some result</h4>
+          <p class="info">Some results can be useful now</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

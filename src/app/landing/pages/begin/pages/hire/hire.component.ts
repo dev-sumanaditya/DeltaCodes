@@ -40,7 +40,6 @@ export class HireComponent implements OnInit {
 
   public submit3(form: FormGroup) {
     this.submitted = true;
-    console.log(this.myForm.value);
     if (this.myForm.invalid) return;
     else {
       this._stService.setInfo(this.myForm.value);
