@@ -40,6 +40,10 @@
     opacity: 1;
   }
 }
+#successAnimation {
+  height: 150px;
+  width: 150px;
+}
 #successAnimationCircle {
   stroke-dasharray: 251px 251px;
   stroke: #0ac775;
@@ -99,4 +103,65 @@
   color: #0ac775;
   font-weight: bold;
   font-size: 18px;
+}
+
+
+
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+
+  #successAnimation {
+    height: 90px;
+    width: 90px;
+    margin-left: -12px;
+  }
+  .container {
+    padding: 0px 30px;
+  }
+  .c1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .c1 h2 {
+    font-size: 20px;
+  }
+  .c1 h3 {
+    font-size: 16px;
+  }
+  .c1 .r {
+    margin-left: 0px;
+  }
+  .c1 span {
+    color: #0ac775;
+  }
+  .c1 li {
+    margin: 15px 0;
+    color: #0ac775;
+  }
+  .c1 li a {
+    color: #0ac775;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
 }

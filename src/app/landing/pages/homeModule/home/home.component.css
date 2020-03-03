@@ -231,6 +231,7 @@
     flex-direction: column;
     background-color: white;
     padding-bottom: 50px;
+    margin-top: -10px;
 }
 
 .how .opts {
@@ -795,7 +796,7 @@
 /* Smartphone */
 @media (min-width: 320px) and (max-width: 480px) {
     .banner {
-        height: 100vh;
+        height: 90vh;
         padding: 250px 0px 0 0px;
         max-width: 100%;
     }
