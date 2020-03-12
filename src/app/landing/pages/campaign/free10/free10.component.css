@@ -1,0 +1,355 @@
+.container {
+  margin-top: 143px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.banner {
+  background: url('https://www.graduateguide.co.uk/images/uploads/work-from-home-banner.jpg');
+  min-height: 50vh;
+  background-size: cover;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(90deg, rgba(2,0,36,0.9) 0%, rgba(9,9,121,0.8) 35%, rgba(0, 255, 213, 0.8) 100%);
+}
+.overlay h1 {
+  font-size: 40px;
+}
+.overlay button {
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 20px;
+  background: transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+.overlay button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+.timer {
+  background: url('https://wallpaperaccess.com/full/1638158.jpg');
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 50px;
+}
+
+.tmchild {
+  width: 80%;
+  min-height: 60vh;
+  box-sizing: border-box;
+  background-image: linear-gradient(to top, #cc208dad 0%, #6613d2bd 100%);
+  padding: 70px 100px;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.tmchild .l {
+  flex: 1;
+}
+.tmchild .l h2 {
+  font-size: 45px;
+  font-weight: 800;
+  margin: 0;
+}
+.tmchild .l p {
+  font-size: 16px;
+}
+.tmchild .l .register {
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  width: max-content;
+  margin-top: 40px;
+  user-select: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  font-weight: bolder;
+}
+.tmchild .l .register:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.tmchild .r {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.tmchild .r .item {
+  width: 100px;
+  margin-left: 20px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  user-select: none;
+}
+.tmchild .r .itc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.tmchild .r .item h2 {
+  font-size: 40px;
+  margin: 0;
+  font-weight: 400;
+  z-index: 10;
+}
+.tmchild .r .item h3 {
+  margin: 5px 0 20px 0;
+  z-index: 10;
+}
+
+#i1 {
+  /* box-shadow: 0 4px 6px -1px rgba(0, 194, 233, 0.425), 0 2px 4px -1px rgba(0, 194, 233, 0.363); */
+  background-color: #00C3E9;
+  box-shadow: 0px 0px 10px 5px #0ff;
+}
+#i2 {
+  background-color: #FF6BD3;
+  box-shadow: 0px 0px 10px 5px rgb(255, 85, 204);
+}
+#i3 {
+  background-color: #00CCA4;
+  box-shadow: 0px 0px 10px 5px rgb(89, 202, 180);
+}
+#i4 {
+  background-color: #FF962B;
+  box-shadow: 0px 0px 10px 5px rgb(253, 171, 88);
+}
+
+
+
+.info {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.info img {
+  height: 400px;
+  position: absolute;
+  bottom: 60px;
+  right: 100px;
+  z-index: 0;
+}
+.info .cntnt {
+  padding: 100px 150px;
+  z-index: 100;
+}
+.info .cntnt h1 {
+  font-size: 60px;
+  margin: 0;
+  font-weight: 300;
+}
+.info .cntnt p {
+  font-size: 20px;
+  width: 40%;
+  margin-left: 5px;
+  margin-top: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #333;
+}
+.info .cntnt p span {
+  color: #0ac775;
+  font-weight: 600;
+}
+.perks {
+  margin-top: 80px;
+  margin-left: 5px;
+}
+.perks h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 40px;
+}
+.perks li {
+  margin-bottom: 20px;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin: 80px 0;
+}
+.roadmap h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
+}
+.roadmap .ct {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  width: 100%;
+}
+.roadmap .ct .l {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.roadmap .ct .r {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.roadmap .ct .item {
+  margin: 16px 20px;
+  font-size: 20px;
+  color: rgba(51, 51, 51, 0.7);
+}
+.roadmap .ct .l .item {
+  text-align: end;
+}
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .timer {
+    min-height: 80vh;
+    margin: 0;
+    padding: 25px;
+  }
+  .tmchild {
+    width: 100%;
+    padding: 70px 20px;
+    flex-direction: column;
+  }
+  .tmchild .l h2 {
+    font-size: 35px;
+  }
+  .tmchild .r {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .tmchild .r .item {
+    width: 20%;
+    margin-left: 0px;
+  }
+  .tmchild .r .item h2 {
+    font-size: 30px;
+  }
+  .tmchild .r .item h3 {
+    margin: 10px 0 20px 0;
+    font-size: 12px;
+  }
+
+
+  .banner {
+    min-height: 50vh;
+  }
+  .overlay {
+    padding: 30px 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .overlay h1 {
+    font-size: 35px;
+  }
+  .overlay button {
+    margin-top: 30px;
+  }
+
+
+  .info img {
+    height: 120px;
+    bottom: 20px;
+    right: 10px;
+  }
+  .info .cntnt {
+    padding: 100px 20px;
+  }
+  .info .cntnt h1 {
+    font-size: 40px;
+  }
+  .info .cntnt p {
+    font-size: 18px;
+    width: 80%;
+    margin-top: 20px;
+    line-height: 25px;
+  }
+  .perks ul {
+    padding-left: 20px;
+    margin-bottom: 60px;
+  }
+
+
+
+
+  .roadmap {
+    margin: 10px 0 80px 0;
+  }
+  .roadmap h2 {
+    font-size: 28px;
+  }
+  .roadmap .ct {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  .roadmap .ct .l .item {
+    margin: 10px 5px 10px 0;
+    font-size: 12px;
+    color: rgba(51, 51, 51, 1);
+  }
+  .roadmap .ct .r .item {
+    margin: 10px 0 10px 5px;
+    font-size: 12px;
+    color: rgba(51, 51, 51, 1);
+  }
+
+}

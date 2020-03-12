@@ -14,6 +14,7 @@ const routes: Routes = [
       {path: 'start', loadChildren: () => import('./pages/startModule/start.module').then(m => m.StartModule) },
       {path: 'blog', loadChildren: () => import('./pages/blogModule/blog.module').then(m => m.BlogModule) },
       {path: 'contact', loadChildren: () => import('./pages/contact-module/contact-module.module').then(m => m.ContactModuleModule)},
+      {path: 'campaign', loadChildren: () => import('./pages/campaign/campaign.module').then(m => m.CampaignModule)},
       {path: '', loadChildren: () => import('./pages/homeModule/home.module').then(m => m.HomeModule)}
     ]},
 ];

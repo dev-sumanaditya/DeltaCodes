@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="banner">
+    <div class="overlay">
+      <h1>Get your free website developed by professionals</h1>
+      <button [routerLink]="['register']">Register now</button>
+    </div>
+  </div>
+
+  <div class="info">
+    <img src="/assets/freeWebsite/ic1.png" alt="">
+    <div class="cntnt">
+      <h1>Free Website Development</h1>
+      <p><span>10 Winners</span> will get a chance to get their free website developed by professionals at DeltaCodes</p>
+      <div class="perks">
+        <h2>What you get:</h2>
+        <ul>
+          <li>Completely free of cost</li>
+          <li>3 Months of free support</li>
+          <li>Dedicated development team</li>
+          <li>Free mentorship</li>
+          <li>Best in class website</li>
+          <li>Safe from online threats</li>
+          <li>A chance to work with DeltaCodes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="roadmap">
+    <h2>Timeline</h2>
+    <div class="ct">
+      <div class="l">
+        <div class="item">Registration Ends</div>
+        <div class="item">Results Announcement</div>
+        <div class="item">Development begins</div>
+        <div class="item">Project Delivery</div>
+      </div>
+      <div class="r">
+        <div class="item">Apr 21, 2020</div>
+        <div class="item">Apr 25, 2020</div>
+        <div class="item">May 1, 2020</div>
+        <div class="item">By Jul 1, 2021</div>
+      </div>
+    </div>
+  </div>
+  <div class="timer">
+    <div class="tmchild">
+      <div class="l">
+        <h2>Countdown<br>to end of registration</h2>
+        <p>Give your idea a boost.<br>Register now and get your free website developed<br>by professioals at DeltaCodes</p>
+        <div class="register" [routerLink]="['register']">Register now</div>
+      </div>
+      <div class="r">
+        <div class="item"> <div class="itc" id="i1" [style.height.%]="timeObj.dayht"></div> <h2>{{timeObj.day}}</h2><h3>DAYS</h3></div>
+        <div class="item"> <div class="itc" id="i2" [style.height.%]="timeObj.hrsht"></div> <h2>{{timeObj.hrs}}</h2><h3>HOURS</h3></div>
+        <div class="item"> <div class="itc" id="i3" [style.height.%]="timeObj.minht"></div> <h2>{{timeObj.min}}</h2><h3>MIN</h3></div>
+        <div class="item"> <div class="itc" id="i4" [style.height.%]="timeObj.secht"></div> <h2>{{timeObj.sec}}</h2><h3>SEC</h3></div>
+      </div>
+    </div>
+  </div>
+</div>

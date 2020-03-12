@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="top">
+    Register and get a chance to win <br> free website development.
+  </div>
+  <form [formGroup]="myForm2" *ngIf="!submitted">
+    <div class="form f1" *ngIf="state === 1">
+      <div class="fitem">
+        <label for="name">Full name :</label>
+        <input formControlName="name" [ngClass]="{ 'invalid': f.name.errors && s1 }" type="text" placeholder="ex: John Doe" id="name" spellcheck="false">
+      </div>
+
+      <div class="fitem">
+        <label for="email">Email :</label>
+        <input formControlName="email" [ngClass]="{ 'invalid': f.email.errors && s1 }" type="email" placeholder="ex: xx@xx.xxx" id="email" spellcheck="false">
+      </div>
+
+      <div class="fitem">
+        <label for="contact">Contact number :</label>
+        <input formControlName="contact" [ngClass]="{ 'invalid': f.contact.errors && s1 }" type="text" placeholder="ex: +01 XXXXXXXXXX" id="contact" spellcheck="false">
+      </div>
+    </div>
+
+    <div class="form f1" *ngIf="state === 2">
+      <div class="fitem">
+        <label for="loaction">Country :</label>
+        <input formControlName="country" [ngClass]="{ 'invalid': f.country.errors && s2 }" type="text" placeholder="ex: India" id="loaction" spellcheck="false">
+      </div>
+
+      <div class="fitem">
+        <label for="pos">Current position :</label>
+        <input formControlName="pos" [ngClass]="{ 'invalid': f.pos.errors && s2 }" type="text" placeholder="ex: Student" id="pos" spellcheck="false">
+      </div>
+
+      <div class="fitem">
+        <label for="project">Project Name :</label>
+        <input formControlName="projectName" [ngClass]="{ 'invalid': f.projectName.errors && s2 }" type="text" placeholder="Your project name" id="project" spellcheck="false">
+      </div>
+    </div>
+
+    <div class="form f1" *ngIf="state === 3">
+      <div class="fitem">
+        <label for="des">Description :</label>
+        <textarea formControlName="des" [ngClass]="{ 'invalid': f.des.errors && s3 }" type="text" placeholder="Briefly describe your project in less than 800 words." maxlength="801" id="des" rows="11"></textarea>
+      </div>
+    </div>
+
+    <button class="btn" (click)="submit()">Next</button>
+  </form>
+
+  <div class="x" *ngIf="submitted">
+    Great! you have successfully registered for free website program. <br>
+    You will get a confirmation email soon. <br>
+
+    <br><br>
+    <h3>Continue exploring DeltaCodes</h3>
+    <ul>
+      <li> <a href="/">Home</a> </li>
+      <li> <a href="/career">Career</a> </li>
+      <li> <a href="/campaign/register">Register for another project</a> </li>
+      <li> <a href="/start">Start a project</a> </li>
+    </ul>
+  </div>
+</div>

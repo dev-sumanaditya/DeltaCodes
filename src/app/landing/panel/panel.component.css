@@ -41,11 +41,14 @@
 .navbar .le span:hover {
     color: #0ac775;
 }
-
+.free a {
+  color: white !important;
+}
 .navbar .re i {
     margin-left: 15px;
     cursor: pointer;
     transition-duration: 0.2s;
+    color: white;
 }
 
 .navbar .re .ttr:hover{
@@ -55,7 +58,7 @@
     color: #0077b5;
 }
 .navbar .re .ytb:hover {
-    color: #c4302b;
+    color: #d85f73;
 }
 
 
@@ -379,6 +382,10 @@
     }
     .hidDrop {
         display: flex !important;
+    }
+
+    .free {
+      display: none;
     }
 
 }
