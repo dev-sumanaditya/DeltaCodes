@@ -26,7 +26,7 @@ export class RegfreeComponent implements OnInit {
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
       // tslint:disable-next-line:max-line-length
       email: ['', [Validators.required, Validators.minLength(5), Validators.email, Validators.maxLength(80), Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
-      contact: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(15), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
+      contact: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(15)]],
       country: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
       pos: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
       projectName: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(140)]],
