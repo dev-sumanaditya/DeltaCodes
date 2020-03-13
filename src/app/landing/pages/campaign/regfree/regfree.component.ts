@@ -12,6 +12,8 @@ export class RegfreeComponent implements OnInit {
 
 
   public state = 1;
+  public validInputs = ['+', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
 
   myForm2: FormGroup;
   public submitted: Boolean = false;
@@ -59,5 +61,45 @@ export class RegfreeComponent implements OnInit {
           this._cs.submitData(this.myForm2.value);
         }
       }
+  }
+
+
+  fire(e) {
+    switch (e.key) {
+      case '+':
+        return;
+      case '0':
+        return;
+      case '1':
+        return;
+      case '2':
+        return;
+      case '3':
+        return;
+      case '4':
+        return;
+      case '5':
+        return;
+      case '6':
+        return;
+      case '7':
+        return;
+      case '8':
+        return;
+      case '9':
+        return;
+      case 'Backspace':
+        return;
+      case ' ':
+        return;
+      case 'ArrowLeft':
+        return;
+      case 'ArrowRight':
+        return;
+      case 'Delete':
+        return;
+      default:
+        e.preventDefault();
+    }
   }
 }
