@@ -16,7 +16,7 @@
 
       <div class="fitem">
         <label for="contact">Contact number :</label>
-        <input (keydown)="fire($event)" formControlName="contact" [ngClass]="{ 'invalid': f.contact.errors && s1 }" type="text" placeholder="ex: +01 XXXXXXXXXX" id="contact" spellcheck="false">
+        <input (keydown)="fire($event)" maxlength="16" formControlName="contact" [ngClass]="{ 'invalid': f.contact.errors && s1 }" type="text" placeholder="ex: +01 XXXXXXXXXX" id="contact" spellcheck="false">
       </div>
     </div>
 
