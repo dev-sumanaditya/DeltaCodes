@@ -31,7 +31,7 @@ export class StartService {
     this.data.estSize = val;
   }
   public setScope(val: string) {
-    this.data.jobType = val
+    this.data.jobType = val;
   }
   public setIndividual(val: boolean) {
     this.data.individual = val;

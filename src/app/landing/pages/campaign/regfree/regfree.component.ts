@@ -30,9 +30,9 @@ export class RegfreeComponent implements OnInit {
       email: ['', [Validators.required, Validators.minLength(5), Validators.email, Validators.maxLength(80), Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
       contact: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(15)]],
       country: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
-      pos: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
+      position: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
       projectName: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(140)]],
-      des: ['', [Validators.required, Validators.maxLength(801)]],
+      description: ['', [Validators.required, Validators.maxLength(801)]],
     });
   }
   get f() { return this.myForm2.controls; }
@@ -47,14 +47,14 @@ export class RegfreeComponent implements OnInit {
         }
       } else if (this.state === 2) {
         this.s2 = true;
-        if (this.f.country.invalid || this.f.pos.invalid || this.f.projectName.invalid) {
+        if (this.f.country.invalid || this.f.position.invalid || this.f.projectName.invalid) {
           return;
         } else {
           this.state += 1;
         }
       } else if (this.state === 3) {
         this.s3 = true;
-        if (this.f.des.invalid) {
+        if (this.f.description.invalid) {
           return;
         } else {
           this.submitted = true;

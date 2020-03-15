@@ -27,8 +27,8 @@
       </div>
 
       <div class="fitem">
-        <label for="pos">Current position :</label>
-        <input formControlName="pos" [ngClass]="{ 'invalid': f.pos.errors && s2 }" type="text" placeholder="ex: Student" id="pos" spellcheck="false">
+        <label for="position">Current position :</label>
+        <input formControlName="position" [ngClass]="{ 'invalid': f.position.errors && s2 }" type="text" placeholder="ex: Student" id="pos" spellcheck="false">
       </div>
 
       <div class="fitem">
@@ -39,12 +39,12 @@
 
     <div class="form f1" *ngIf="state === 3">
       <div class="fitem">
-        <label for="des">Description :</label>
-        <textarea formControlName="des" [ngClass]="{ 'invalid': f.des.errors && s3 }" type="text" placeholder="Briefly describe your project in less than 800 words." maxlength="801" id="des" rows="11"></textarea>
+        <label for="description">Description :</label>
+        <textarea formControlName="description" [ngClass]="{ 'invalid': f.description.errors && s3 }" type="text" placeholder="Briefly describe your project in less than 800 words." maxlength="801" id="des" rows="11"></textarea>
       </div>
     </div>
 
-    <button class="btn" (click)="submit()">Next</button>
+    <button class="btn" type="button" (click)="submit()">Next</button>
   </form>
 
   <div class="x" *ngIf="submitted">
