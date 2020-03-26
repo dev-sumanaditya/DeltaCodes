@@ -4,6 +4,84 @@
     z-index: 10 !important;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 9000;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .c {
+  width: 50%;
+  height: 60%;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+.modal .c .bg {
+  height: 300vh;
+  width: 300vh;
+  border-radius: 50%;
+  background-color: rgb(138, 77, 207);
+  position: absolute;
+  right: 55%;
+  top: -150%;
+}
+.modal .c .top {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal .c .top i {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+.modal .c .visi {
+  box-sizing: border-box;
+  z-index: 9001;
+  flex-grow: 1;
+  display: flex;
+}
+.modal .visi .l {
+  width: 50%;
+}
+.modal .visi .l img {
+  height: 500px;
+  margin-left: -70px;
+}
+.modal .visi .r {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.modal .visi .r li {
+  margin-bottom: 10px;
+  color: #333;
+}
+.modal a {
+  border: 2px solid rgb(122, 40, 255);
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(122, 40, 255);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+
 .banner {
     height: 100vh;
     background-color: transparent;
@@ -797,6 +875,10 @@
 
 /* Smartphone */
 @media (min-width: 320px) and (max-width: 480px) {
+    .modal {
+      display: none;
+    }
+
     .banner {
         height: 90vh;
         padding: 250px 0px 0 0px;

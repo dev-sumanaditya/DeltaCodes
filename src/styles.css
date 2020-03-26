@@ -19,3 +19,7 @@ body::-webkit-scrollbar {
    color: white;
    background: #0ac775;
 }
+
+.prime {
+  color: #0ac775;
+}
