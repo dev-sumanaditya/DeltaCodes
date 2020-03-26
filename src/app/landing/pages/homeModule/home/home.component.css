@@ -53,14 +53,14 @@
   display: flex;
 }
 .modal .visi .l {
-  width: 50%;
+  flex: 2;
 }
 .modal .visi .l img {
   height: 500px;
-  margin-left: -70px;
+  margin-left: -100px;
 }
 .modal .visi .r {
-  flex-grow: 1;
+  flex: 3;
   display: flex;
   flex-direction: column;
 }
