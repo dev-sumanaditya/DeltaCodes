@@ -1,0 +1,22 @@
+.container {
+  margin-top: 150px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.itms {
+  display: flex;
+}
+
+.link {
+  margin:20px;
+  cursor: pointer;
+  color: #0ac775;
+}

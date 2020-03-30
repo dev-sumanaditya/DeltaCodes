@@ -83,7 +83,7 @@
     color: rgba(51, 51, 51, 0.7) !important;
 }
 .loadingBar {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 4px;
     width: 100%;
@@ -314,6 +314,58 @@
 
 
 
+.footer2{
+  display: flex;
+  color: whitesmoke;
+  background-color: #253746;
+  padding: 0px 150px 20px 150px;
+  font-size: 12px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #253746;
+  padding: 50px 100px 20px 100px;
+  justify-content: space-between;
+}
+.footer .sec {
+  padding: 0 0 0 50px;
+  color: whitesmoke;
+  flex: 1;
+}
+.footer .sec h2 {
+  color: #0ac775;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.footer .sec h3 {
+  font-size: 16px;
+}
+.footer .sec ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .sec ul a {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 10px;
+}
+.footer .sec li {
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: whitesmoke;
+  width: max-content;
+  cursor: pointer;
+}
+.footer .sec li a:hover {
+  color: rgb(184, 184, 184);
+}
+.footer .sec p {
+  line-height: 25px;
+}
 
 
 
@@ -388,4 +440,21 @@
       display: none;
     }
 
+    .footer2 {
+      padding: 0px 20px 20px 20px;
+    }
+
+    .footer {
+      flex-direction: column;
+      padding: 20px 20px;
+      justify-content: space-between;
+    }
+
+    .footer .sec {
+      padding: 0;
+    }
+
+    .about, .resources {
+      display: none;
+    }
 }
