@@ -17,6 +17,7 @@ const routes: Routes = [
       {path: 'blog', loadChildren: () => import('./pages/blogModule/blog.module').then(m => m.BlogModule) },
       {path: 'contact', loadChildren: () => import('./pages/contact-module/contact-module.module').then(m => m.ContactModuleModule)},
       {path: 'campaign', loadChildren: () => import('./pages/campaign/campaign.module').then(m => m.CampaignModule)},
+      {path: 'services', loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule)},
       {path: '', loadChildren: () => import('./pages/homeModule/home.module').then(m => m.HomeModule)}
     ]},
     {path: '**', redirectTo: '/404'}

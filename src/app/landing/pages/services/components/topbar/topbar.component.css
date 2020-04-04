@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #08AEEA;
+  background-image: linear-gradient(101deg, #08AEEA 0%, #2AF598 100%);
+  padding: 20px 30px;
+  color: black;
+}
+
+.route {
+  color: #333;
+  font-size: 14px;
+  user-select: none;
+  font-weight: 600;
+}
+.route a {
+  text-decoration: none;
+  color: #333;
+}
+.route a:hover {
+  color: rgb(0, 255, 140);
+}
+
+h1 {
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: 600;
+  color: #333;
+}
+.more {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  width: max-content;
+  color: black;
+}
+.more:active {
+  color: rgb(124, 0, 72);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+
+}
