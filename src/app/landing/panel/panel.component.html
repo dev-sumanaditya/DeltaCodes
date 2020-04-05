@@ -5,6 +5,7 @@
         <i class="fa fa-phone" aria-hidden="true"></i>
         <span>+91 8448441298</span>
     </a>
+    <div class="expanded"></div>
     <div class="free">
       <a href="./campaign">Free website development</a>
     </div>
@@ -18,8 +19,24 @@
     <a href="/" class="brand">Delta<span [class.black]="hideTopNav">Codes</span></a>
     <div class="spacer"></div>
     <div class="navs">
-      <div class="nav"><a routerLink = "/">Home</a></div>
-      <div class="nav"><a routerLink = "/about"  routerLinkActive="navActive">How D-codes Works</a></div>
+      <div class="nav"><a routerLink = "/services">Services</a>
+        <div class="dropdown">
+          <div class="navio"><a href ="/services/product">Product Engineering</a></div>
+          <div class="navio"><a href ="/services/web">Web Development</a></div>
+          <div class="navio"><a href ="/services/app">App Development</a></div>
+          <div class="navio"><a href="/services/software">Enterprise Software Development</a></div>
+          <div class="navio"><a href="/services/testing">Software Q/A & Testing</a></div>
+          <div class="navio"><a href="/services/consulting">IT Consulting</a></div>
+          <div class="navio"><a href="/services/uiux">UI / UX Development</a></div>
+          <div class="navio"><a href="/services/analytics">Data Analytics</a></div>
+          <div class="navio"><a href="/services/security">Cyber Security</a></div>
+          <div class="navio"><a href="/services/3d">3D Modeling</a></div>
+          <div class="navio"><a href="/services/iot">IoT Solutions</a></div>
+          <div class="navio"><a href="/services/robotics">Industrial Robotics and UAV's</a></div>
+          <div style="height: 8px;"></div>
+        </div>
+      </div>
+      <div class="nav"><a routerLink = "/about"  routerLinkActive="navActive">Approach</a></div>
       <div class="nav"><a routerLink = "/career"  routerLinkActive="navActive">Career</a></div>
       <div class="nav"><a routerLink = "/blog"  routerLinkActive="navActive">Blog</a></div>
       <a routerLink="/start" class="nav3"><a>Get Started</a></a>
@@ -38,8 +55,8 @@
     </div>
     <div class="content">
       <ul>
-        <li><a routerLink = "/" (click)="hideMenu()">Home</a></li>
-        <li><a routerLink = "/about" (click)="hideMenu()">How D-codes works</a></li>
+        <li><a routerLink = "/services" (click)="hideMenu()">Services</a></li>
+        <li><a routerLink = "/about" (click)="hideMenu()">Approach</a></li>
         <li><a routerLink = "/career" (click)="hideMenu()">Career</a></li>
         <li><a routerLink = "/blog" (click)="hideMenu()">Blog</a></li>
         <li><a class="start" routerLink = "/start" (click)="hideMenu()">Start a Project</a></li>

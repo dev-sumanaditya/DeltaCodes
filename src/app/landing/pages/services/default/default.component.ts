@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class DefaultComponent implements OnInit {
 
   public data = {
-    route: 'All Services',
-    heading: 'All Services',
-    detail: 'Explore the services we offer at deltacodes by using lorem ipsum this is some text to cover.',
+    route: '',
+    heading: 'Industries & Services',
+    detail: 'Harness the power of digital to drive growth with our services and business solutions.',
     moreURL: 'case-studies'
   };
 

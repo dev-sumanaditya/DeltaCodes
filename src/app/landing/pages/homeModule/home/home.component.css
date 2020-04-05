@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
 }
 .modal .c {
   width: 50%;
@@ -342,56 +343,86 @@
 }
 
 
-
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.heading h2 {
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 5px 0;
+}
 .inf {
     display: flex;
-    flex-direction: column;
-    background-color: #233142;
-    min-height: 300px;
-    padding: 170px 170px 85px 170px;
-    user-select: none;
-}
-.inf .row {
-    display: flex;
     flex-direction: row;
-    margin-bottom: 80px;
+    box-sizing: border-box;
+    background-color: rgb(10, 10, 10);
 }
-.inf .row .navi {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    color: white;
-    overflow: hidden;
-    padding-right: 20px;
+.inf .item {
+  min-width: 6vw;
+  min-height: 70vh !important;
+  max-height: 70vh !important;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  transition-duration: 0.4s;
 }
-.inf .row .navi .l {
-    padding: 0 20px 0 0;
+.maxWide {
+  max-width: 100% !important;
 }
-.inf .row .navi .l i {
-    font-size: 45px;
-    color: #0ac775;
+.inf .item .overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(1, 1, 1, 0.7);
+  transition-duration: 0.2s;
+  transition-delay: 0.2s;
+  opacity: 0;
 }
-.inf .row .navi .r {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    padding-top: 10px;
+.visible {
+  opacity: 1 !important;
 }
-.inf .row .navi .r .t {
-    font-size: 21px;
-    font-weight: 700 !important;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    width: max-content;
+.visContent {
+  display: flex !important;
 }
-.inf .row .navi .r .t:hover {
-    color: #0ac775;
+.inf .cont {
+  display: none;
+  transition-delay: 0.4s;
+  flex-direction: column;
+  padding: 50px;
+  color: white;
+  z-index: 200;
+  overflow: hidden;
 }
-.inf .row .navi .r .b {
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: 500;
+.inf .cont h1 {
+  font-size: 50px !important;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.inf .cont h3 {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.inf .cont button {
+  border: 3px solid #0ac775;
+  padding: 10px 20px;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  width: max-content;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.inf .cont button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -581,76 +612,6 @@
     }
   }
 
-
-
-.dtwo {
-    background-color: #233142;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding: 0 0 40px 0;
-    font-size: 28px;
-    font-weight: 100;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 8px;
-    cursor: pointer;
-    outline: none;
-}
-
-.dtwo .bttn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    border: 2px solid #ddd;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 25px;
-    letter-spacing: 0px;
-    cursor: pointer;
-    animation: pulse 2s infinite;
-    user-select: none;
-}
-.dtwo .bttn i {
-    font-size: 30px;
-    margin-left: 3px;
-    animation: pulseSize 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-      color: white;
-      border-color: white;
-      height: 50px;
-      width: 50px;
-    }
-    50% {
-      color: #0ac775;
-      border-color: #0ac775;
-      height: 60px;
-      width: 60px;
-    }
-    100% {
-      color: white;
-      border-color: white;
-      height: 50px;
-      width: 50px;
-    }
-}
-@keyframes pulseSize {
-    0% {
-      font-size: 30px;
-    }
-    50% {
-      font-size: 40px;
-    }
-    100% {
-      font-size: 30px;
-    }
-}
 
 
 
@@ -1047,94 +1008,6 @@
 }
 
 
-.inf {
-    padding: 70px 20px 70px 20px;
-}
-.inf .row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0px;
-}
-.inf .row .navi {
-    padding-right: 0px;
-    margin-bottom: 50px;
-}
-.inf .row .navi .l {
-    padding: 0;
-    flex: 1;
-}
-.inf .row .navi .l i {
-    font-size: 40px;
-}
-.inf .row .navi .r {
-    padding-top: 0px;
-    flex: 4;
-}
-.inf .row .navi .r .t {
-    font-size: 18px;
-}
-.inf .row .navi .r .b {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.dtwo {
-    height: 100px;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-.dtwo h3 {
-    width: max-content;
-    font-size: 14px;
-    text-shadow: 0px 0px #fff;
-    margin-right: 10px;
-    color: #0ac775;
-    opacity: 1;
-}
-.dtwo .bttn {
-    height: 25px;
-    width: 25px;
-    margin-left: 0px;
-}
-.dtwo .bttn i {
-    font-size: 20px;
-    margin-left: 3px;
-    animation: pulseSize 2s infinite;
-}
-@keyframes pulse {
-    0% {
-      color: #0ac775;
-      border-color: #0ac775;
-      height: 30px;
-      width: 30px;
-    }
-    50% {
-      color: #0ac775;
-      border-color: #0ac775;
-      height: 40px;
-      width: 40px;
-    }
-    100% {
-      color: #0ac775;
-      border-color: #0ac775;
-      height: 30px;
-      width: 30px;
-    }
-}
-@keyframes pulseSize {
-    0% {
-      font-size: 20px;
-    }
-    50% {
-      font-size: 25px;
-    }
-    100% {
-      font-size: 20px;
-    }
-}
-
-
-
 
 .portfolio {
     padding: 60px 20px;
@@ -1181,4 +1054,29 @@
     font-size: 14px;
     margin-top: 20px;
 }
+
+
+
+.inf .cont {
+  padding: 20px;
+}
+.inf .cont h1 {
+  font-size: 20px !important;
+  font-weight: 600;
+}
+.inf .cont h3 {
+  font-size: 14px;
+  line-height: 22px;
+}
+.inf .cont button {
+  font-size: 12px;
+  font-weight: 400;
+}
+.heading {
+  margin-bottom: 40px;
+}
+.heading h2 {
+  font-size: 25px;
+}
+
 }

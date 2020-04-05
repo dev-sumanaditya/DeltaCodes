@@ -27,10 +27,10 @@
 
 
 .navbar .le {
-    flex-grow: 1;
     text-decoration: none;
     color: white;
     -webkit-box-direction: none;
+    width: max-content;
 }
 .navbar .le span {
     cursor: pointer;
@@ -115,7 +115,9 @@
 }
 
 .navbar .navs .nav {
-    padding: 10px 30px;
+    margin: 0 30px;
+    padding: 10px 0;
+    position: relative;
 }
 .navbar .navs .nav a {
     color: inherit;
@@ -128,6 +130,31 @@
 .navbar .navs .nav a:hover {
     color: #0ac775;
 }
+.navbar .navs .dropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: whitesmoke;
+  color: black;
+  width: max-content;
+  max-height: 0px !important;
+  transition-duration: 0.2s;
+  transition-delay: 0.8s;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.navbar .navs .nav:hover .dropdown {
+  max-height: 300px !important;
+}
+.navbar .navs .navio {
+  padding: 5px 15px 0px 15px;
+}
+.navbar .navs .navio a {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
 .navbar .nav3 {
     padding: 10px 15px;
     background-color: #0ac775;

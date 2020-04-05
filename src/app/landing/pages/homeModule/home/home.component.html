@@ -265,62 +265,27 @@
   </div>
 
 
-
+  <div class="heading">
+    <h2>Industries</h2>
+    <div class="bar"></div>
+  </div>
   <div class="inf">
-    <div class="row">
-        <div class="navi">
-            <div class="l"><i class="fa fa-file-code-o" aria-hidden="true"></i></div>
-            <div class="r">
-                <div class="t">SEO Ready Code</div>
-                <div class="b">Codes that always rank you first on Google.</div>
-            </div>
+    <div class="item"
+      [class.expanded]="expandedInd === i"
+      *ngFor="let item of industries; let i = index"
+      (mouseenter)="selectfn(i)"
+      (mouseleave)="mouseExit()"
+      [style.backgroundImage]="'url('+ item.image +')'"
+    >
+      <div class="overlay" [class.visible]="expandedInd === i">
+        <div class="cont" [class.visContent]="expandedInd === i" *ngIf="showContent">
+          <h1>{{item.name}}</h1>
+          <h3>{{item.des}}</h3>
+          <button [routerLink]="['/', item.url]">LEARN MORE</button>
         </div>
-        <div class="navi">
-                <div class="l"><i class="fa fa-desktop" aria-hidden="true"></i></div>
-                <div class="r">
-                    <div class="t">Fully Responsive</div>
-                    <div class="b">Fully responsive on notebook, tablets, smartphones and desktops.</div>
-                </div>
-        </div>
-        <div class="navi">
-                <div class="l"><i class="fa fa-sliders" aria-hidden="true"></i></div>
-                <div class="r">
-                    <div class="t">Reusable Codes</div>
-                    <div class="b">Easy-to-use, multi platform codes that run on all devices.</div>
-                </div>
-        </div>
+      </div>
     </div>
-    <div class="row">
-        <div class="navi">
-                <div class="l"><i class="fa fa-comments-o" aria-hidden="true"></i></div>
-                <div class="r">
-                    <div class="t">5-Star-Support</div>
-                    <div class="b">Always ready to help you create the best solution.</div>
-                </div>
-        </div>
-        <div class="navi">
-                <div class="l"><i class="fa fa-cogs" aria-hidden="true"></i></div>
-                <div class="r">
-                    <div class="t">High Customizibility</div>
-                    <div class="b">Create, display, hack and invent anything that you want on any device.</div>
-                </div>
-        </div>
-        <div class="navi">
-                <div class="l"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                <div class="r">
-                    <div class="t">Up-To-Date Software</div>
-                    <div class="b">Codes running on latest platforms that deliver seamless results.</div>
-                </div>
-        </div>
-    </div>
-</div>
-
-<div class="dtwo" routerLink="/campaign">
-    <h3>Register now for free website</h3>
-    <div class="bttn">
-      <i class="material-icons">arrow_forward_ios</i>
-    </div>
-</div>
+  </div>
 
   <div class="portfolio">
     <h2>Tech-stack</h2>
