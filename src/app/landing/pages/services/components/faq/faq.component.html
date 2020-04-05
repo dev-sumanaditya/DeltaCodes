@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="hed">Frequently Asked Questions</h2>
+  <div class="bar"></div>
+  <h4 class="hed2">If you are looking for more information, Explore our frequently asked questions.</h4>
+  <div class="qs">
+    <div class="item" *ngFor="let item of Data; let i = index;">
+      <i class="fa fa-chevron-down" aria-hidden="true" [class.rotate]="expanded === i"></i>
+      <h2 (click)="expand(i)" [class.prime]="expanded === i">{{item.que}}</h2>
+      <div class="text" [class.expand]="expanded === i">
+        <p>{{item.ans}}</p>
+      </div>
+    </div>
+  </div>
+</div>

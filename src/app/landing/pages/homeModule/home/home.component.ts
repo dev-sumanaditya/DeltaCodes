@@ -214,7 +214,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       image: 'https://images.unsplash.com/photo-1573153178631-49e3aa9e018b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80'
     },
     {
-      name: 'Telecom',
+      name: 'Telecom & Internet',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
       url: 'services',
@@ -230,7 +230,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       image: 'https://images.unsplash.com/photo-1530825894095-9c184b068fcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80'
     },
     {
-      name: 'Financial Serivices',
+      name: 'Financial Services',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
       url: 'services',

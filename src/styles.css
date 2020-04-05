@@ -5,6 +5,7 @@ html, body {
     font-family: "proximo-nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body::-webkit-scrollbar {
@@ -26,4 +27,11 @@ body::-webkit-scrollbar {
 
 .expanded {
   flex-grow: 1;
+}
+
+.bar {
+  width: 80px;
+  height: 5px;
+  background-color: #0ac775;
+  border-radius: 2px;
 }

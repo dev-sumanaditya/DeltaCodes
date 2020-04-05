@@ -2,3 +2,157 @@
   display: flex;
   flex-direction: column;
 }
+
+
+.top {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.top .l {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.top .l h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin: 10px;
+}
+.top .r {
+  flex: 1;
+}
+.top .r p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+
+.heading {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 70px;
+}
+.heading h1 {
+  font-size: 32px;
+  margin: 0 0 -29px 0;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.serv {
+  width: 31%;
+  border-bottom: 1px solid #ddd;
+  min-height: 200px;
+  height: max-content;
+  margin: 0 0 30px 0;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+.serv i {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 18px;
+  color: #0ac775;
+}
+.serv h2 {
+  margin: 0;
+  transition-duration: 0.2s;
+  width: 80%;
+}
+.serv:hover h2 {
+  color: #0ac775;
+}
+.serv p {
+  max-width: 85%;
+}
+.serv button {
+  border: 2px solid #0ac775;
+  padding: 5px 15px;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  background-color: whitesmoke;
+  font-size: 14px;
+  transition-duration: 0.2s;
+  margin-bottom: 20px;
+}
+
+.faq {
+  margin: 70px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .top {
+    flex-direction: column;
+  }
+  .top .l h1 {
+    font-size: 40px;
+  }
+  .top .r {
+    margin: 10px;
+  }
+  .top .r p {
+    font-size: 16px;
+  }
+
+
+
+  .heading {
+    margin: 70px 15px
+  }
+  .heading h1 {
+    font-size: 24px;
+    margin: 0 0 -24px 0;
+  }
+
+  .services {
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+  }
+  .serv {
+    width: 100%;
+  }
+}

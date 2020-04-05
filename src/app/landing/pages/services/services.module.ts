@@ -16,6 +16,7 @@ import { PanelComponent } from './panel/panel.component';
 import { ServicesRoutingModule } from './services-routing.module';
 import { DefaultComponent } from './default/default.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 
 
@@ -35,7 +36,8 @@ import { TopbarComponent } from './components/topbar/topbar.component';
     RoboticsComponent,
     PanelComponent,
     DefaultComponent,
-    TopbarComponent
+    TopbarComponent,
+    FaqComponent
   ],
   imports: [
     CommonModule,

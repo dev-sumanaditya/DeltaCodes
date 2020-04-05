@@ -1,7 +1,30 @@
 <div class="container">
   <app-topbar [data]="data"></app-topbar>
 
-  <div class="ind">
-    something
+  <div class="top">
+    <div class="l">
+      <h1>Consulting Services</h1>
+      <div class="bar" style="margin-left: 50px;"></div>
+    </div>
+    <div class="r">
+      <p>Our management consulting services focus on our clients' most critical issues and opportunities: strategy, marketing, organization, operations, technology, transformation, digital, advanced analytics, corporate finance, mergers & acquisitions and sustainability across all industries and geographies. We bring deep, functional expertise, but are known for our holistic perspective: we capture value across boundaries and between the silos of any organization. We have proven a multiplier effect from optimizing the sum of the parts, not just the individual pieces.</p>
+    </div>
+  </div>
+
+  <div class="heading">
+    <h1>How We Help</h1>
+  </div>
+
+  <div class="services">
+    <a class="serv" *ngFor="let item of services" [routerLink]="['/services', item.url ]">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+      <h2>{{item.name}}</h2>
+      <p>this is some text some dummy text bro. how can i help you write some text budds.</p>
+      <button>Know More</button>
+    </a>
+  </div>
+
+  <div class="faq">
+    <app-faq [Data]="faq"></app-faq>
   </div>
 </div>

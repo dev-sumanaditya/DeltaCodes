@@ -19,7 +19,7 @@
     <a href="/" class="brand">Delta<span [class.black]="hideTopNav">Codes</span></a>
     <div class="spacer"></div>
     <div class="navs">
-      <div class="nav"><a routerLink = "/services">Services</a>
+      <div class="nav"><a href="/services" routerLink = "/services"  routerLinkActive="navActive">Services</a>
         <div class="dropdown">
           <div class="navio"><a href ="/services/product">Product Engineering</a></div>
           <div class="navio"><a href ="/services/web">Web Development</a></div>
@@ -33,6 +33,20 @@
           <div class="navio"><a href="/services/3d">3D Modeling</a></div>
           <div class="navio"><a href="/services/iot">IoT Solutions</a></div>
           <div class="navio"><a href="/services/robotics">Industrial Robotics and UAV's</a></div>
+          <div style="height: 8px;"></div>
+        </div>
+      </div>
+      <div class="nav"><a href="/industries" routerLink = "/industries"  routerLinkActive="navActive">Industries</a>
+        <div class="dropdown">
+          <div class="navio"><a href ="/industries/logistics">Logistics & Transportation</a></div>
+          <div class="navio"><a href ="/industries/oil">Oil & Gas</a></div>
+          <div class="navio"><a href ="/industries/telecom">Telecom & Internet</a></div>
+          <div class="navio"><a href ="/industries/tech">Tech & Innovation (R&D)</a></div>
+          <div class="navio"><a href ="/industries/financial">Financial Services</a></div>
+          <div class="navio"><a href ="/industries/healthcare">Healthcare & Life Sciences</a></div>
+          <div class="navio"><a href ="/industries/travel">Travel & Hospitality</a></div>
+          <div class="navio"><a href ="/industries/retail">Retail & Ecommerce</a></div>
+          <div class="navio"><a href ="/industries/education">Education & Digital Learning</a></div>
           <div style="height: 8px;"></div>
         </div>
       </div>
@@ -56,6 +70,7 @@
     <div class="content">
       <ul>
         <li><a routerLink = "/services" (click)="hideMenu()">Services</a></li>
+        <li><a routerLink = "/industries" (click)="hideMenu()">Industries</a></li>
         <li><a routerLink = "/about" (click)="hideMenu()">Approach</a></li>
         <li><a routerLink = "/career" (click)="hideMenu()">Career</a></li>
         <li><a routerLink = "/blog" (click)="hideMenu()">Blog</a></li>
@@ -80,7 +95,7 @@
 
   <div class="footer">
     <div class="about sec">
-      <h2>TECHNOLOGIES</h2>
+      <h2>SOLUTIONS</h2>
       <!-- <p>DeltaCodes helps Start-ups and Top Tech Firms across the globe with all kinds of tech solutions needed for the new digital age.</p> -->
       <ul>
         <li><a routerLink="/services/analytics">Data Analytics</a></li>

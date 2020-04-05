@@ -139,7 +139,7 @@
   width: max-content;
   max-height: 0px !important;
   transition-duration: 0.2s;
-  transition-delay: 0.8s;
+  transition-delay: 0.4s;
   border-radius: 5px;
   overflow: hidden;
 }
