@@ -1,1 +1,27 @@
-<p>default works!</p>
+<div class="container">
+
+  <div class="banner">
+    <div class="overlay">
+      <h1>Transforming the face of new age industries.</h1>
+      <p>Learn more about how we leverage our expertise and technology to transform business by focusing on most critical issues and opportunities.</p>
+      <button type="button">LEARN MORE</button>
+    </div>
+  </div>
+  <div class="head">
+    <h1 class="heading">Industries</h1>
+    <div class="bar"></div>
+  </div>
+  <div class="industries">
+    <div
+      class="item"
+      *ngFor="let item of industries"
+      [routerLink]="['./', item.url]"
+    >
+      <img class="b" [src]="'/assets/industries/' + item.icon1 + '/b.png'" alt="{{item.icon1}}">
+      <img class="w" [src]="'/assets/industries/' + item.icon1 + '/w.png'" alt="{{item.icon1}}">
+      <h2>{{item.name}}</h2>
+      <h3>LEARN MORE</h3>
+    </div>
+  </div>
+
+</div>
