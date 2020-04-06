@@ -8,10 +8,12 @@
 .hed {
   font-size: 28px;
   margin: 0 0 8px 0;
+  text-align: center;
 }
 .hed2 {
   font-size: 18px;
   font-weight: 400;
+  text-align: center;
 }
 
 .qs {
@@ -62,4 +64,47 @@
 
 .rotate {
  transform: rotate(180deg);
+}
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .qs {
+    margin: 50px 0 0 0;
+  }
+  .item {
+    padding: 0 10px;
+  }
+  .item i {
+    font-size: 20px;
+    right: 10px;
+  }
+  .item h2 {
+    font-size: 18px;
+    padding: 10px 0 20px 0;
+    max-width: 90%;
+  }
+  .item p {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
