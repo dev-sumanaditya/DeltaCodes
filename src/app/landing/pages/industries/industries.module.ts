@@ -13,6 +13,8 @@ import { RetailComponent } from './pages/retail/retail.component';
 import { EducationComponent } from './pages/education/education.component';
 import { DefaultComponent } from './pages/default/default.component';
 import { PanelComponent } from './panel/panel.component';
+import { CoverComponent } from './components/cover/cover.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { PanelComponent } from './panel/panel.component';
     RetailComponent,
     EducationComponent,
     DefaultComponent,
-    PanelComponent
+    PanelComponent,
+    CoverComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

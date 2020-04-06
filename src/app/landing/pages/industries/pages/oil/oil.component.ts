@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OilComponent implements OnInit {
 
+  coverData = {
+    name: 'Oil, Gas & Power Industry',
+    detail: 'Innovative IT and Software Solutions to accelerate your digital transformation.',
+    background: '/assets/industries/backgrounds/oil.jpeg'
+  };
+
   constructor() { }
 
   ngOnInit(): void {

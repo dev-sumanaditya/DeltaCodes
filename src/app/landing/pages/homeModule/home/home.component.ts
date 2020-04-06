@@ -3,7 +3,7 @@ import { Component, OnInit, AfterViewInit, HostListener, ViewChild, ElementRef, 
 import {fromEvent, Subscription, timer} from 'rxjs';
 
 import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID } from "@angular/core";
+import { PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -327,7 +327,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       setTimeout(() => {
         this.showContent = true;
       }, 450);
-    };
+    }
   }
   public mouseExit() {
   }

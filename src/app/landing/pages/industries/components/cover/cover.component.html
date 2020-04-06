@@ -1,0 +1,13 @@
+<div class="container" [style.background]="'url('+ Data.background +')'">
+  <div class="overlay">
+    <h1>{{Data.name}}</h1>
+    <h1>Solutions</h1>
+    <h2>{{Data.detail}}</h2>
+    <div class="cont" (click)="cont()">
+      <span *ngIf="!contact && !submitted">CONTACT US</span>
+      <span style="width: 100%; text-align: center;" *ngIf="submitted2">SENT</span>
+      <input *ngIf="contact" [class.expand]="expand" spellcheck="false" type="text" placeholder="Your Email">
+      <i *ngIf="contact" (click)="submitCont()" [class.anim]="submitted" class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
