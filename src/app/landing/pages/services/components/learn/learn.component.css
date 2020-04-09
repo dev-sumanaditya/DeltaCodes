@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  min-height: 230px;
+  justify-content: space-between;
+}
+.item h3 {
+  font-size: 18px;
+}
+.item p {
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.item span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+}
+.item span img {
+  height: 26px;
+}
+.item span a {
+  color: #197DED;
+  font-size: 18px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.item span:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .items {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .item {
+    width: 100%;
+    margin-bottom: 50px;
+    min-height: 100px;
+  }
+  .item p {
+    margin-bottom: 40px;
+  }
+}

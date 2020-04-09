@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="head">
+    <h1>Drive Your Business Forward</h1>
+    <div class="bar"></div>
+  </div>
+  <div class="section">
+    <div class="item" *ngFor="let item of dummy;">
+      <img [src]="'/assets/services/drive/'+ item.img" alt="">
+      <h2>{{item.name}}</h2>
+      <ul>
+        <div class="it" *ngFor="let i of item.points">
+          <i class="fa fa-square" aria-hidden="true"></i>
+          <li>{{i}}</li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>

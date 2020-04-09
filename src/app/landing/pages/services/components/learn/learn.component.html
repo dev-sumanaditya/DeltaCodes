@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Learn More about how to achieve better business outcomes in the new digital age</h2>
+  <div class="bar"></div>
+  <div class="items">
+    <div class="item" *ngFor="let item of items">
+      <div class="cont">
+        <h3>{{item.head}}</h3>
+        <p>{{item.p}}</p>
+      </div>
+      <span><img src="/assets/services/icons/arrow.png" alt=""> <a [routerLink]="['/'+ item.url]">Learn more</a> </span>
+    </div>
+  </div>
+</div>

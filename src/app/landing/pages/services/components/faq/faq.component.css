@@ -88,6 +88,10 @@
 /* Smartphone */
 @media (min-width: 320px) and (max-width: 480px) {
 
+  .container {
+    padding: 0 15px;
+  }
+
   .qs {
     margin: 50px 0 0 0;
   }

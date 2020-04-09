@@ -97,82 +97,6 @@
 }
 
 
-.talk {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid #ddd;
-}
-.talk .l {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 50px 60px;
-}
-.talk .l h1 {
-  font-size: 32px;
-  font-weight: 800;
-  margin: 0 0 40px 0;
-}
-.talk .l label {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-.talk .l select {
-  border: none;
-  border-bottom: 1px solid #0ac775;
-  padding: 10px 0;
-  font-size: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition-duration: 0.1s;
-  outline: none;
-}
-.talk .l select:hover {
-  color: #0ac775;
-}
-.talk .l select option {
-  color: black;
-  background-color: white !important;
-}
-
-.talk .r {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 50px 60px;
-}
-.talk .r p {
-  font-size: 18px;
-  line-height: 25px;
-  margin:  0 0 20px 0;
-  letter-spacing: 1px;
-}
-.talk .r input {
-  font-size: 22px;
-  padding: 10px 15px;
-  outline: none;
-  border: 1px solid rgb(139, 139, 139);
-  margin-bottom: 20px;
-  transition-duration: 0.1s;
-}
-.talk .r input:focus {
-  box-shadow: 0 0 8px -4px #333;
-}
-.talk .r button {
-  font-size: 15px;
-  font-weight: 600;
-  padding: 15px 30px;
-  border: none;
-  background-color: #0ac775;
-  color: white;
-  width: max-content;
-  cursor: pointer;
-  transition-duration: 0.2s;
-}
-.talk .r button:hover {
-  background-color: #09a15f;
-}
-
 
 
 
@@ -236,21 +160,4 @@
     padding: 0 15px;
   }
 
-  .talk {
-    flex-direction: column;
-  }
-  .talk .l {
-    padding: 30px;
-  }
-  .talk .r {
-    padding: 30px;
-  }
-
-  .talk .l select {
-    font-size: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    transition-duration: 0.1s;
-    outline: none;
-  }
 }

@@ -17,6 +17,11 @@ import { ServicesRoutingModule } from './services-routing.module';
 import { DefaultComponent } from './default/default.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { DriveComponent } from './components/drive/drive.component';
+import { VidComponent } from './components/vid/vid.component';
+import { ClientStoriesComponent } from './components/client-stories/client-stories.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { LearnComponent } from './components/learn/learn.component';
 
 
 
@@ -37,7 +42,12 @@ import { FaqComponent } from './components/faq/faq.component';
     PanelComponent,
     DefaultComponent,
     TopbarComponent,
-    FaqComponent
+    FaqComponent,
+    DriveComponent,
+    VidComponent,
+    ClientStoriesComponent,
+    ContactComponent,
+    LearnComponent
   ],
   imports: [
     CommonModule,

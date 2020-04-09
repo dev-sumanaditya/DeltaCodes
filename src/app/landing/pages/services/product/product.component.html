@@ -1,3 +1,31 @@
 <div class="container">
   <app-topbar [data]="data"></app-topbar>
+  <div class="txt">
+    <p>In an era of technological advances and rapid changes, software can make or break your business. It’s key to ensuring you meet fast-changing customer needs, stay ahead of the competition, and keep business operations running smoothly – every day.</p>
+    <p>Too many businesses find themselves falling behind the curve due to outdated legacy or third-party applications or a lack of qualified talent to build and maintain truly innovative software solutions.</p>
+  </div>
+
+  <app-drive></app-drive>
+
+  <app-vid
+  [options]="{
+    autoplay: false,
+    fluid: true,
+    fill: true,
+    controls: true,
+    sources: [
+      { src: '//d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4', type: 'video/mp4' }
+    ],
+    poster: '//d2zihajmogu5jn.cloudfront.net/elephantsdream/poster.png'
+  }">
+  </app-vid>
+
+  <app-learn></app-learn>
+
+  <app-client-stories></app-client-stories>
+
+  <app-faq [Data]="faq"></app-faq>
+
+  <app-contact></app-contact>
+
 </div>
