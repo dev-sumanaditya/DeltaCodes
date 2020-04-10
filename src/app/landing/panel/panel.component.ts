@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router, NavigationStart, RouterEvent, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-panel',
@@ -8,16 +9,17 @@ import { Router, NavigationStart, RouterEvent, NavigationEnd, NavigationCancel, 
 })
 export class PanelComponent implements OnInit, AfterViewInit {
 
-  public hideTopNav: boolean = false;
-  public loading: boolean = false;
+  public hideTopNav: Boolean = false;
+  public loading: Boolean = false;
 
+  public cookieStatus = false;
 
   public SearchWindow: Boolean = false;
   public MenuWindow: Boolean = false;
 
   @ViewChild('loading', { static: true }) _ldng: ElementRef;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cookieService: CookieService) {}
 
   ngAfterViewInit() {
     this.router.events.forEach((event: RouterEvent) => {
@@ -42,10 +44,26 @@ export class PanelComponent implements OnInit, AfterViewInit {
         return;
       }
     });
+
+
+    if (this.cookieService.check('visited')) {
+      this.cookieStatus = false;
+    } else {
+      this.cookieStatus = true;
+    }
   }
 
   click() {
     this.loading = true;
+  }
+
+  public acceptCookie() {
+    this.cookieStatus = false;
+    this.cookieService.set('visited', 'true');
+  }
+
+  public declineCookie() {
+    this.cookieStatus = false;
   }
 
   ngOnInit() {

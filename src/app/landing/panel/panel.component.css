@@ -395,8 +395,52 @@
 }
 
 
-
-/* medi queries */
+.cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(1, 1, 1);
+  color: white;
+  padding: 10px 150px;
+  font-family: 'Montserrat', sans-serif;
+  border-top: 1px solid rgb(40,40,40);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cookie .l {
+  font-size: 15px;
+  font-weight: 400;
+}
+.cookie .l a {
+  color: #0ac775;
+  text-decoration: none;
+}
+.cookie .r {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.cookie .r button {
+  border: 1px solid #ddd;
+  background: transparent;
+  color: white;
+  width: max-content;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  margin-left: 20px;
+  outline: none;
+}
+.cookie .r button:hover {
+  border: 1px solid #0ac775;
+  background-color: #0ac775;
+}
+.cookie .r .close {
+  padding: 10px 15px !important;
+}
 
 
 /* Laptops, Desktops */
@@ -509,5 +553,29 @@
 
     .resources {
       display: none;
+    }
+
+
+    .cookie {
+      padding: 10px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .cookie .l {
+      font-size: 14px;
+    }
+    .cookie .l p {
+      margin-top: 0px;
+    }
+    .cookie .r {
+      margin-left: 0px;
+    }
+    .cookie .r button {
+      font-size: 14px;
+      padding: 8px 15px;
+      margin-left: 0px;
+    }
+    .cookie .r .close {
+      margin-left: 15px;
     }
 }

@@ -144,4 +144,15 @@
   <div class="footer2">
     Copyright © Deltacodes India Inc. All Rights Reserved.
   </div>
+
+  <div class="cookie" *ngIf="cookieStatus">
+    <div class="l">
+      <p>This website uses cookies to enhance your digital experience. For additional information please visit <a href="/privacy-policy">Privacy Policy</a> and <a href="/cookie-policy">Cookie Policy</a>.</p>
+    </div>
+    <div class="r">
+      <button (click)="acceptCookie()">ACCEPT COOKIES</button>
+      <button (click)="declineCookie()" class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
 </div>
