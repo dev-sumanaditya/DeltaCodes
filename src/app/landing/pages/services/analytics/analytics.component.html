@@ -1,6 +1,19 @@
 <div class="container">
   <app-topbar [data]="data"></app-topbar>
 
+  <app-vid
+  [options]="{
+    autoplay: false,
+    fluid: true,
+    fill: true,
+    controls: true,
+    sources: [
+      { src: 'https://storage.bunnycdn.com/deltacodes/vid01.mp4?AccessKey=331d3610-7e17-404c-9d6a36fca697-5ade-4849&download', type: 'video/mp4' }
+    ],
+    poster: 'https://i.ibb.co/JnXd3jx/Delivering-tech-at-scale.jpg'
+  }">
+  </app-vid>
+
   <app-learn></app-learn>
 
   <app-client-stories></app-client-stories>
