@@ -813,6 +813,21 @@
 
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .boy {
+    left: -100px !important;
+  }
+
+  .banner {
+    padding: 300px 80px 0 50px;
+  }
+
+  .anim .r {
+      margin-left: -100px;
+      width: 55%;
+  }
+  .how .opts {
+    padding: 0 120px;
+}
 
 }
 
