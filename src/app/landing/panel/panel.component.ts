@@ -2,6 +2,11 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 import { Router, NavigationStart, RouterEvent, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
+import { AnalyticsService } from '../services/analytics.service';
+
+declare let gtag: Function;
+
+
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
@@ -19,7 +24,7 @@ export class PanelComponent implements OnInit, AfterViewInit {
 
   @ViewChild('loading', { static: true }) _ldng: ElementRef;
 
-  constructor(private router: Router, private cookieService: CookieService) {}
+  constructor(private router: Router, private cookieService: CookieService, private analyticsService: AnalyticsService) {}
 
   ngAfterViewInit() {
     this.router.events.forEach((event: RouterEvent) => {
@@ -31,6 +36,11 @@ export class PanelComponent implements OnInit, AfterViewInit {
       if (event instanceof NavigationEnd) {
           this.loading = false;
           this._ldng.nativeElement.classList.add('hide');
+
+          gtag('config', 'G-FQ8VNLKTGM', {
+            'page_path': event.urlAfterRedirects
+          });
+
         return;
       }
       if (event instanceof NavigationCancel) {
@@ -53,8 +63,26 @@ export class PanelComponent implements OnInit, AfterViewInit {
     }
   }
 
-  click() {
-    this.loading = true;
+  public navigate(event) {
+    this.router.navigate(['/', event]).then( nav => {
+      if (event === '/') {
+        const val = 'home';
+        this.analyticsService.eventEmitter(
+          'navigate',
+          'navigation',
+          'navigated',
+          val
+        );
+      } else {
+        const val = event;
+        this.analyticsService.eventEmitter(
+          'navigate',
+          'navigation',
+          'navigated',
+          val
+        );
+      }
+    });
   }
 
   public acceptCookie() {

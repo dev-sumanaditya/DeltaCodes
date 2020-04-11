@@ -126,6 +126,7 @@
     font-weight: 400;
     letter-spacing: 0.05rem;
     transition-duration: 0.2s;
+    cursor: pointer;
 }
 .navbar .navs .nav a:hover {
     color: #0ac775;
