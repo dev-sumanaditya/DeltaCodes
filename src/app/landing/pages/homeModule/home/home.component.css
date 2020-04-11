@@ -1072,6 +1072,10 @@
 
 
 
+.inf .item {
+  min-height: 50vh !important;
+  overflow: hidden;
+}
 .inf .cont {
   padding: 20px;
 }
