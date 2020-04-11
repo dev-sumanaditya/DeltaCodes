@@ -33,9 +33,7 @@ export class VidComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
-    this.player = videojs(this.target.nativeElement, this.options, function onPlayerReady() {
-      console.log('onPlayerReady', this);
-    });
+    this.player = videojs(this.target.nativeElement, this.options, function onPlayerReady() {});
   }
 
   ngOnDestroy(): void {

@@ -15,6 +15,7 @@ import { DefaultComponent } from './pages/default/default.component';
 import { PanelComponent } from './panel/panel.component';
 import { CoverComponent } from './components/cover/cover.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { DescComponent } from './components/desc/desc.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ContactComponent } from './components/contact/contact.component';
     DefaultComponent,
     PanelComponent,
     CoverComponent,
-    ContactComponent
+    ContactComponent,
+    DescComponent
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { Router, NavigationStart, RouterEvent, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
+import { Router, NavigationStart, RouterEvent, NavigationEnd, NavigationCancel, NavigationError, ActivatedRoute } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
 import { AnalyticsService } from '../services/analytics.service';
@@ -22,9 +22,16 @@ export class PanelComponent implements OnInit, AfterViewInit {
   public SearchWindow: Boolean = false;
   public MenuWindow: Boolean = false;
 
+  public navWhite: Boolean = false;
+
   @ViewChild('loading', { static: true }) _ldng: ElementRef;
 
-  constructor(private router: Router, private cookieService: CookieService, private analyticsService: AnalyticsService) {}
+  constructor(
+    private router: Router,
+    private cookieService: CookieService,
+    private analyticsService: AnalyticsService,
+    private route: ActivatedRoute
+  ) {}
 
   ngAfterViewInit() {
     this.router.events.forEach((event: RouterEvent) => {
@@ -106,15 +113,29 @@ export class PanelComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     if (this.router.url !== '/') {
       this.hideTopNav = true;
+      if (this.route.snapshot.firstChild.url[0].path === 'industries') {
+        this.navWhite = false;
+      } else {
+        this.navWhite = true;
+      }
+      console.log(this.route.snapshot.firstChild.url[0].path);
     } else {
       this.hideTopNav = false;
+      this.navWhite = false;
     }
     this.router.events.forEach((event) => {
-      if (event instanceof NavigationStart) {
-        if(event.url !== '/') {
+      if (event instanceof NavigationEnd) {
+        if (event.url !== '/') {
           this.hideTopNav = true;
+          if (this.route.snapshot.firstChild.url[0].path === 'industries') {
+            this.navWhite = false;
+          } else {
+            this.navWhite = true;
+          }
+          console.log(this.route.snapshot.firstChild.url[0].path);
         } else {
           this.hideTopNav = false;
+          this.navWhite = false;
         }
       }
     })

@@ -16,7 +16,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 50px 100px 90px 100px;
+  padding: 230px 100px 130px 100px;
 }
 .banner .overlay h1 {
   font-size: 45px;
@@ -215,7 +215,7 @@
 /* Smartphone */
 @media (min-width: 320px) and (max-width: 480px) {
   .banner .overlay {
-    padding: 50px 20px 70px 20px;
+    padding: 200px 20px 70px 20px;
   }
   .banner .overlay h1 {
     font-size: 32px;

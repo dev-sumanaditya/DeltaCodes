@@ -33,7 +33,7 @@ export class DefaultComponent implements OnInit {
     {
       name: 'Financial Services',
       icon1: 'financial',
-      url: 'finance'
+      url: 'financial'
     },
     {
       name: 'Healthcare & Life Sciences',
