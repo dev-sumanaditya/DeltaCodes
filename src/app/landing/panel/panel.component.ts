@@ -59,7 +59,7 @@ export class PanelComponent implements OnInit, AfterViewInit {
 
   public acceptCookie() {
     this.cookieStatus = false;
-    this.cookieService.set('visited', 'true');
+    this.cookieService.set('visited', 'true', 604800);
   }
 
   public declineCookie() {
