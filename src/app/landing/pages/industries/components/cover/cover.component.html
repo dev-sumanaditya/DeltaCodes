@@ -1,4 +1,8 @@
-<div class="container" [style.background]="'url('+ Data.background +')'">
+<div class="container">
+  <video autoplay muted loop id="video">
+    <source [src]="Data.background" type="video/mp4">
+  </video>
+
   <div class="overlay">
     <h1>{{Data.name}}</h1>
     <h1>Solutions</h1>

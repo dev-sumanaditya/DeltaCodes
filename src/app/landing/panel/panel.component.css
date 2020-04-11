@@ -51,17 +51,6 @@
     color: white;
 }
 
-.navbar .re .ttr:hover{
-    color: rgb(85, 172, 238);
-}
-.navbar .re .lin:hover {
-    color: #0077b5;
-}
-.navbar .re .ytb:hover {
-    color: #d85f73;
-}
-
-
 .navbar .brand {
     font-size: 30px;
     display: flex;
@@ -254,7 +243,7 @@
 .sideMenu  h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 800 !important;
   margin: 0 0 20px 20px;
   color: #ddd;
 }
@@ -361,6 +350,7 @@
   background-color: #253746;
   padding: 0px 150px 20px 150px;
   font-size: 12px;
+  user-select: none;
 }
 
 .footer {
@@ -370,6 +360,16 @@
   padding: 50px 100px 20px 100px;
   justify-content: space-between;
 }
+.footer .contact a {
+  color: #0ac775;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  margin-bottom: 5px;
+}
+.footer .contact a:hover {
+  text-decoration: underline;
+}
+
 .footer .sec {
   padding: 0 0 0 50px;
   color: whitesmoke;

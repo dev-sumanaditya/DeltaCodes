@@ -36,3 +36,13 @@ body::-webkit-scrollbar {
   border-radius: 2px;
 }
 
+
+.ttr:hover{
+  color: rgb(85, 172, 238) !important;
+}
+.lin:hover {
+  color: #0077b5 !important;
+}
+.ytb:hover {
+  color: #d85f73 !important;
+}

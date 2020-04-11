@@ -10,7 +10,7 @@ export class TechComponent implements OnInit {
   coverData = {
     name: 'Tech & innovation (R&D)',
     detail: 'Innovative IT and Software Solutions to accelerate your digital transformation.',
-    background: '/assets/industries/backgrounds/tech2.jpeg'
+    background: 'https://dcvideo.b-cdn.net/tech.mp4'
   };
 
   constructor() { }

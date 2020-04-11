@@ -10,7 +10,7 @@ export class FinancialComponent implements OnInit {
   coverData = {
     name: 'Banking & Financial',
     detail: 'Innovative IT and Software Solutions to accelerate your digital transformation.',
-    background: '/assets/industries/backgrounds/fintech.jpeg'
+    background: 'https://dcvideo.b-cdn.net/finance.mp4'
   };
 
   constructor() { }

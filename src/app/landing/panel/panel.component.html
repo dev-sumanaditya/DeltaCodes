@@ -70,15 +70,15 @@
     <h4><span>Delta</span>Codes</h4>
     <div class="content">
       <ul>
-        <li><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/services" (click)="hideMenu()">Services</a></li>
-        <li><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/industries" (click)="hideMenu()">Industries</a></li>
-        <li><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/about" (click)="hideMenu()">Approach</a></li>
-        <li><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/career" (click)="hideMenu()">Career</a></li>
-        <li><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/blog" (click)="hideMenu()">Blog</a></li>
-        <li><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/contact" (click)="hideMenu()">Contact Us</a></li>
-        <li><i class="fa fa-square-o start" aria-hidden="true"></i><a class="start" routerLink = "/start" (click)="hideMenu()">Start a Project</a></li>
+        <li (click)="navigate('services')"><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/services" (click)="hideMenu()">Services</a></li>
+        <li (click)="navigate('industries')"><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/industries" (click)="hideMenu()">Industries</a></li>
+        <li (click)="navigate('about')"><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/about" (click)="hideMenu()">Approach</a></li>
+        <li (click)="navigate('career')"><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/career" (click)="hideMenu()">Career</a></li>
+        <li (click)="navigate('blog')"><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/blog" (click)="hideMenu()">Blog</a></li>
+        <li (click)="navigate('contact')"><i class="fa fa-square-o" aria-hidden="true"></i><a routerLink = "/contact" (click)="hideMenu()">Contact Us</a></li>
+        <li (click)="navigate('start')"><i class="fa fa-square-o start" aria-hidden="true"></i><a class="start" routerLink = "/start" (click)="hideMenu()">Start a Project</a></li>
       </ul>
-      <div class="social">
+      <div class="social" (click)="analytics('social')">
         <a href="https://twitter.com/delta_codes" target="_blank"><i class="fa fa-twitter ttr" aria-hidden="true"></i></a>
         <a href="https://linkedin.com/company/deltacodes" target="_blank"><i class="fa fa-linkedin lin" aria-hidden="true"></i></a>
         <a href="https://instagram.com/deltacodes" target="_blank"><i class="fa fa-instagram ytb" aria-hidden="true"></i></a>
@@ -105,40 +105,45 @@
       <h2>SOLUTIONS</h2>
       <!-- <p>DeltaCodes helps Start-ups and Top Tech Firms across the globe with all kinds of tech solutions needed for the new digital age.</p> -->
       <ul>
-        <li><a routerLink="/services/analytics">Data Analytics</a></li>
-        <li><a routerLink="/services/security">Cyber Security</a></li>
-        <li><a routerLink="/services/3d">3D Modeling</a></li>
-        <li><a routerLink="/services/iot">IoT Solutions</a></li>
-        <li><a routerLink="/services/robotics">Industrial Robotics and UAV's</a></li>
+        <li (click)="analytics('Data analytics')"><a routerLink="/services/analytics">Data Analytics</a></li>
+        <li (click)="analytics('Cyber security')"><a routerLink="/services/security">Cyber Security</a></li>
+        <li (click)="analytics('3d modeling')"><a routerLink="/services/3d">3D Modeling</a></li>
+        <li (click)="analytics('Iot')"><a routerLink="/services/iot">IoT Solutions</a></li>
+        <li (click)="analytics('Robotics & Uav')"><a routerLink="/services/robotics">Industrial Robotics and UAV's</a></li>
       </ul>
     </div>
     <div class="services sec">
       <h2>IT SERVICES</h2>
       <ul>
-        <li><a routerLink="/services/product">Product Engineering</a></li>
-        <li><a routerLink="/services/web">Web Development</a></li>
-        <li><a routerLink="/services/app">App Development</a></li>
-        <li><a routerLink="/services/software">Enterprise Software Development</a></li>
-        <li><a routerLink="/services/testing">Software Q/A & Testing</a></li>
-        <li><a routerLink="/services/consulting">IT Consulting</a></li>
-        <li><a routerLink="/services/uiux">UI / UX Development</a></li>
+        <li (click)="analytics('Product engineering')"><a routerLink="/services/product">Product Engineering</a></li>
+        <li (click)="analytics('Web Development')"><a routerLink="/services/web">Web Development</a></li>
+        <li (click)="analytics('App development')"><a routerLink="/services/app">App Development</a></li>
+        <li (click)="analytics('Software development')"><a routerLink="/services/software">Enterprise Software Development</a></li>
+        <li (click)="analytics('Q/A & testing')"><a routerLink="/services/testing">Software Q/A & Testing</a></li>
+        <li (click)="analytics('IT consulting')"><a routerLink="/services/consulting">IT Consulting</a></li>
+        <li (click)="analytics('UI / UX')"><a routerLink="/services/uiux">UI / UX Development</a></li>
       </ul>
     </div>
     <div class="resources sec">
       <h2>RESOURCES</h2>
       <ul>
-        <li><a routerLink="/blog">Blog</a></li>
-        <li><a routerLink="/about">How D-Codes Works</a></li>
-        <li><a routerLink="/case-studies">Case Studies</a></li>
-        <li><a routerLink="/news">News</a></li>
-        <li><a routerLink="/career">Career</a></li>
-        <li><a routerLink="/contact">Contact Us</a></li>
+        <li (click)="analytics('Blog')"><a routerLink="/blog">Blog</a></li>
+        <li (click)="analytics('About')"><a routerLink="/about">How D-Codes Works</a></li>
+        <li (click)="analytics('Case Studies')"><a routerLink="/case-studies">Case Studies</a></li>
+        <li (click)="analytics('News')"><a routerLink="/news">News</a></li>
+        <li (click)="analytics('Career')"><a routerLink="/career">Career</a></li>
+        <li (click)="analytics('Contact')"><a routerLink="/contact">Contact Us</a></li>
       </ul>
     </div>
     <div class="contact sec">
       <h2>CONTACT US</h2>
       <h3>India Headquarters</h3>
-      <p>+91 8448441298<br>support@deltacodes.in<br>14th Floor, JM Orchid | Sector 74, Noida 201304</p>
+      <p>
+        <a href="tel:+918448441298">+91 8448441298</a>
+        <br>
+        <a href="mailto:support@deltacodes.in">support@deltacodes.in</a>
+        <br>
+        14th Floor, JM Orchid | Sector 76, Noida 201304</p>
     </div>
     <div class="othr sec">
       <h2>FOLLOW US</h2>

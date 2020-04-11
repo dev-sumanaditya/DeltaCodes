@@ -1,16 +1,30 @@
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 92vh;
+  min-height: 95vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-grow: 1;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.77);
   color: white;
   flex-direction: column;
   padding: 40px 100px;

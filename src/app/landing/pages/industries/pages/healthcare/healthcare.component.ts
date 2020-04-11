@@ -10,7 +10,7 @@ export class HealthcareComponent implements OnInit {
   coverData = {
     name: 'Healthcare & Life Sciences',
     detail: 'Innovative IT and Software Solutions to accelerate your digital transformation.',
-    background: '/assets/industries/backgrounds/healthcare.jpeg'
+    background: 'https://dcvideo.b-cdn.net/healthcare.mp4'
   };
 
   constructor() { }

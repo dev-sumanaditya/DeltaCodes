@@ -10,7 +10,7 @@ export class LogisticsComponent implements OnInit {
   coverData = {
     name: 'Logistics & Transportation',
     detail: 'Innovative IT and Software Solutions to accelerate your digital transformation.',
-    background: '/assets/industries/backgrounds/logistics.jpg'
+    background: 'https://dcvideo.b-cdn.net/logistics.mp4'
   };
 
   constructor() { }

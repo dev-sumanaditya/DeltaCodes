@@ -10,7 +10,7 @@ export class TravelComponent implements OnInit {
   coverData = {
     name: 'Travel & Hospitality',
     detail: 'Innovative IT and Software Solutions to accelerate your digital transformation.',
-    background: '/assets/industries/backgrounds/travel.jpeg'
+    background: 'https://dcvideo.b-cdn.net/travel.mp4'
   };
 
   constructor() { }

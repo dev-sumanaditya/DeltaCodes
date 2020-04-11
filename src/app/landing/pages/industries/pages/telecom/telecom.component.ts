@@ -10,7 +10,7 @@ export class TelecomComponent implements OnInit {
   coverData = {
     name: 'Telecom & Internet',
     detail: 'Innovative IT and Software Solutions to accelerate your digital transformation.',
-    background: '/assets/industries/backgrounds/telecom.jpeg'
+    background: 'https://dcvideo.b-cdn.net/telecom.mp4'
   };
 
   constructor() { }

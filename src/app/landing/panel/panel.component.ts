@@ -85,6 +85,15 @@ export class PanelComponent implements OnInit, AfterViewInit {
     });
   }
 
+  public analytics(event) {
+    this.analyticsService.eventEmitter(
+      'navigate',
+      'navigation',
+      'navigated',
+      event
+    )
+  }
+
   public acceptCookie() {
     this.cookieStatus = false;
     this.cookieService.set('visited', 'true', 604800);

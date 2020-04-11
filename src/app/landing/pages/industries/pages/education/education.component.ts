@@ -10,7 +10,7 @@ export class EducationComponent implements OnInit {
   coverData = {
     name: 'Education & Digital Learning',
     detail: 'Innovative IT and Software Solutions to accelerate your digital transformation.',
-    background: '/assets/industries/backgrounds/education.jpg'
+    background: 'https://dcvideo.b-cdn.net/education.mp4'
   };
 
   constructor() { }
