@@ -19,6 +19,7 @@ const routes: Routes = [
       {path: 'campaign', loadChildren: () => import('./pages/campaign/campaign.module').then(m => m.CampaignModule)},
       {path: 'services', loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule)},
       {path: 'industries', loadChildren: () => import('./pages/industries/industries.module').then(m => m.IndustriesModule)},
+      {path: 'public', loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule)},
       {path: '', loadChildren: () => import('./pages/homeModule/home.module').then(m => m.HomeModule)}
     ]},
     {path: '**', redirectTo: '/404'}

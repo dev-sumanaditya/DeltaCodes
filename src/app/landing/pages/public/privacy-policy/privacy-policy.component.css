@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 150px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 38px;
+}
+h2 {
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+p {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+a {
+  color: #0ac775;
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  color: #07a360;
+}
