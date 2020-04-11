@@ -257,6 +257,9 @@
   margin: 0 0 20px 20px;
   color: #ddd;
 }
+.sideMenu h4 span {
+  color: #0ac775;
+}
 .sideMenu .content .social {
   margin-top: 30px;
   font-size: 24px;
