@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: rgb(215, 215, 215);
+  padding: 40px 150px;
+}
+
+.client {
+  background-color: #121212;
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.l {
+  flex: 4;
+}
+.l h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.r {
+  flex: 1;
+  padding-left: 20px;
+}
+.r button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid #0ac775;
+  color: rgb(215, 215, 215);
+  width: max-content;
+  background-color: transparent;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  font-weight: 800;
+}
+.r button:hover {
+  background-color: #0ac775;
+  color: black;
+}
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .client {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .r {
+    padding-left: 0px;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 60px 150px;
+  background-color: black;
+  color: rgb(215, 215, 215);
+  justify-content: space-between;
+}
+
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+}
+.i2 {
+  border: 1px solid rgb(30, 30, 30);
+}
+.item h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0 0 5px 0;
+}
+.item .img {
+  height: 180px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.item .content {
+  padding: 20px;
+}
+.item .content h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.item .content p {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
+}
+.item .content .btn {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 20px;
+  border: 1px solid rgb(130, 130, 130);
+  width: max-content;
+  margin-top: 60px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+.item .content .btn:hover {
+  color: #0ac775;
+  border: 1px solid #0ac775;
+}
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .item {
+    width: 100%;
+    margin-top: 40px;
+  }
+}

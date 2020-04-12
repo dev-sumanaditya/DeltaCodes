@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>What's Next?</h1>
+  <div class="items">
+    <div class="item" *ngFor="let item of next">
+      <div class="ct">
+        <img [src]="'/assets/industries/icons/'+ item.icon +'.png'">
+        <h2>{{item.name}}</h2>
+        <p>{{item.text}}</p>
+      </div>
+      <a routerLink="/blog">Learn more</a>
+    </div>
+  </div>
+</div>
