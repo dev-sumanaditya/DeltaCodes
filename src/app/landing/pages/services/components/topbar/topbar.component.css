@@ -42,11 +42,13 @@ h3 {
   font-size: 20px;
   font-weight: 600;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 .more {
   margin-bottom: 20px;
   width: max-content;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 .more:active {
   color: rgb(124, 0, 72);

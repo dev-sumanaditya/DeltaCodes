@@ -10,8 +10,8 @@ export class DefaultComponent implements OnInit {
   public data = {
     route: '',
     heading: 'Services',
-    detail: 'Harness the power of digital to drive growth with our services and business solutions.',
-    moreURL: 'about'
+    detail: 'Harness the power of digital to drive growth with our innovative services and business solutions.',
+    moreURL: 'industries'
   };
 
   public services = [

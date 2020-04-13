@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+export interface Datatype {
+  head: String;
+  desc1: String;
+  desc2: String;
+  url: String;
+}
 
 @Component({
   selector: 'app-desc',
@@ -6,6 +13,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./desc.component.css']
 })
 export class DescComponent implements OnInit {
+
+  @Input() Data: Datatype;
 
   constructor() { }
 
