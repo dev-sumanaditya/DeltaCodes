@@ -1,12 +1,23 @@
 <div class="container">
-  <h1>Oops!</h1>
+  <!-- <h1>Oops!</h1>
   <h2>We can't seem to find the page you're looking for.</h2>
-  <h4>Here are some helpful links instead:</h4>
-  <br><br>
-  <div class="itms">
-    <h4 class="link" routerLink="/">Home</h4>
-    <h4 class="link" routerLink="/blog">Blog</h4>
-    <h4 class="link" routerLink="/about">Explore</h4>
-    <h4 class="link" routerLink="/career">Career</h4>
+  <h4>Here are some helpful links instead:</h4> -->
+  <div class="l">
+    <h1 class="oops">OOPS!</h1>
+    <h1>We can't seem to find the page you're looking for.</h1>
+    <div class="bar"></div>
+    <h2>Here are some helpful links instead :</h2>
+    <ul>
+      <li><i class="fa fa-square" aria-hidden="true"></i><a [routerLink]="['/']">Home</a></li>
+      <li><i class="fa fa-square" aria-hidden="true"></i><a [routerLink]="['/services']">Services</a></li>
+      <li><i class="fa fa-square" aria-hidden="true"></i><a [routerLink]="['/industries']">Industries</a></li>
+      <li><i class="fa fa-square" aria-hidden="true"></i><a [routerLink]="['/contact']">Contact</a></li>
+      <li><i class="fa fa-square" aria-hidden="true"></i><a [routerLink]="['/blog']">Blog</a></li>
+      <li><i class="fa fa-square" aria-hidden="true"></i><a [routerLink]="['/career']">Career</a></li>
+    </ul>
+  </div>
+  <div class="r">
+    <img src="/assets/404/4042.gif" alt="">
+    <h1>Error 404</h1>
   </div>
 </div>
