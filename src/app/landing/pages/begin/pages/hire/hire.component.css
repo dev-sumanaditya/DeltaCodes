@@ -18,9 +18,10 @@
 
 .items {
     display: flex;
+    flex-direction: row;
     margin-top: 50px;
 }
-.items .bar {
+.items .bar2 {
     border: 1px solid #0ac775;
     border-radius: 50%;
 }

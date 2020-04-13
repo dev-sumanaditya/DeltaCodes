@@ -19,7 +19,7 @@
     display: flex;
     margin-top: 50px;
 }
-.items .bar {
+.items .bar2 {
     border: 1px solid #0ac775;
     border-radius: 50%;
     background-color: #0ac775;
@@ -67,7 +67,7 @@
   @media (min-width: 1025px) and (max-width: 1280px) {
 
 }
-  
+
 
 /* Tab */
 @media (min-width: 768px) and (max-width: 1024px) {
