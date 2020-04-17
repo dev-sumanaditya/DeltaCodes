@@ -10,5 +10,8 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent {
   constructor(public meta: Meta) {
+    this.meta.addTags([
+      {property: 'og:description', content: `Deltacodes is accelerating the digital transformation and adoption of new age technologies for businesses and top tech startup's across the globe.`}
+    ]);
   }
 }
