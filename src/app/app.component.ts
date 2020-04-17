@@ -10,6 +10,5 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent {
   constructor(public meta: Meta) {
-    this.meta.addTag({ name: '', content: ''});
   }
 }
