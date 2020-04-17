@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-// import { Router, NavigationEnd } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
+
 
 // declare let gtag: Function;
 @Component({
@@ -8,15 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor() {
-    // this.router.events.subscribe(event => {
-    //   if (event instanceof NavigationEnd) {
-    //       gtag('config', 'xx-xxxxx-xx',
-    //             {
-    //               'page_path': event.urlAfterRedirects
-    //             }
-    //       );
-    //   }
-    // });
+  constructor(public meta: Meta) {
+    this.meta.addTag({ name: '', content: ''});
   }
 }
