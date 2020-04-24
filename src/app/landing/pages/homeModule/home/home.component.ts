@@ -201,7 +201,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Logistics & Transportation',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/logistics',
+      url: 'logistics',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
     },
@@ -209,7 +209,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Oil & Gas',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/oil',
+      url: 'oil',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1573153178631-49e3aa9e018b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80'
     },
@@ -217,7 +217,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Telecom & Internet',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/telecom',
+      url: 'telecom',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1533664488202-6af66d26c44a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80'
     },
@@ -225,7 +225,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Technology & Innovation',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/tech',
+      url: 'tech',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1530825894095-9c184b068fcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80'
     },
@@ -233,7 +233,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Financial Services',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/finance',
+      url: 'financial',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80'
     },
@@ -241,7 +241,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Healthcare & Life Sciences',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/healthcare',
+      url: 'healthcare',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1582560469781-1965b9af903d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=984&q=80'
     },
@@ -249,7 +249,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Travel & Hospitality',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/travel',
+      url: 'travel',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80'
     },
@@ -257,7 +257,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Retail & Ecommerce',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/retail',
+      url: 'retail',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80'
     },
@@ -265,7 +265,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Education and Digital Learning',
       des: `Build your end-to-end digital supply chain to drive efficiencies and
            shorten delivery times with our intelligent IT and software solution`,
-      url: 'industries/education',
+      url: 'education',
       // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
     }

@@ -281,7 +281,7 @@
         <div class="cont" [class.visContent]="expandedInd === i" *ngIf="showContent">
           <h1>{{item.name}}</h1>
           <h3>{{item.des}}</h3>
-          <button [routerLink]="[item.url]">LEARN MORE</button>
+          <button [routerLink]="['/industries',item.url]">LEARN MORE</button>
         </div>
       </div>
     </div>
