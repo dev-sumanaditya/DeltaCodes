@@ -1,0 +1,51 @@
+<div class="contact">
+  <h1>Ready to talk?</h1>
+  <div class="bar"></div>
+  <div class="items">
+    <div class="l">
+      <a class="wapp" href="http://wa.me/917798623604?text=Hey%20DeltaCodes" target="_blank" rel="noopener noreferrer">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <span>+91 7798623604</span>
+      </a>
+
+      <a class="mail" href="mailto:support@deltacodes.in">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <span>support@deltacodes.in</span>
+      </a>
+
+      <a class="call" href="tel:+917798623604">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <span>+91 7798623604</span>
+      </a>
+    </div>
+
+    <div class="r">
+      <div class="formItem">
+        <label for="fname">First Name*</label>
+        <input id="fname" type="text">
+      </div>
+      <div class="formItem">
+        <label for="lname">Last Name*</label>
+        <input id="lname" type="text">
+      </div>
+      <div class="formItem">
+        <label for="comp">Company*</label>
+        <input id="comp" type="text">
+      </div>
+      <div class="formItem">
+        <label for="email">Email*</label>
+        <input id="email" type="email">
+      </div>
+      <div class="formItem">
+        <label for="cont">Contact*</label>
+        <input id="contact" type="text">
+      </div>
+      <div class="tarea">
+        <label for="query">How can we help?*</label>
+        <textarea name="" id="query" rows="6"></textarea>
+      </div>
+      <button>SUBMIT</button>
+      <p *ngIf="submitted" style="width: 100%; padding: 0 20px;">Thanks! A member of our business development team will contact you shortly.</p>
+    </div>
+  </div>
+</div>

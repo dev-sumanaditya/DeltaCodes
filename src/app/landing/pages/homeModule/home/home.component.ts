@@ -170,7 +170,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Cyber security & Computer vision',
-      info: 'Secure your peremiter or use computer vision for industrial surveillance.',
+      info: 'Secure your perimeter or use computer vision for industrial surveillance.',
       link: '',
       image: '5.jpg'
     },
