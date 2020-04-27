@@ -199,10 +199,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   public subscription2: Subscription;
   public subscription3: Subscription;
   public subscription4: Subscription;
-  public subscription5: Subscription;
-  public subscription6: Subscription;
-  public subscription7: Subscription;
-  public subscription8: Subscription;
 
   public selectedDeliver = 1;
 
@@ -352,9 +348,5 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subscription2.unsubscribe();
     this.subscription3.unsubscribe();
     this.subscription4.unsubscribe();
-    this.subscription5.unsubscribe();
-    this.subscription6.unsubscribe();
-    this.subscription7.unsubscribe();
-    this.subscription8.unsubscribe();
   }
 }
