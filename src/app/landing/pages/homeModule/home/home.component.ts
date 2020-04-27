@@ -72,129 +72,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     it autonomous flights to wearable tech, Our team of Data Scientists and Developers can build all the Algorithms.`
   ];
 
-  public services = [
-    {
-      name: 'Static Websites',
-      url: '/assets/i3/1.png'
-    },
-    {
-      name: 'Dynamic Websites',
-      url: '/assets/i3/2.png'
-    },
-    {
-      name: 'Web Apps',
-      url: '/assets/i3/3.png'
-    },
-    {
-      name: 'Progressive Web Apps',
-      url: '/assets/i3/4.png'
-    },
-    {
-      name: 'Hybrid Apps',
-      url: '/assets/i3/5.png'
-    },
-    {
-      name: 'Android Apps',
-      url: '/assets/i3/6.png'
-    },
-    {
-      name: 'IOS Apps',
-      url: '/assets/i3/7.png'
-    },
-    {
-      name: 'Desktop Apps',
-      url: '/assets/i3/8.png'
-    },
-    {
-      name: 'Backend API Development',
-      url: '/assets/i3/9.png'
-    },
-    {
-      name: 'Frontend Development',
-      url: '/assets/i3/10.png'
-    },
-    {
-      name: 'API Integration',
-      url: '/assets/i3/11.png'
-    },
-    {
-      name: 'Wearable Tech',
-      url: '/assets/i3/12.png'
-    },
-    {
-      name: 'Data Science',
-      url: '/assets/i3/13.png'
-    },
-    {
-      name: 'Machine Learning',
-      url: '/assets/i3/14.png'
-    },
-    {
-      name: 'Image Processing',
-      url: '/assets/i3/15.png'
-    },
-    {
-      name: 'AR/VR',
-      url: '/assets/i3/16.png'
-    },
-    {
-      name: 'AI',
-      url: '/assets/i3/16b.png'
-    },
-    {
-      name: 'UI/UX Design',
-      url: '/assets/i3/17.png'
-    },
-    {
-      name: 'Arduino',
-      url: '/assets/i3/18.png'
-    },
-    {
-      name: 'Raspberry-Pi',
-      url: '/assets/i3/19.png'
-    },
-    {
-      name: 'Drones/Robotics',
-      url: '/assets/i3/20.png'
-    },
-    {
-      name: 'Automation',
-      url: '/assets/i3/21.png'
-    },
-    {
-      name: 'Sensors and Microprocessors',
-      url: '/assets/i3/22.png'
-    },
-    {
-      name: 'CAD Designing',
-      url: '/assets/i3/23.png'
-    },
-    {
-      name: 'E-Commerce',
-      url: '/assets/i3/24.png'
-    },
-    {
-      name: 'Wordpress',
-      url: '/assets/i3/25.png'
-    },
-    {
-      name: 'SEO',
-      url: '/assets/i3/26.png'
-    },
-    {
-      name: 'Digital Marketing',
-      url: '/assets/i3/27.png'
-    },
-    {
-      name: 'Website Optimization',
-      url: '/assets/i3/28.png'
-    },
-    {
-      name: 'Maintenance',
-      url: '/assets/i3/3.png'
-    },
-  ];
-
 
   public industries = [
     {
@@ -271,6 +148,42 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   ];
 
+
+  public weDeliver = [
+    {
+      name: 'Mobile Apps & Games',
+      info: 'Harvest the power of mobile to reach billions in seconds.',
+      link: '',
+      image: '1.jpg'
+    },
+    {
+      name: 'AI / BI, Crypto, AWS',
+      info: 'Leverage your data to gain actionable insights or go secure with immutable blockchain technology.',
+      link: '',
+      image: '2.jpg'
+    },
+    {
+      name: 'VR/ AR, & Wearables',
+      info: 'Boost your teams effeciency by using the power of AR & VR.',
+      link: '',
+      image: '3.jpg'
+    },
+    {
+      name: 'Cyber security & Computer vision',
+      info: 'Secure your peremiter or use computer vision for industrial surveillance.',
+      link: '',
+      image: '5.jpg'
+    },
+    {
+      name: 'IOT & Robotics',
+      info: 'Let machines do the labour so that your team can focus on more critical human aspects.',
+      link: '',
+      image: '4.jpg'
+    },
+  ];
+
+
+
   public expandedInd = 0;
   public showContent: Boolean = true;
 
@@ -291,6 +204,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   public subscription7: Subscription;
   public subscription8: Subscription;
 
+  public selectedDeliver = 1;
 
   public modal1 = false;
 
@@ -331,6 +245,16 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   public mouseExit() {
   }
+
+  public deliverItm(e) {
+    this.selectedDeliver = e;
+  }
+  public deliverDflt() {
+    this.selectedDeliver = 1;
+  }
+
+
+
 
   ngOnInit() {}
 
@@ -383,7 +307,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
 
-      const sl1MouseDown = fromEvent<any>(this.sl1.nativeElement, 'mousedown')
+      const sl1MouseDown = fromEvent<any>(this.sl1.nativeElement, 'mousedown');
       this.subscription = sl1MouseDown.subscribe(
         e => {
           this.isDown = true;
@@ -393,7 +317,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       );
 
-      const sl1MouseLeave = fromEvent<any>(this.sl1.nativeElement, 'mouseleave')
+      const sl1MouseLeave = fromEvent<any>(this.sl1.nativeElement, 'mouseleave');
       this.subscription2 = sl1MouseLeave.subscribe(
         e => {
           this.isDown = false;
@@ -401,7 +325,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       );
 
-      const sl1MouseUp = fromEvent<any>(this.sl1.nativeElement, 'mouseup')
+      const sl1MouseUp = fromEvent<any>(this.sl1.nativeElement, 'mouseup');
       this.subscription3 = sl1MouseUp.subscribe(
         e => {
           this.isDown = false;
@@ -409,20 +333,22 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       );
 
-      const sl1MouseMove = fromEvent<any>(this.sl1.nativeElement, 'mousemove')
+      const sl1MouseMove = fromEvent<any>(this.sl1.nativeElement, 'mousemove');
       this.subscription4 = sl1MouseMove.subscribe(
         e => {
-          if(!this.isDown) return;
+          if (!this.isDown) {
+            return;
+          }
           e.preventDefault();
           const x = e.pageX - this.sl1.nativeElement.offsetLeft;
-          const walk = (x- this.startX) * 3;
+          const walk = (x - this.startX) * 3;
           this.sl1.nativeElement.scrollLeft = this.scrollLeft - walk;
         }
       );
 
 
 
-      const sl2MouseDown = fromEvent<any>(this.sl2.nativeElement, 'mousedown')
+      const sl2MouseDown = fromEvent<any>(this.sl2.nativeElement, 'mousedown');
       this.subscription5 = sl2MouseDown.subscribe(
         e => {
           this.isDown2 = true;
@@ -432,7 +358,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       );
 
-      const sl2MouseLeave = fromEvent<any>(this.sl2.nativeElement, 'mouseleave')
+      const sl2MouseLeave = fromEvent<any>(this.sl2.nativeElement, 'mouseleave');
       this.subscription6 = sl2MouseLeave.subscribe(
         e => {
           this.isDown2 = false;
@@ -440,7 +366,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       );
 
-      const sl2MouseUp = fromEvent<any>(this.sl2.nativeElement, 'mouseup')
+      const sl2MouseUp = fromEvent<any>(this.sl2.nativeElement, 'mouseup');
       this.subscription7 = sl2MouseUp.subscribe(
         e => {
           this.isDown2 = false;
@@ -448,13 +374,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       );
 
-      const sl2MouseMove = fromEvent<any>(this.sl2.nativeElement, 'mousemove')
+      const sl2MouseMove = fromEvent<any>(this.sl2.nativeElement, 'mousemove');
       this.subscription8 = sl2MouseMove.subscribe(
         e => {
-          if(!this.isDown2) return;
+          if (!this.isDown2) {
+            return;
+          }
           e.preventDefault();
           const x = e.pageX - this.sl2.nativeElement.offsetLeft;
-          const walk = (x- this.startX2) * 3;
+          const walk = (x - this.startX2) * 3;
           this.sl2.nativeElement.scrollLeft = this.scrollLeft2 - walk;
         }
       );

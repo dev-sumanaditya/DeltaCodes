@@ -257,13 +257,6 @@
     </div>
   </div>
 
-  <div class="map">
-    <h2>Global Talent Pool</h2>
-    <div class="bar"></div>
-    <img style="display: none;" src="/assets/imgs/globalpresence.gif" alt="">
-    <h1 style="text-align: center; color: #ddd; margin-top: 140px;">Coming soon..</h1>
-  </div>
-
 
   <div class="heading">
     <h2>Industries</h2>
@@ -287,17 +280,32 @@
     </div>
   </div>
 
-  <div class="portfolio">
-    <h2>Tech-stack</h2>
+  <div class="map">
+    <h2>Global Talent Pool</h2>
     <div class="bar"></div>
-    <div class="bttm">
-        <div class="navs" *ngFor="let item of services">
-            <div class="img">
-                <div class="circle-ripple"></div>
-                <img src="{{item.url}}" alt="">
-            </div>
-            <h2>{{item.name}}</h2>
+    <img style="display: none;" src="/assets/imgs/globalpresence.gif" alt="">
+    <h1 style="text-align: center; color: #ddd; margin-top: 140px;">Coming soon..</h1>
+  </div>
+
+  <div class="portfolio">
+    <h2>Unlock your potential</h2>
+    <div class="bar"></div>
+    <div class="sec">
+      <h3>See how DeltaCodes can help you in your digital transformation journey</h3>
+      <div class="items"  (mouseleave)="deliverDflt()">
+        <div class="item"
+        *ngFor="let i of weDeliver; let j = index;"
+        [style.backgroundImage]="'url(/assets/weDeliver/'+ i.image +')'"
+        (mouseenter)="deliverItm(j)"
+        [class.sechover]="selectedDeliver === j"
+        >
+          <div class="pseudo">
+            <h1>{{i.name}}</h1>
+            <p>{{i.info}}</p>
+            <a rel="noopener noreferrer" [routerLink]="['/', i.link]">SEE HOW</a>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 

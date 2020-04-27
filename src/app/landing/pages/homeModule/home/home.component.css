@@ -531,15 +531,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 150px;
     background-color: white;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 100px;
 }
 
 .portfolio  h2{
     font-size: 50px;
     font-weight: 700;
     margin: 0;
+    text-align: center;
 }
 
 .portfolio .bar {
@@ -549,70 +550,85 @@
     background-color: #0ac775;
 }
 
-.portfolio .bttm {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-top: 60px;
+.sec {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  width: 100%;
+}
+.sec h3 {
+  color: rgb(56, 7, 7);
+  text-align: center;
 }
 
-.portfolio .bttm .navs {
-    width: 20%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px 0;
-    user-select: none;
+.sec .items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 380px;
+  margin-top: 50px;
 }
-.portfolio .bttm .navs .img {
-    width: 150px;
-    height: 150px;
-    border-radius: 30px;
-    padding: 10px;
-    box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.3), 0 0px 10px -1px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    background-color: white;
+.sec .item {
+  flex: 1;
+  height: 300px;
+  transition-duration: 0.7s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
-.portfolio .bttm .navs .img img {
-    height: 100%;
-    width: 100%;
+.sec h1 {
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  max-width: 200px;
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+  padding: 10px;
 }
-.portfolio .bttm .navs .img:hover {
-    -webkit-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.sec p {
+  display: none;
+  transition-delay: 0.4s;
 }
-.portfolio .bttm .navs h2 {
-    font-size: 22px;
-    margin-top: 25px;
-    text-align: center;
-    color: #333;
+.sec a {
+  display: none;
 }
-@-webkit-keyframes shadow-drop-2-center {
-    0% {
-      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-    100% {
-      -webkit-box-shadow: 0 0 20px 4px rgb(0, 0, 0);
-              box-shadow: 0 0 20px 4px rgb(0, 0, 0);
-    }
-  }
-  @keyframes shadow-drop-2-center {
-    0% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-    100% {
-      -webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.35);
-              box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.35);
-    }
-  }
+.sec .pseudo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  backdrop-filter: blur(0.8);
+}
+.sechover {
+  height: 370px !important;
+  flex: 2 !important;
+}
 
-
+.sechover .pseudo {
+  background: linear-gradient(rgba(245, 246, 252, 0.52), rgb(117, 19, 93)) !important;
+}
+.sechover h1 {
+  font-size: 26px;
+  margin-top: 0;
+}
+.sechover p {
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  max-width: 70%;
+}
+.sechover a {
+  display: flex;
+  color: #3ee69d;
+  font-weight: 900;
+  font-size: 24px;
+  width: max-content;
+}
 
 
 .scrl {
@@ -1041,35 +1057,6 @@
     background-color: #0ac775;
 }
 
-.portfolio .bttm {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-top: 60px;
-}
-
-.portfolio .bttm .navs {
-    width: 40%;
-    box-sizing: border-box;
-    align-items: center;
-    margin: 20px 0;
-}
-.portfolio .bttm .navs .img {
-    width: 80%;
-    height: auto;
-    border-radius: 30px;
-    padding: 10px;
-}
-.portfolio .bttm .navs .img img {
-    height: 100%;
-    width: 100%;
-}
-.portfolio .bttm .navs h2 {
-    font-size: 14px;
-    margin-top: 20px;
-}
-
 
 
 .inf .item {
@@ -1096,6 +1083,19 @@
 }
 .heading h2 {
   font-size: 25px;
+}
+
+
+.sec .items {
+  flex-direction: column;
+  align-items: flex-start;
+  height: max-content;
+  margin-top: 50px;
+}
+
+.sechover {
+  height: max-content !important;
+  flex: 1 !important;
 }
 
 }

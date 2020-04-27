@@ -118,7 +118,6 @@ export class PanelComponent implements OnInit, AfterViewInit {
       } else {
         this.navWhite = true;
       }
-      console.log(this.route.snapshot.firstChild.url[0].path);
     } else {
       this.hideTopNav = false;
       this.navWhite = false;
@@ -132,7 +131,6 @@ export class PanelComponent implements OnInit, AfterViewInit {
           } else {
             this.navWhite = true;
           }
-          console.log(this.route.snapshot.firstChild.url[0].path);
         } else {
           this.hideTopNav = false;
           this.navWhite = false;
