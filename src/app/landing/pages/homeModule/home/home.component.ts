@@ -345,47 +345,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           this.sl1.nativeElement.scrollLeft = this.scrollLeft - walk;
         }
       );
-
-
-
-      const sl2MouseDown = fromEvent<any>(this.sl2.nativeElement, 'mousedown');
-      this.subscription5 = sl2MouseDown.subscribe(
-        e => {
-          this.isDown2 = true;
-          this.sl2.nativeElement.classList.add('activeSlide');
-          this.startX2 = e.pageX - this.sl2.nativeElement.offsetLeft;
-          this.scrollLeft2 = this.sl2.nativeElement.scrollLeft;
-        }
-      );
-
-      const sl2MouseLeave = fromEvent<any>(this.sl2.nativeElement, 'mouseleave');
-      this.subscription6 = sl2MouseLeave.subscribe(
-        e => {
-          this.isDown2 = false;
-          this.sl2.nativeElement.classList.remove('activeSlide');
-        }
-      );
-
-      const sl2MouseUp = fromEvent<any>(this.sl2.nativeElement, 'mouseup');
-      this.subscription7 = sl2MouseUp.subscribe(
-        e => {
-          this.isDown2 = false;
-          this.sl2.nativeElement.classList.remove('activeSlide');
-        }
-      );
-
-      const sl2MouseMove = fromEvent<any>(this.sl2.nativeElement, 'mousemove');
-      this.subscription8 = sl2MouseMove.subscribe(
-        e => {
-          if (!this.isDown2) {
-            return;
-          }
-          e.preventDefault();
-          const x = e.pageX - this.sl2.nativeElement.offsetLeft;
-          const walk = (x - this.startX2) * 3;
-          this.sl2.nativeElement.scrollLeft = this.scrollLeft2 - walk;
-        }
-      );
   }
 
   ngOnDestroy() {
