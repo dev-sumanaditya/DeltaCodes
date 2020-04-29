@@ -32,7 +32,7 @@ export class Free10Component implements OnInit, AfterViewInit {
 
   public timerFn() {
     if (isPlatformBrowser(this.platformId)) {
-      const countDownDate = new Date('Apr 22, 2020 12:00:00').getTime();
+      const countDownDate = new Date('May 22, 2020 12:00:00').getTime();
       const set = (data) => { this.timeObj = data; };
       const x = setInterval(function() {
         const now = new Date().getTime();

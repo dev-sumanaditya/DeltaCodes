@@ -4,7 +4,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 .banner {
-  background: url('https://www.graduateguide.co.uk/images/uploads/work-from-home-banner.jpg');
+  background: url('/assets/freeWebsite/banner.jpg');
   min-height: 50vh;
   background-size: cover;
   background-position: top center;
@@ -42,7 +42,7 @@
 
 
 .timer {
-  background: url('https://wallpaperaccess.com/full/1638158.jpg');
+  background: url('/assets/freeWebsite/bg.jpg');
   min-height: 80vh;
   background-size: cover;
   background-position: center;
