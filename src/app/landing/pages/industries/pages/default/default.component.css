@@ -4,7 +4,7 @@
 }
 
 .banner {
-  background: url('https://cdn.pixabay.com/photo/2015/07/08/03/13/forklift-835340_1280.jpg');
+  background: url('/assets/industries/common/default.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
