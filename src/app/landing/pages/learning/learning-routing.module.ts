@@ -6,7 +6,7 @@ import { ReaderComponent } from './components/reader/reader.component';
 
 const routes: Routes = [
   {path: '',  component: HomeComponent, children: [
-    {path: 'reader/:id', component: ReaderComponent}
+    {path: '', component: ReaderComponent}
   ]}
 ];
 

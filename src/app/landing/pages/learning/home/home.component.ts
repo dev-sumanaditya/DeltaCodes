@@ -7,35 +7,107 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  public dummy = [
-    {head: 'Introduction', url: 'intro', list: [{name: 'Beginners Guide', url: '1'}, {name: 'Advanced Guide', url: '2'}, {name: 'Best Practices', url: '3'}, {name: 'Other Links', url: '4'}, {name: 'Free Resources', url: '5'}]},
-    {head: 'Web Developers Guide', url: 'one', list: [{name: 'Beginners Guide', url: '1'}, {name: 'Advanced Guide', url: '2'}, {name: 'Best Practices', url: '3'}]},
-    {head: 'Hybrid Apps', url: 'two', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Cyber Security', url: 'three', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Useful Links', url: '', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Beginners Guide', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Developers Guide', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Remote Work', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Introduction', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Web Developers Guide', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Hybrid Apps', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Cyber Security', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Useful Links', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Beginners Guide', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Developers Guide', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
-    {head: 'Remote Work', list: [{name: 'Beginners Guide', url: ''}, {name: 'Advanced Guide', url: ''}, {name: 'Best Practices', url: ''}]},
+
+  public list = [
+    {
+      name: 'HTML5',
+      icon: '/assets/learning/languages/html5.svg'
+    },
+    {
+      name: 'C',
+      icon: '/assets/learning/languages/c.svg'
+    },
+    {
+      name: 'Bootstrap',
+      icon: '/assets/learning/languages/bootstrap.svg'
+    },
+    {
+      name: 'Github',
+      icon: '/assets/learning/languages/github.svg'
+    },
+    {
+      name: 'Apache',
+      icon: '/assets/learning/languages/apache.svg'
+    },
+    {
+      name: 'Django',
+      icon: '/assets/learning/languages/django.svg'
+    },
+    {
+      name: 'Electron',
+      icon: '/assets/learning/languages/electron.svg'
+    },
+    {
+      name: 'HandleBars',
+      icon: '/assets/learning/languages/handlebars.svg'
+    },
+    {
+      name: 'Ionic',
+      icon: '/assets/learning/languages/ionic.svg'
+    },
+    {
+      name: 'JAVA',
+      icon: '/assets/learning/languages/java.svg'
+    },
+    {
+      name: 'JavaScript',
+      icon: '/assets/learning/languages/javascript.svg'
+    },
+    {
+      name: 'Linux',
+      icon: '/assets/learning/languages/linux.svg'
+    },
+    {
+      name: 'Material Design',
+      icon: '/assets/learning/languages/materialdesign.svg'
+    },
+    {
+      name: 'MySql',
+      icon: '/assets/learning/languages/mysql.svg'
+    },
+    {
+      name: 'Node Js',
+      icon: '/assets/learning/languages/node-js.svg'
+    },
+    {
+      name: 'PHP',
+      icon: '/assets/learning/languages/php.svg'
+    },
+    {
+      name: 'PyCharm',
+      icon: '/assets/learning/languages/pycharm.svg'
+    },
+    {
+      name: 'SASS',
+      icon: '/assets/learning/languages/sass.svg'
+    },
+    {
+      name: 'Sequelize',
+      icon: '/assets/learning/languages/sequelize.svg'
+    },
+    {
+      name: 'SSH',
+      icon: '/assets/learning/languages/ssh.svg'
+    },
+    {
+      name: 'TypeScript',
+      icon: '/assets/learning/languages/typescript.svg'
+    },
+    {
+      name: 'WebPack',
+      icon: '/assets/learning/languages/webpack.svg'
+    }
   ];
-  public d2 = [1,1,1,1,1,1]
 
-
-  public currentIndex = 0;
+  public searching = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggle(i) {
-    this.currentIndex = i;
+  search(data) {
+    this.searching = true;
   }
+
 }

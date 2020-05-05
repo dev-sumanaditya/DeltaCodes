@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 20px
+}
+.topbar:hover {
+  background-color: #ddd;
+}
+
+img {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+.topbar span {
+  font-size: 18px;
+}
+.content {
+  margin-left: 25px;
+  margin-top: 15px;
+  max-height: 10000px;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+.shrinked {
+  max-height: 0px !important;
+  margin-top: 0px !important;
+}
+.item {
+  margin-bottom: 10px;
+}
+.item:hover span {
+  color: #0ac775;
+}
+.item span {
+  font-size: 20px;
+  line-height: 20px;
+  margin-right: 6px;
+  color: rgb(180, 180, 180);
+}
+.item a {
+  color: rgb(53, 53, 138);
+}
