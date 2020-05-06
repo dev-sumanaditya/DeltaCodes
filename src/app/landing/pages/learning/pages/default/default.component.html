@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="top">
+    <h1>Get Smarter Everyday</h1>
+    <p>A free learning portal for developers and computer geeks.</p>
+  </div>
+
+  <div class="head">Select a topic and start learning</div>
+  <div class="topics">
+    <a [routerLink]="" class="topic" *ngFor="let item of topics">
+      <span>#</span>
+      <strong>{{item.name}}</strong>
+    </a>
+  </div>
+  <p class="text">Didn't find the one you are looking for? try our search</p>
+
+  <div class="register">
+    <div class="head">Register for our newsletters</div>
+    <div class="inp">
+      <input placeholder="Your Email" type="text" spellcheck="false">
+      <button>Register</button>
+    </div>
+    <p>Registration Successful!</p>
+  </div>
+</div>

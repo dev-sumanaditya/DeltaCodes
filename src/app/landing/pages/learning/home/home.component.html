@@ -12,16 +12,6 @@
     </div>
   </Nav>
   <div class="content">
-    <div class="left">
-      <h4>Explore Topics -</h4>
-      <app-listitem [header]="item" [index]="index" *ngFor="let item of list; let index= index"></app-listitem>
-      <div style="height: 120px;"></div>
-    </div>
-    <div class="center scroll">
-      <app-reader></app-reader>
-    </div>
-    <div class="right scroll">
-      right something something
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 export interface HeaderType {
   name: string;
   icon: string;
@@ -14,32 +15,25 @@ export interface HeaderType {
 export class ListitemComponent implements OnInit {
 
   @Input() header: HeaderType;
-  @Input() index: number;
+  @Input() activated: string;
+
 
   dummy = [
     {
-      name: 'Some name of topic',
-      url: ''
+      name: 'Introduction',
+      url: 'intro'
     },
     {
-      name: 'Some other topic',
-      url: ''
+      name: 'Data Sutructures',
+      url: 'ds'
     },
     {
-      name: 'Some other new topic',
-      url: ''
+      name: 'Sorting Algorithms',
+      url: 'sorting'
     },
     {
-      name: 'Some name of topic',
-      url: ''
-    },
-    {
-      name: 'Some other topic',
-      url: ''
-    },
-    {
-      name: 'Some other new topic',
-      url: ''
+      name: 'Operators',
+      url: 'operator'
     }
   ];
 

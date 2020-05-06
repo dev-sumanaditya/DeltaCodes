@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-reader',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
+
+  id;
+  page = '';
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.id = params['topic'];
+      this.page = params['title'];
+    });
   }
-
 }

@@ -6,7 +6,8 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 12px 20px
+  padding: 12px 20px;
+  text-decoration: none;
 }
 .topbar:hover {
   background-color: #ddd;
@@ -18,7 +19,8 @@ img {
   margin-right: 10px;
 }
 .topbar span {
-  font-size: 18px;
+  font-size: 16px;
+  color: #182846;
 }
 .content {
   margin-left: 25px;
@@ -26,6 +28,9 @@ img {
   max-height: 10000px;
   transition-duration: 0.3s;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
 }
 .shrinked {
   max-height: 0px !important;
@@ -33,6 +38,10 @@ img {
 }
 .item {
   margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  color: rgb(56, 56, 117);
 }
 .item:hover span {
   color: #0ac775;
@@ -41,8 +50,12 @@ img {
   font-size: 20px;
   line-height: 20px;
   margin-right: 6px;
-  color: rgb(180, 180, 180);
 }
-.item a {
-  color: rgb(53, 53, 138);
+
+
+.activeroute {
+  color: #0ac775 !important;
+}
+.activeroute span {
+  color: #0ac775;
 }

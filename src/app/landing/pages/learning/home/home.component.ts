@@ -11,15 +11,18 @@ export class HomeComponent implements OnInit {
   public list = [
     {
       name: 'HTML5',
-      icon: '/assets/learning/languages/html5.svg'
+      icon: '/assets/learning/languages/html5.svg',
+      _id: 'html'
     },
     {
       name: 'C',
-      icon: '/assets/learning/languages/c.svg'
+      icon: '/assets/learning/languages/c.svg',
+      _id: 'c'
     },
     {
       name: 'Bootstrap',
-      icon: '/assets/learning/languages/bootstrap.svg'
+      icon: '/assets/learning/languages/bootstrap.svg',
+      _id: 'Bootstrap'
     },
     {
       name: 'Github',
