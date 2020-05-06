@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden scroll;
+  height: calc(100vh - 56px);
+}
+.mont {
+  font-family: 'Montserrat', sans-serif;
+}
+.l {
+  flex: 1;
+  position: sticky;
+  top: 0px;
+  box-shadow: 0px 2px 10px -5px #333;
+  overflow: hidden scroll;
+}
+.l .header {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+.l::-webkit-scrollbar {
+  width: 8px;
+}
+.l::-webkit-scrollbar-thumb {
+  background: rgb(202, 202, 202);
+}
+.m {
+  flex: 3;
+}
+
+
+.r {
+  width: 220px;
+  padding: 20px;
+}
+.r .head {
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.r .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.r .item img {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #0ac775;
+  border-radius: 50%;
+  background: #ddd;
+  margin-right: 10px;
+}
+.r .item .text .txt {
+  font-size: 13px;
+}
+.twitter {
+  color: #1DA1F2;
+}

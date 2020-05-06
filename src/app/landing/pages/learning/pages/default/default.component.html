@@ -1,24 +1,40 @@
 <div class="container">
   <div class="top">
     <h1>Get Smarter Everyday</h1>
-    <p>A free learning portal for developers and computer geeks.</p>
+    <p class="mont">A free learning portal for developers and computer geeks.</p>
   </div>
 
   <div class="head">Select a topic and start learning</div>
   <div class="topics">
-    <a [routerLink]="" class="topic" *ngFor="let item of topics">
+    <a [routerLink]="['/learning','topic', item.url]" class="topic" *ngFor="let item of topics">
       <span>#</span>
       <strong>{{item.name}}</strong>
     </a>
   </div>
-  <p class="text">Didn't find the one you are looking for? try our search</p>
+  <p class="text mont">Didn't find the one you are looking for? try our search</p>
 
+
+  <div class="about">
+    <div class="item">
+      <img src="/assets/learning/homeIcons/1.png" alt="">
+      <p class="mont">Expert Contributors</p>
+    </div>
+    <div class="item">
+      <img src="/assets/learning/homeIcons/2.png" alt="">
+      <p class="mont">Made for community by community</p>
+    </div>
+    <div class="item">
+      <img src="/assets/learning/homeIcons/3.png" alt="">
+      <p class="mont">Free for Everyone</p>
+    </div>
+  </div>
   <div class="register">
-    <div class="head">Register for our newsletters</div>
+    <div class="head mont">Register for our newsletters</div>
     <div class="inp">
       <input placeholder="Your Email" type="text" spellcheck="false">
       <button>Register</button>
     </div>
-    <p>Registration Successful!</p>
+    <p class="mont">Registered successfully!</p>
   </div>
 </div>
+

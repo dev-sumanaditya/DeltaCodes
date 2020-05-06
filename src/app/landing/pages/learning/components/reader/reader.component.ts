@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { ReaderService } from '../../services/reader.service';
 
 
 @Component({
@@ -8,17 +8,35 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './reader.component.html',
   styleUrls: ['./reader.component.css']
 })
-export class ReaderComponent implements OnInit {
+export class ReaderComponent implements OnInit, AfterViewInit{
 
-  constructor(private route: ActivatedRoute) { }
+  @Input() topic;
+  public params = null;
+  public Intro = false;
 
-  id;
-  page = '';
+  public html;
+
+  constructor(private route: ActivatedRoute, private readerService: ReaderService) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      this.id = params['topic'];
-      this.page = params['title'];
+      this.params = params;
     });
   }
+
+  ngAfterViewInit() {
+    if (!this.params.topic) {
+      this.showIntro();
+    }
+    this.getdata();
+  }
+
+  showIntro() {
+    this.Intro = true;
+  }
+
+  getdata() {
+    this.html = this.readerService.getHTML();
+  }
+
 }

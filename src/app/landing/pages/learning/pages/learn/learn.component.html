@@ -1,1 +1,27 @@
-learn component
+<div class="container">
+  <div class="l">
+    <div class="header mont">
+      Website Development Basics <br> {{topic_id}}
+    </div>
+    <app-listitem [header]="i" [activated]="params.topic" *ngFor="let i of list"></app-listitem>
+    <div class="header mont" style="color: #0ac775;">
+      Powered by DeltaCodes
+    </div>
+  </div>
+  <div class="m">
+    <app-reader [topic]="topic_id"></app-reader>
+  </div>
+  <div class="r">
+    <div class="head mont">Authors</div>
+    <div class="item" *ngFor="let i of dummy">
+      <img src="" alt="">
+      <div class="text">
+        <span class="mont txt">User name</span>
+        <div class="social">
+          <i class="fa fa-twitter txt twitter" style="margin-right: 5px;" aria-hidden="true"></i>
+          <a href="/" class="txt twitter">@paul_rhodrigus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

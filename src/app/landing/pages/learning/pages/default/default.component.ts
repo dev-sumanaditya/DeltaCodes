@@ -78,19 +78,19 @@ export class DefaultComponent implements OnInit {
     },
     {
       name: 'IOT',
-      URL: 'iot'
+      url: 'iot'
     },
     {
       name: 'Machine Learning',
-      URL: 'machine learning'
+      url: 'machine learning'
     },
     {
       name: 'Artificial Intelligence',
-      URL: 'ai'
+      url: 'ai'
     },
     {
       name: 'Data Science',
-      URL: 'data'
+      url: 'data'
     },
     {
       name: 'Resources',

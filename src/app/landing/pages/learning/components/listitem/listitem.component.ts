@@ -17,7 +17,6 @@ export class ListitemComponent implements OnInit {
   @Input() header: HeaderType;
   @Input() activated: string;
 
-
   dummy = [
     {
       name: 'Introduction',
@@ -38,7 +37,9 @@ export class ListitemComponent implements OnInit {
   ];
 
   public expanded = false;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

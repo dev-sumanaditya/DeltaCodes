@@ -8,7 +8,7 @@ import { LearnComponent } from './pages/learn/learn.component';
 const routes: Routes = [
   {path: '',  component: HomeComponent, children: [
     {path: '', component: DefaultComponent},
-    {path: 'topic', component: LearnComponent}
+    {path: 'topic/:id', component: LearnComponent}
   ]}
 ];
 

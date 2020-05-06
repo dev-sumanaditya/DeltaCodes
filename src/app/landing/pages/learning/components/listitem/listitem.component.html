@@ -1,13 +1,15 @@
 <div class="container">
-  <a [routerLink]="['/learning']" [queryParams]="{ topic: header.name, title: 'intro' }" class="topbar" (click)="expand()">
+  <a (click)="expand()" class="topbar">
     <img [src]="header.icon" alt="">
     <span>{{header.name}}</span>
   </a>
-  <div class="content" [class.shrinked]="!expanded">
+  <div class="content"
+    [ngClass]="{'shrinked': !expanded && header._id !== activated}"
+  >
     <a class="item"
       *ngFor="let i of dummy"
-      [routerLink]="['/learning']"
-      [queryParams]="{ topic: header.name, title: i.url }"
+      [routerLink]="['./']"
+      [queryParams]="{ topic: header._id, title: i.url }"
       [routerLinkActive]="['activeroute']"
     >
       <span>&#9632;</span>
