@@ -26,22 +26,22 @@ export class LearnComponent implements OnInit {
       icon: '/assets/learning/languages/bootstrap.svg',
       _id: 'bootstrap'
     },
-    // {
-    //   name: 'Github',
-    //   icon: '/assets/learning/languages/github.svg'
-    // },
-    // {
-    //   name: 'Apache',
-    //   icon: '/assets/learning/languages/apache.svg'
-    // },
-    // {
-    //   name: 'Django',
-    //   icon: '/assets/learning/languages/django.svg'
-    // },
-    // {
-    //   name: 'Electron',
-    //   icon: '/assets/learning/languages/electron.svg'
-    // },
+    {
+      name: 'Github',
+      icon: '/assets/learning/languages/github.svg'
+    },
+    {
+      name: 'Apache',
+      icon: '/assets/learning/languages/apache.svg'
+    },
+    {
+      name: 'Django',
+      icon: '/assets/learning/languages/django.svg'
+    },
+    {
+      name: 'Electron',
+      icon: '/assets/learning/languages/electron.svg'
+    },
     // {
     //   name: 'HandleBars',
     //   icon: '/assets/learning/languages/handlebars.svg'

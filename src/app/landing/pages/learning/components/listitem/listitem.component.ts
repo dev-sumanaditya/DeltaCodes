@@ -36,7 +36,7 @@ export class ListitemComponent implements OnInit {
     }
   ];
 
-  public expanded = false;
+  public expanded = true;
 
   constructor() {
   }
