@@ -6,9 +6,10 @@ import { LearnComponent } from './pages/learn/learn.component';
 
 
 const routes: Routes = [
+  {path: 'contributor', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
   {path: '',  component: HomeComponent, children: [
-    {path: '', component: DefaultComponent},
-    {path: 'topic/:id', component: LearnComponent}
+    {path: 'topic/:id', component: LearnComponent},
+    {path: '', component: DefaultComponent}
   ]}
 ];
 

@@ -28,36 +28,32 @@ export class LearnComponent implements OnInit {
     },
     {
       name: 'Github',
-      icon: '/assets/learning/languages/github.svg'
+      icon: '/assets/learning/languages/github.svg',
+      _id: 'github'
     },
     {
       name: 'Apache',
-      icon: '/assets/learning/languages/apache.svg'
+      icon: '/assets/learning/languages/apache.svg',
+      _id: 'apache'
     },
     {
       name: 'Django',
-      icon: '/assets/learning/languages/django.svg'
+      icon: '/assets/learning/languages/django.svg',
+      _id: 'django'
     },
     {
       name: 'Electron',
-      icon: '/assets/learning/languages/electron.svg'
+      icon: '/assets/learning/languages/electron.svg',
+      _id: 'electron'
     },
-    // {
-    //   name: 'HandleBars',
-    //   icon: '/assets/learning/languages/handlebars.svg'
-    // },
-    // {
-    //   name: 'Ionic',
-    //   icon: '/assets/learning/languages/ionic.svg'
-    // },
-    // {
-    //   name: 'JAVA',
-    //   icon: '/assets/learning/languages/java.svg'
-    // },
-    // {
-    //   name: 'JavaScript',
-    //   icon: '/assets/learning/languages/javascript.svg'
-    // },
+    {
+      name: 'JAVA',
+      icon: '/assets/learning/languages/java.svg'
+    },
+    {
+      name: 'JavaScript',
+      icon: '/assets/learning/languages/javascript.svg'
+    }
     // {
     //   name: 'Linux',
     //   icon: '/assets/learning/languages/linux.svg'

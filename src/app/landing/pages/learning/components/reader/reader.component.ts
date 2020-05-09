@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReaderService } from '../../services/reader.service';
 
@@ -13,14 +13,19 @@ export class ReaderComponent implements OnInit, AfterViewInit{
   @Input() topic;
   public params = null;
   public Intro = false;
-
   public html;
+
+  public loading = false;
 
   constructor(private route: ActivatedRoute, private readerService: ReaderService) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.params = params;
+      this.getdata();
+      if (!params.topic) {
+        console.log('default');
+      }
     });
   }
 
@@ -36,7 +41,12 @@ export class ReaderComponent implements OnInit, AfterViewInit{
   }
 
   getdata() {
-    this.html = this.readerService.getHTML();
+    this.loading = true;
+
+    setTimeout(() => {
+      this.html = this.readerService.getHTML();
+      this.loading = false;
+    }, 1000);
   }
 
 }

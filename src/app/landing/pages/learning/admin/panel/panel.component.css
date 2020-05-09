@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0px 2px 10px -5px #333;
+  padding: 0 20px;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+.brand {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #666;
+}
+.brand span {
+  color: #0ac775;
+  font-size: 26px;
+  font-weight: 900;
+  text-shadow: 0px 0px 0.5px #444;
+}
+.right {
+  display: flex;
+  align-items: center;
+}
+.separator {
+  height: 40px;
+  border-right: 1px solid #999;
+  margin: 0 15px;
+}
+.navs {
+  margin-right: 10px;
+}
+.navs .nav {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+.nav:hover {
+  color: #0ac775 !important;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.avatar .img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}

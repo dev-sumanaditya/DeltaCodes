@@ -1,11 +1,14 @@
-<div class="container">
-  <div class="head">
+<div class="container" #scroll>
+  <div class="loading">
+    <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>
+  </div>
+  <div class="head" *ngIf="!loading">
     <h1 class="mont">Introduction to Data Structures and algorithms.</h1>
     <strong class="mont">Section- {{topic}}</strong>
     <strong class="mont">Topic- {{params.topic}}</strong>
   </div>
-  <div class="html mont" [innerHTML]="html"></div>
-  <div class="footer">
+  <div class="html mont" [innerHTML]="html" *ngIf="!loading"></div>
+  <div class="footer" *ngIf="!loading">
     <a href="/learning/topic/web" class="link">Sorting Algorithms <i class="fa fa-angle-right" aria-hidden="true"></i></a>
   </div>
 </div>

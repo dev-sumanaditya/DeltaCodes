@@ -1,5 +1,4 @@
 .container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,6 +44,10 @@
   font-size: 26px;
   color: #0ac775;
 }
+.loading {
+  font-size: 26px;
+}
+
 
 
 .html {

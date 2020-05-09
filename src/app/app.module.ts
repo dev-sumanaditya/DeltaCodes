@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+import { QuillModule } from 'ngx-quill';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
+
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QuillModule.forRoot(),
+    NgxSmartModalModule.forRoot()
   ],
   providers: [
     CookieService

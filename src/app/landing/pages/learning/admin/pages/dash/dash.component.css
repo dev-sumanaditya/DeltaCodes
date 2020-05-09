@@ -1,0 +1,99 @@
+.row {
+  display: flex;
+  padding: 20px;
+}
+.row .l {
+  flex: 1;
+  margin: 10px;
+}
+.row .r {
+  flex: 2;
+  margin: 10px;
+}
+.card {
+  box-shadow: 0px 1px 5px -2px #222;
+  border-radius: 5px;
+  padding: 20px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.top select {
+  padding: 5px;
+  width: 40%;
+  outline: none;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+.item:hover {
+  color: blue;
+}
+.item i {
+  font-size: 24px;
+  color: blue;
+}
+
+
+.r .top input {
+  flex-grow: 1;
+  margin: 0 0 0 10px;
+}
+
+.r .bottm {
+  padding: 10px 0;
+}
+.r .bottm button {
+  padding: 8px 30px;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.l .bttm {
+  display: flex;
+  justify-content: flex-end;
+}
+.l .bttm button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.create input {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.createbttm {
+  justify-content: flex-end;
+}
+.createbttm button {
+  background-color: #222;
+  color: white;
+  padding: 8px 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

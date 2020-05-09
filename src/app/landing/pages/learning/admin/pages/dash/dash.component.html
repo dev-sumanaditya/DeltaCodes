@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="l card">
+    <div class="top">
+      <strong>TOPIC</strong>
+      <select id="cars">
+        <option *ngFor="let i of topics" value="{{i}}">{{i}}</option>
+      </select>
+    </div>
+    <div class="items">
+      <div class="item" *ngFor="let i of sections">
+        <p>Introduction</p>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="bttm">
+      <button (click)="showModal()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="r">
+    <div class="top">
+      <Label>Name of the section:</Label>
+      <input type="text">
+    </div>
+    <quill-editor
+      [styles]="{height: '500px !important'}"
+      (onEditorChanged)="changed($event)"
+      trackChanges="all"
+      [modules]="config"
+      syntax="true"
+    ></quill-editor>
+    <div class="bottm">
+      <button>SUBMIT</button>
+    </div>
+  </div>
+</div>
+
+
+
+<ngx-smart-modal #createItem identifier="createItem">
+  <div class="row">
+    <strong>Topic: name of topic</strong>
+  </div>
+  <div class="row create">
+    <strong>Section Name:</strong>
+    <input type="text">
+  </div>
+  <div class="row createbttm">
+    <button>CREATE</button>
+  </div>
+</ngx-smart-modal>
