@@ -6,7 +6,6 @@ import { PanelComponent } from './panel/panel.component';
 import { AuthComponent } from './auth/auth.component';
 import { DashComponent } from './pages/dash/dash.component';
 import { QuillModule } from 'ngx-quill';
-import { NgxSmartModalModule } from 'ngx-smart-modal';
 
 
 @NgModule({
@@ -15,7 +14,6 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
     CommonModule,
     AdminRoutingModule,
     QuillModule,
-    NgxSmartModalModule.forChild()
   ]
 })
 export class AdminModule { }

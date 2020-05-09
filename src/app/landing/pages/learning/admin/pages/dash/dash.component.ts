@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import BlotFormatter from 'quill-blot-formatter';
 import Quill from 'quill';
-import { NgxSmartModalService } from 'ngx-smart-modal';
 
 
 Quill.register('modules/blotFormatter', BlotFormatter);
@@ -36,7 +35,7 @@ export class DashComponent implements OnInit {
     ]
   };
 
-  constructor(public modalService: NgxSmartModalService) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
@@ -44,6 +43,5 @@ export class DashComponent implements OnInit {
   }
 
   showModal() {
-    this.modalService.getModal('createItem').open();
   }
 }

@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { QuillModule } from 'ngx-quill';
-import { NgxSmartModalModule } from 'ngx-smart-modal';
 
 
 
@@ -21,7 +20,6 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
     HttpClientModule,
     ReactiveFormsModule,
     QuillModule.forRoot(),
-    NgxSmartModalModule.forRoot()
   ],
   providers: [
     CookieService
