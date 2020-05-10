@@ -20,6 +20,7 @@ const routes: Routes = [
       {path: 'services', loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule)},
       {path: 'industries', loadChildren: () => import('./pages/industries/industries.module').then(m => m.IndustriesModule)},
       {path: 'public', loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule)},
+      {path: 'checklist', loadChildren: () => import('./pages/checklist/checklist.module').then(m => m.ChecklistModule)},
       {path: '', loadChildren: () => import('./pages/homeModule/home.module').then(m => m.HomeModule)}
     ]},
     {path: '**', redirectTo: '/404'}
