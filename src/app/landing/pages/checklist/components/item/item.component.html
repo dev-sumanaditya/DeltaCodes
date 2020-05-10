@@ -1,0 +1,24 @@
+<div class="ctr">
+  <h1 class="head mont">{{data.name}}</h1>
+  <div class="bar"></div>
+  <p class="mont para">{{data.description}}</p>
+  <strong class="topic">{{data.topic}}:</strong>
+  <div class="items">
+    <div class="item"
+    [tooltip]="tooltipContent"
+    content-type="template"
+    placement="bottom"
+    show-delay="500"
+    *ngFor="let i of data.children"
+    >
+      <img src="" alt="">
+      <strong class="mont">{{i.name}}</strong>
+      <ng-template #tooltipContent>
+        <div class="wrapper mont">
+          <p>{{i.description}}</p>
+          <small class="danger">{{data.highName}}: {{i.highValue}}</small>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

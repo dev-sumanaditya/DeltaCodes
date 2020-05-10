@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-qualification',
   templateUrl: './qualification.component.html',
-  styleUrls: ['./qualification.component.css']
+  styleUrls: ['./qualification.component.scss']
 })
 export class QualificationComponent implements OnInit {
 

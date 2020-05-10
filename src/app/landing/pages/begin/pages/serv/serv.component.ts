@@ -1,16 +1,19 @@
-import { Component, OnInit, Inject, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Inject, AfterViewInit, PLATFORM_ID } from '@angular/core';
 
 import { timer } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID } from "@angular/core";
 import { StartService } from 'src/app/landing/services/start.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-serv',
   templateUrl: './serv.component.html',
-  styleUrls: ['./serv.component.css']
+  styleUrls: ['./serv.component.scss']
 })
 export class ServComponent implements OnInit, AfterViewInit {
+
+  public showM1: boolean = true;
+  public showM2: boolean = false;
+  public loading: boolean = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private _stService: StartService, private router: Router) { }
 
@@ -21,9 +24,6 @@ export class ServComponent implements OnInit, AfterViewInit {
     this._stService.setSegment('Service');
   }
 
-  public showM1: boolean = true;
-  public showM2: boolean = false;
-  public loading: boolean = false;
   public submit(data) {
     this.showM1 = false;
     this.loading = true;

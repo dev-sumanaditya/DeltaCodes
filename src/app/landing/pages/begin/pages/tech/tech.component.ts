@@ -5,7 +5,7 @@ import { StartService } from 'src/app/landing/services/start.service';
 @Component({
   selector: 'app-tech',
   templateUrl: './tech.component.html',
-  styleUrls: ['./tech.component.css']
+  styleUrls: ['./tech.component.scss']
 })
 export class TechComponent implements OnInit, AfterViewInit {
 

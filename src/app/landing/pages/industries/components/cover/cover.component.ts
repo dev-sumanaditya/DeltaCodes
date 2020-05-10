@@ -11,7 +11,7 @@ export interface DataType {
 @Component({
   selector: 'app-cover',
   templateUrl: './cover.component.html',
-  styleUrls: ['./cover.component.css']
+  styleUrls: ['./cover.component.scss']
 })
 export class CoverComponent implements OnInit {
 

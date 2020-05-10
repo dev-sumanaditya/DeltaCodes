@@ -1,14 +1,13 @@
-import { Component, OnInit, Inject, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Inject, AfterViewInit, PLATFORM_ID } from '@angular/core';
 
 import { timer } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID } from "@angular/core";
 import { StartService } from 'src/app/landing/services/start.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-web',
   templateUrl: './web.component.html',
-  styleUrls: ['./web.component.css']
+  styleUrls: ['./web.component.scss']
 })
 export class WebComponent implements OnInit, AfterViewInit {
 

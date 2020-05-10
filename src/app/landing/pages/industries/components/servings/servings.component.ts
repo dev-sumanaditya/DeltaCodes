@@ -8,7 +8,7 @@ export interface Datatype {
 @Component({
   selector: 'app-servings',
   templateUrl: './servings.component.html',
-  styleUrls: ['./servings.component.css']
+  styleUrls: ['./servings.component.scss']
 })
 export class ServingsComponent implements OnInit {
 

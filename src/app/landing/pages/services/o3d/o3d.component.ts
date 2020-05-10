@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-o3d',
   templateUrl: './o3d.component.html',
-  styleUrls: ['./o3d.component.css']
+  styleUrls: ['./o3d.component.scss']
 })
 export class O3dComponent implements OnInit {
 

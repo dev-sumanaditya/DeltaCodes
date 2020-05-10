@@ -6,7 +6,7 @@ import { ReaderService } from '../../services/reader.service';
 @Component({
   selector: 'app-reader',
   templateUrl: './reader.component.html',
-  styleUrls: ['./reader.component.css']
+  styleUrls: ['./reader.component.scss']
 })
 export class ReaderComponent implements OnInit, AfterViewInit{
 

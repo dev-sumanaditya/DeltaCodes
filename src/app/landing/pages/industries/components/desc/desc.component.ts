@@ -10,7 +10,7 @@ export interface Datatype {
 @Component({
   selector: 'app-desc',
   templateUrl: './desc.component.html',
-  styleUrls: ['./desc.component.css']
+  styleUrls: ['./desc.component.scss']
 })
 export class DescComponent implements OnInit {
 

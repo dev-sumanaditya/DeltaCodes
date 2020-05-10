@@ -6,7 +6,7 @@ import { CampaignService, CampaignData } from '../../../services/campaign.servic
 @Component({
   selector: 'app-regfree',
   templateUrl: './regfree.component.html',
-  styleUrls: ['./regfree.component.css']
+  styleUrls: ['./regfree.component.scss']
 })
 export class RegfreeComponent implements OnInit {
 

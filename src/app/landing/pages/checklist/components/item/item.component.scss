@@ -1,0 +1,60 @@
+.ctr {
+  width: 100%;
+  margin-bottom: 80px;
+
+  .head {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .para {
+    margin-top: 20px;
+    font-size: 18px;
+    max-width: 80%;
+    margin-bottom: 40px;
+  }
+  .topic {
+    color: #555;
+    text-transform: uppercase;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    flex-wrap: wrap;
+
+    .item {
+      border: 1px solid #ddd;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 7px -4px #333;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      width: max-content;
+
+      &:hover {
+        background-color: #0ac775;
+        color: black;
+      }
+    }
+  }
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 10px 10px 10px;
+
+  .danger {
+    color: crimson;
+    font-weight: 600;
+  }
+}

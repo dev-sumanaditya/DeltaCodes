@@ -6,7 +6,7 @@ import videojs from 'video.js';
 @Component({
   selector: 'app-vid',
   templateUrl: './vid.component.html',
-  styleUrls: ['./vid.component.css']
+  styleUrls: ['./vid.component.scss']
 })
 export class VidComponent implements OnInit, OnDestroy {
 

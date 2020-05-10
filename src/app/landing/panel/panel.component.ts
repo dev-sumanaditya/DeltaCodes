@@ -10,7 +10,7 @@ declare let gtag: Function;
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.css']
+  styleUrls: ['./panel.component.scss']
 })
 export class PanelComponent implements OnInit, AfterViewInit {
 

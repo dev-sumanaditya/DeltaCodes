@@ -5,7 +5,7 @@ import { PLATFORM_ID } from '@angular/core';
 @Component({
   selector: 'app-free10',
   templateUrl: './free10.component.html',
-  styleUrls: ['./free10.component.css']
+  styleUrls: ['./free10.component.scss']
 })
 export class Free10Component implements OnInit, AfterViewInit {
 

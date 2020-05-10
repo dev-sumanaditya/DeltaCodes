@@ -10,7 +10,7 @@ import { StartService } from 'src/app/landing/services/start.service';
 @Component({
   selector: 'app-hire',
   templateUrl: './hire.component.html',
-  styleUrls: ['./hire.component.css']
+  styleUrls: ['./hire.component.scss']
 })
 export class HireComponent implements OnInit {
 

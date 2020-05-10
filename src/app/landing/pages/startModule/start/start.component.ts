@@ -6,18 +6,18 @@ import {
   ElementRef,
   AfterViewInit,
   Renderer2,
-  Inject
+  Inject,
+  PLATFORM_ID
 } from '@angular/core';
 
 import { interval } from 'rxjs';
 
 import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID } from "@angular/core";
 
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
-  styleUrls: ['./start.component.css']
+  styleUrls: ['./start.component.scss']
 })
 export class StartComponent implements OnInit, AfterViewInit {
 
