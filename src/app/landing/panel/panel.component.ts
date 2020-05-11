@@ -113,7 +113,7 @@ export class PanelComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     if (this.router.url !== '/') {
       this.hideTopNav = true;
-      if (this.route.snapshot.firstChild.url[0].path === 'industries' || 'checklist') {
+      if (this.route.snapshot.firstChild.url[0].path === 'industries' || this.route.snapshot.firstChild.url[0].path === 'checklist') {
         this.navWhite = false;
       } else {
         this.navWhite = true;
@@ -126,7 +126,7 @@ export class PanelComponent implements OnInit, AfterViewInit {
       if (event instanceof NavigationEnd) {
         if (event.url !== '/') {
           this.hideTopNav = true;
-          if (this.route.snapshot.firstChild.url[0].path === 'industries' || 'checklist') {
+          if (this.route.snapshot.firstChild.url[0].path === 'industries' || this.route.snapshot.firstChild.url[0].path === 'checklist') {
             this.navWhite = false;
           } else {
             this.navWhite = true;
