@@ -57,3 +57,77 @@
 .info {
   padding: 40px 180px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .image {
+    height: 80vh;
+
+    .overlay {
+      padding: 100px 20px;
+
+      svg {
+        bottom: -2px;
+      }
+
+      .l {
+
+        h1 {
+          font-size: 35px;
+          line-height: 35px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+  .info {
+    padding: 40px 20px;
+  }
+}

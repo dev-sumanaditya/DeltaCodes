@@ -58,3 +58,68 @@
     font-weight: 600;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .ctr {
+    .head {
+      font-size: 28px;
+    }
+    .para {
+      font-size: 14px;
+      max-width: 80%;
+      margin-bottom: 40px;
+    }
+    .topic {
+      font-size: 14px;
+    }
+
+    .items {
+      .item {
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  .wrapper {
+    font-size: 12px;
+  }
+}
