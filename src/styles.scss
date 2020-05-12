@@ -8,12 +8,12 @@ html, body {
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
 
-body::-webkit-scrollbar {
-   display: none;
-}
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
+}
 ::selection {
    color: white;
    background: #0ac775;
@@ -26,19 +26,15 @@ body::-webkit-scrollbar {
 .prime {
   color: #0ac775;
 }
-
 .expanded {
   flex-grow: 1;
 }
-
 .bar {
   width: 80px;
   height: 5px;
   background-color: #0ac775;
   border-radius: 2px;
 }
-
-
 .ttr:hover{
   color: rgb(85, 172, 238) !important;
 }
@@ -49,7 +45,123 @@ body::-webkit-scrollbar {
   color: #d85f73 !important;
 }
 
-
 .mont {
   font-family: 'Montserrat', sans-serif;
+}
+
+
+// layout
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-row-sm {
+  display: flex;
+  flex-direction: row;
+}
+.flex-row-md {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex:2
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+.flex-5 {
+  flex: 5;
+}
+.flex-6 {
+  flex: 6;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.padding-main {
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+.margin-main {
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .padding-main {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  .margin-main {
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+}
+
+
+/* Tab */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .padding-main {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .margin-main {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+
+/* tab/cellphone */
+@media (min-width: 481px) and (max-width: 767px) {
+  .padding-main {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .margin-main {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+/* Smartphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .padding-main {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .margin-main {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
 }

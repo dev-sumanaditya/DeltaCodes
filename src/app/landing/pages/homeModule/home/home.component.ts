@@ -202,8 +202,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public selectedDeliver = 1;
 
-  public modal1 = false;
-
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   @HostListener('body:mousemove', ['$event'])
@@ -253,10 +251,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   ngOnInit() {}
-
-  hideModal() {
-    this.modal1 = false;
-  }
   public time = () => {
     if (isPlatformBrowser(this.platformId)) {
       this.hideit();
@@ -294,11 +288,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       const source = timer(100, 6000);
       const subscribe = source.subscribe(() => {
         this.time();
-      });
-
-      const tr = timer(2000);
-      tr.subscribe(() => {
-        this.modal1 = true;
       });
     }
 

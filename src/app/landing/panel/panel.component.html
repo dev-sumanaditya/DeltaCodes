@@ -1,13 +1,14 @@
 <div class="panel">
   <div #loading class="loadingBar hide"></div>
-  <div class="navbar nt" [class.hide]="hideTopNav">
+  <div class="navbar nt padding-main" [class.hide]="hideTopNav">
+
     <a href="tel:+917798623604" class="le">
         <i class="fa fa-phone" aria-hidden="true"></i>
         <span>+91 7798623604</span>
     </a>
-    <div class="expanded"></div>
-    <div class="free">
-      <a href="./campaign">Free website development</a>
+    <div class="flex-grow"></div>
+    <div class="links">
+      <a href="./checklist">Our Quality checklist</a>
     </div>
     <div class="re">
         <a href="https://twitter.com/delta_codes" target="_blank"><i class="fa fa-twitter ttr" aria-hidden="true"></i></a>
@@ -15,11 +16,12 @@
         <a href="https://instagram.com/deltacodes" target="_blank"><i class="fa fa-instagram ytb" aria-hidden="true"></i></a>
     </div>
   </div>
-  <div class="navbar nt2" [class.navWhite]="navWhite">
+  <div class="navbar nt2 padding-main" [class.navWhite]="navWhite">
     <a [routerLink]="['/']" (click)="navigate('/')" class="brand">Delta<span [class.black]="navWhite">Codes</span></a>
-    <div class="spacer"></div>
-    <div class="navs">
-      <div class="nav"><a (click)="navigate('services')" routerLink = "/services"  routerLinkActive="navActive">Services</a>
+    <div class="flex-grow"></div>
+    <div class="navs mont">
+      <div class="nav">
+        <a (click)="navigate('services')" routerLink = "/services"  routerLinkActive="navActive">Services</a>
         <div class="dropdown">
           <div class="navio"><a href ="/services/product">Product Engineering</a></div>
           <div class="navio"><a href ="/services/web">Web Development</a></div>
@@ -36,7 +38,8 @@
           <div style="height: 8px;"></div>
         </div>
       </div>
-      <div class="nav"><a (click)="navigate('industries')" routerLink = "/industries"  routerLinkActive="navActive">Industries</a>
+      <div class="nav">
+        <a (click)="navigate('industries')" routerLink = "/industries"  routerLinkActive="navActive">Industries</a>
         <div class="dropdown">
           <div class="navio"><a href ="/industries/logistics">Logistics & Transportation</a></div>
           <div class="navio"><a href ="/industries/oil">Oil & Gas</a></div>
@@ -92,7 +95,7 @@
       </div>
       <h1>WHAT ARE YOU LOOKING FOR?</h1>
       <div class="searchbar">
-          <input type="text" spellcheck="false" placeholder="Search here">
+          <input type="text" spellcheck="false" placeholder="Coming soon..">
       </div>
   </div>
 
@@ -100,7 +103,7 @@
       <router-outlet></router-outlet>
   </div>
 
-  <div class="footer">
+  <div class="footer padding-main">
     <div class="about sec">
       <h2>SOLUTIONS</h2>
       <!-- <p>DeltaCodes helps Start-ups and Top Tech Firms across the globe with all kinds of tech solutions needed for the new digital age.</p> -->
@@ -127,10 +130,10 @@
     <div class="resources sec">
       <h2>RESOURCES</h2>
       <ul>
-        <li (click)="analytics('Blog')"><a routerLink="/blog">Blog</a></li>
-        <li (click)="analytics('About')"><a routerLink="/about">How D-Codes Works</a></li>
-        <li (click)="analytics('Case Studies')"><a routerLink="/case-studies">Case Studies</a></li>
-        <li (click)="analytics('News')"><a routerLink="/news">News</a></li>
+        <li (click)="analytics('Blog')"><a routerLink="/checklist">Quality Checklist</a></li>
+        <li (click)="analytics('About')"><a routerLink="/about">Approach</a></li>
+        <li (click)="analytics('Case Studies')"><a routerLink="/Learning">Learning</a></li>
+        <li (click)="analytics('News')"><a routerLink="/blog">Blog</a></li>
         <li (click)="analytics('Career')"><a routerLink="/career">Career</a></li>
         <li (click)="analytics('Contact')"><a routerLink="/contact">Contact Us</a></li>
       </ul>
@@ -143,7 +146,7 @@
         <br>
         <a href="mailto:support@deltacodes.in">support@deltacodes.in</a>
         <br>
-        14th Floor, JM Orchid | Sector 76, Noida 201304</p>
+        14th Floor, <br> JM Orchid | Sector 76, <br> Noida 201304</p>
     </div>
     <div class="othr sec">
       <h2>FOLLOW US</h2>
@@ -154,11 +157,11 @@
       </ul>
     </div>
   </div>
-  <div class="footer2">
+  <div class="footer2 padding-main">
     Copyright © Deltacodes India Inc. All Rights Reserved.
   </div>
 
-  <div class="cookie" *ngIf="cookieStatus">
+  <div class="cookie padding-main" *ngIf="cookieStatus">
     <div class="l">
       <p>This website uses cookies to enhance your digital experience. For additional information please visit <a href="/public/privacy-policy">Privacy Policy</a> and <a href="/public/cookie-policy">Cookie Policy</a>.</p>
     </div>
