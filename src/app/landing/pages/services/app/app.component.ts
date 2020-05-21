@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   public data = {
     route: 'Mobile App',
     heading: 'Mobile Application Development',
-    detail: 'Explore the services we offer at deltacodes by using lorem ipsum this is some text to cover.',
+    detail: 'Custom Application Development and Management Services',
     moreURL: 'case-studies'
   };
 
