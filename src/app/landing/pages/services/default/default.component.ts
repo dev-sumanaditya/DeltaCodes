@@ -51,7 +51,7 @@ export class DefaultComponent implements OnInit {
       url: 'uiux'
     },
     {
-      name: 'Data Aanalytics',
+      name: 'Data Analytics',
       des: 'something',
       url: 'analytics'
     },
