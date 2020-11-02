@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Input, OnDestroy, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ElementRef, Input, OnDestroy, ViewChild } from '@angular/core';
 
 import videojs from 'video.js';
 
